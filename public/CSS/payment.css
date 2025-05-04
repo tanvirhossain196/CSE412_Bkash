@@ -1,0 +1,798 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Payment Section Styles */
+.payment-section {
+  padding: 20px 0;
+  margin-top: -50px;
+}
+
+.payment-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+/* Payment Header */
+.payment-header {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.shopping-icon a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header-title h3 {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: -180px;
+}
+
+.header-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Merchant Info Section */
+.merchant-info {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.merchant-info h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.merchant-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.merchant-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2146c;
+  font-size: 20px;
+}
+
+.merchant-data {
+  flex: 1;
+}
+
+.merchant-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.merchant-number {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Payment Amount Section */
+.payment-amount {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.payment-amount h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.amount-display {
+  margin: 30px 0;
+}
+
+.amount-display h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.total-amount {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0 0 0;
+}
+
+/* Payment Method Selection */
+.payment-method {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.payment-method h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.payment-options {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.payment-option img,
+.payment-option i {
+  height: 24px;
+  width: auto;
+  margin-bottom: 8px;
+  color: #e2146c;
+}
+
+.payment-option span {
+  font-size: 12px;
+  color: #333;
+}
+
+.payment-option.active {
+  border-color: #e2146c;
+  background-color: rgba(226, 20, 108, 0.05);
+}
+
+.selected-mark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #e2146c;
+  font-size: 14px;
+}
+
+/* Reference Section */
+.reference-section {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.reference-note {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  text-align: center;
+}
+
+/* Action Buttons */
+.action-buttons {
+  padding: 20px;
+}
+
+.next-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.next-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(226, 20, 108, 0.2);
+}
+
+.next-button:disabled {
+  background: linear-gradient(135deg, #cccccc 0%, #999999 100%);
+  cursor: not-allowed;
+}
+
+/* Recent Merchants Section */
+.recent-merchants {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.search-wrapper i {
+  color: #999;
+  margin-right: 10px;
+}
+
+.search-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.qr-scanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.qr-scanner i {
+  color: #e2146c;
+  font-size: 18px;
+}
+
+.qr-scanner p {
+  margin: 0;
+  font-size: 14px;
+  color: #e2146c;
+  font-weight: 500;
+}
+
+.subscription-option {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sub-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(226, 20, 108, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2146c;
+  margin-right: 15px;
+}
+
+.sub-text {
+  flex: 1;
+}
+
+.sub-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.sub-text .sub-desc {
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+}
+
+.arrow-right {
+  color: #999;
+}
+
+.recent-section,
+.saved-payments {
+  margin-top: 20px;
+}
+
+.recent-section h4,
+.saved-payments h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.merchant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.merchant-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.merchant-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.no-saved-payments {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+/* Only Merchant Selection Section Styles - Isolated from other styles */
+
+/* Merchant Selection Section */
+.merchant-selection-section {
+  padding: 15px 0;
+  margin-top: -40px;
+  background-color: #f8f9fa;
+}
+
+.merchant-selection-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+  margin-top: 50px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Header Styles */
+.selection-header {
+  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  padding: 15px 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.selection-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.18),
+    transparent 70%
+  );
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.back-button a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
+
+.back-button a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.header-title h3 {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.4px;
+}
+
+.header-icon img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Search Section Styles */
+.search-section {
+  padding: 15px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: 1px solid #edf0f7;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.search-container:focus-within {
+  border-color: #e91e63;
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.08);
+}
+
+.search-container i {
+  color: #999;
+  margin-right: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 13.5px;
+  color: #444;
+}
+
+/* QR Scanner Button Styles */
+.qr-scanner-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.qr-scanner-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #e91e63;
+  border-radius: 10px;
+  padding: 12px 15px;
+  cursor: pointer;
+  gap: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(233, 30, 99, 0.05);
+}
+
+.qr-scanner-button:hover {
+  background-color: #fcf4f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.08);
+}
+
+.qr-icon {
+  color: #e91e63;
+  font-size: 18px;
+}
+
+.qr-text {
+  color: #e91e63;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Subscription Section Styles */
+.subscription-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.subscription-container {
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 13px 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid #edf0f7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.subscription-container:hover {
+  background-color: #fcf4f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.subscription-icon {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(233, 30, 99, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e91e63;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.subscription-text {
+  flex: 1;
+}
+
+.subscription-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 3px;
+}
+
+.subscription-desc {
+  font-size: 11.5px;
+  color: #777;
+}
+
+.subscription-arrow {
+  color: #999;
+  font-size: 13px;
+}
+
+/* Recent Merchants Section Styles */
+.recent-merchants-section,
+.saved-payments-section {
+  padding: 15px 16px;
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.merchants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.merchant-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid #edf0f7;
+  height: 60px; /* Reduced height */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.merchant-item:hover {
+  background-color: #fcf4f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.merchant-icon {
+  width: 36px; /* Smaller icon */
+  height: 36px; /* Smaller icon */
+  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 15px; /* Smaller icon */
+  margin-right: 12px;
+  box-shadow: 0 3px 6px rgba(226, 20, 108, 0.12);
+  flex-shrink: 0;
+}
+
+.merchant-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.merchant-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.merchant-number {
+  font-size: 11.5px;
+  color: #777;
+}
+
+/* Saved Payments Section Styles */
+.no-saved-payments {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 20px 0;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  border: 1px dashed #e0e0e0;
+  margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .payment-container,
+  .recent-merchants {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .merchant-selection-container {
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 50px;
+  }
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.payment-container,
+.recent-merchants {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.merchant-selection-container {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Ripple Effect */
+.next-button,
+.payment-option,
+.merchant-item,
+.qr-scanner,
+.subscription-option {
+  position: relative;
+  overflow: hidden;
+}
+
+.next-button::after,
+.payment-option::after,
+.merchant-item::after,
+.qr-scanner::after,
+.subscription-option::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 10%,
+    transparent 10.01%
+  );
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.next-button:active::after,
+.payment-option:active::after,
+.merchant-item:active::after,
+.qr-scanner:active::after,
+.subscription-option:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}

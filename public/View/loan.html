@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ - লোন</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/loan.css">
+    <link rel="stylesheet" href="/public/CSS/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+    
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+    
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+    
+                </div>
+    
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+    
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loan Main Section -->
+    <section class="loan-main-section">
+        <div class="loan-section-container">
+            <!-- Header -->
+            <div class="loan-header">
+                <div class="header-content">
+                    <div class="header-loan-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="header-title">
+                        <h3>লোন</h3>
+                    </div>
+                    <div class="header-icon">
+                        <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Loan Content -->
+            <div class="loan-main-content">
+                <div class="loan-action">
+                    <div class="loan-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <button class="apply-loan-button" onclick="showLoanModal()">এখনই আবেদন করুন</button>
+                </div>
+
+                <div class="loan-options">
+                    <div class="loan-option">
+                        <div class="option-icon">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <div class="option-text">
+                            <p>লোনের তথ্য ও নিয়মাবলী</p>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="loan-option">
+                        <div class="option-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="option-text">
+                            <p>সাধারণ জিজ্ঞাসা</p>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Application Modal -->
+    <div id="loanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-back-button" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h3 class="modal-title">ব্যক্তিগত তথ্য</h3>
+                <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="modal-bkash-logo"
+                    onerror="this.src='data:image/svg+xml;charset=UTF-8,%3csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'30\' height=\'30\' viewBox=\'0 0 100 100\'%3e%3crect width=\'100\' height=\'100\' fill=\'white\' rx=\'20\'/%3e%3ctext x=\'50\' y=\'65\' text-anchor=\'middle\' fill=\'%23e2146c\' font-family=\'Arial\' font-weight=\'bold\' font-size=\'40\'%3ebK%3c/text%3e%3c/svg%3e'">
+                <button class="close-modal" onclick="closeLoanModal()">&times;</button>
+            </div>
+
+            <!-- Step Indicator -->
+            <div class="step-indicator">
+                <div class="step-dot active">১</div>
+                <div class="step-dot">২</div>
+                <div class="step-dot">৩</div>
+                <div class="step-dot">৪</div>
+                <div class="step-dot">৫</div>
+            </div>
+
+            <!-- Step 1: Basic Information -->
+            <div id="step1" class="step-content active">
+                <h4>ব্যক্তিগত তথ্য</h4>
+                <form id="basicInfoForm">
+                    <div class="form-group">
+                        <label>আপনার নাম</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="fullName" required placeholder="সম্পূর্ণ নাম লিখুন">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>মোবাইল নম্বর</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                            <input type="tel" id="mobileNumber" required placeholder="01XXXXXXXXX" maxlength="11"
+                                pattern="^01[3-9]\d{8}$">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>জাতীয় পরিচয়পত্র নম্বর</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-id-card"></i>
+                            <input type="text" id="nidNumber" required placeholder="১৩ ডিজিটের NID নম্বর" maxlength="13"
+                                pattern="\d{13}">
+                        </div>
+                    </div>
+                    <button type="button" class="next-button" onclick="goToStep(2)">পরবর্তী</button>
+                </form>
+            </div>
+
+            <!-- Step 2: Loan Details -->
+            <div id="step2" class="step-content">
+                <h4>লোনের তথ্য</h4>
+                <form id="loanDetailsForm">
+                    <div class="form-group">
+                        <label>লোনের পরিমাণ (৳)</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <input type="number" id="loanAmount" min="1000" max="50000" required
+                                oninput="calculateLoan()" placeholder="সর্বনিম্ন ৳১০০০">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>লোনের মেয়াদ</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                            <select id="loanDuration" onchange="calculateLoan()">
+                                <option value="3">৩ মাস</option>
+                                <option value="6">৬ মাস</option>
+                                <option value="12">১২ মাস</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="loan-calculation">
+                        <p>মাসিক কিস্তি: <span id="monthlyInstallment">৳0</span></p>
+                        <p>সার্ভিস চার্জ (১০%): <span id="serviceCharge">৳0</span></p>
+                        <p>মোট পরিশোধ: <span id="totalPayment">৳0</span></p>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="back-button" onclick="goToStep(1)">পূর্ববর্তী</button>
+                        <button type="button" class="next-button" onclick="goToStep(3)">পরবর্তী</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Employment Information -->
+            <div id="step3" class="step-content">
+                <h4>চাকরির তথ্য</h4>
+                <form id="employmentForm">
+                    <div class="form-group">
+                        <label>পেশা</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-briefcase"></i>
+                            <select id="occupation" required>
+                                <option value="">নির্বাচন করুন</option>
+                                <option value="salaried">চাকরিজীবী</option>
+                                <option value="business">ব্যবসায়ী</option>
+                                <option value="freelancer">ফ্রিল্যান্সার</option>
+                                <option value="other">অন্যান্য</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>মাসিক আয় (৳)</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                            <input type="number" id="monthlyIncome" required placeholder="মাসিক আয়">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>প্রতিষ্ঠানের নাম</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-building"></i>
+                            <input type="text" id="companyName" required placeholder="যেখানে কাজ করেন">
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="back-button" onclick="goToStep(2)">পূর্ববর্তী</button>
+                        <button type="button" class="next-button" onclick="goToStep(4)">পরবর্তী</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: PIN Verification -->
+            <div id="step4" class="step-content">
+                <h4>পিন নম্বর প্রদান করুন</h4>
+                <form id="pinForm">
+                    <div class="pin-container">
+                        <p class="pin-instruction">দয়া করে আপনার ৫ সংখ্যার বিকাশ পিন নম্বর প্রদান করুন</p>
+                        <div class="pin-input-group">
+                            <input type="password" maxlength="1" class="pin-digit" onkeyup="moveFocus(this, event)">
+                            <input type="password" maxlength="1" class="pin-digit" onkeyup="moveFocus(this, event)">
+                            <input type="password" maxlength="1" class="pin-digit" onkeyup="moveFocus(this, event)">
+                            <input type="password" maxlength="1" class="pin-digit" onkeyup="moveFocus(this, event)">
+                            <input type="password" maxlength="1" class="pin-digit" onkeyup="moveFocus(this, event)">
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="back-button" onclick="goToStep(3)">পূর্ববর্তী</button>
+                        <button type="button" class="submit-button" onclick="submitLoanApplication()">আবেদন জমা
+                            দিন</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div id="step5" class="step-content">
+                <div class="success-container">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>অভিনন্দন!</h3>
+                    <p>আপনার লোন আবেদন সফলভাবে গৃহীত হয়েছে</p>
+                    <div class="success-details">
+                        <p>লোন রেফারেন্স: <span id="loanReference"></span></p>
+                        <p>লোনের পরিমাণ: <span id="confirmedAmount"></span></p>
+                        <p>মাসিক কিস্তি: <span id="confirmedInstallment"></span></p>
+                        <p>প্রাপ্তির তারিখ: <span id="dateApproved"></span></p>
+                    </div>
+                    <button class="download-button" onclick="downloadReceipt()">
+                        <i class="fas fa-download"></i> রসিদ ডাউনলোড করুন
+                    </button>
+                    <button class="close-success-button" onclick="closeLoanModal()">বন্ধ করুন</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <script src="/public/JS/loanJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+</body>
+</html>

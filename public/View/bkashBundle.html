@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ - বান্ডেল</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/bkashBundle.css">
+    <link rel="stylesheet" href="/public/CSS/AllHeaderSyeles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangla+Sangam+MN:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+                </div>
+
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <!-- <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i> -->
+                </div>
+
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- bKash Bundle Section -->
+    <section class="bundle-section">
+        <div class="bundle-container">
+            <div class="form-header-gradient">
+                <div class="header-content">
+                    <!-- Left side with logo -->
+                    <div class="header-left">
+                        <div class="header-logo">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                    </div>
+
+                    <!-- Center with title -->
+                    <div class="header-center">
+                        <div class="header-title">
+                            <h3>বিকাশ বান্ডেল</h3>
+                        </div>
+                    </div>
+
+                    <!-- Right side with bKash logo -->
+                    <div class="header-right">
+                        <div class="bkash-app-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bundle-content">
+                <div class="bundle-form">
+                    <!-- Bundle Section Header -->
+                    <div class="bundle-header-section">
+                        <div class="tab-content active" id="currentBundles">
+                            <!-- Empty Bundle Message with Icon -->
+                            <div class="empty-bundle-message">
+                                <div class="empty-bundle-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <p>খরচ বাঁচাতে চান? আজই কিনুন বিকাশ বান্ডেল!</p>
+                            </div>
+
+                            <h4>বর্তমান বান্ডেলসমূহ</h4>
+                        </div>
+                    </div>
+
+                    <!-- Bundle Options List -->
+                    <div class="bundle-options-list">
+                        <!-- 5 Send Money Bundle -->
+                        <div class="bundle-option">
+                            <div class="bundle-details">
+                                <div class="bundle-icon-container green">
+                                    <div class="bundle-icon">
+                                        <span class="bkash-logo">ব</span>
+                                    </div>
+                                </div>
+                                <div class="bundle-info">
+                                    <div class="bundle-name">5 সেন্ড মানি</div>
+                                    <div class="bundle-validity">30 দিন</div>
+                                    <div class="bundle-savings">
+                                        <div class="savings-badge">
+                                            <i class="fas fa-bullhorn"></i>
+                                            <span>বাঁচবে ৳4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-price">
+                                    <span>৳21.0</span>
+                                </div>
+                                <div class="bundle-action">
+                                    <span class="bundle-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bundle-alt-option">
+                                <div class="alt-option-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="alt-option-text">5 সেন্ড মানি</span>
+                                <span class="alt-option-arrow">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 10 Send Money Bundle -->
+                        <div class="bundle-option">
+                            <div class="bundle-details">
+                                <div class="bundle-icon-container purple">
+                                    <div class="bundle-icon">
+                                        <span class="bkash-logo">ব</span>
+                                    </div>
+                                </div>
+                                <div class="bundle-info">
+                                    <div class="bundle-name">10 সেন্ড মানি</div>
+                                    <div class="bundle-validity">30 দিন</div>
+                                    <div class="bundle-savings">
+                                        <div class="savings-badge">
+                                            <i class="fas fa-bullhorn"></i>
+                                            <span>বাঁচবে ৳9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-price">
+                                    <span>৳41.0</span>
+                                </div>
+                                <div class="bundle-action">
+                                    <span class="bundle-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bundle-alt-option">
+                                <div class="alt-option-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="alt-option-text">10 সেন্ড মানি</span>
+                                <span class="alt-option-arrow">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 25 Send Money Bundle -->
+                        <div class="bundle-option">
+                            <div class="bundle-details">
+                                <div class="bundle-icon-container blue">
+                                    <div class="bundle-icon">
+                                        <span class="bkash-logo">ব</span>
+                                    </div>
+                                </div>
+                                <div class="bundle-info">
+                                    <div class="bundle-name">25 সেন্ড মানি</div>
+                                    <div class="bundle-validity">30 দিন</div>
+                                    <div class="bundle-savings">
+                                        <div class="savings-badge">
+                                            <i class="fas fa-bullhorn"></i>
+                                            <span>বাঁচবে ৳31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-price">
+                                    <span>৳94.0</span>
+                                </div>
+                                <div class="bundle-action">
+                                    <span class="bundle-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bundle-alt-option">
+                                <div class="alt-option-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="alt-option-text">25 সেন্ড মানি</span>
+                                <span class="alt-option-arrow">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 50 Send Money Bundle -->
+                        <div class="bundle-option">
+                            <div class="bundle-details">
+                                <div class="bundle-icon-container orange">
+                                    <div class="bundle-icon">
+                                        <span class="bkash-logo">ব</span>
+                                    </div>
+                                </div>
+                                <div class="bundle-info">
+                                    <div class="bundle-name">50 সেন্ড মানি</div>
+                                    <div class="bundle-validity">30 দিন</div>
+                                    <div class="bundle-savings">
+                                        <div class="savings-badge">
+                                            <i class="fas fa-bullhorn"></i>
+                                            <span>বাঁচবে ৳101</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-price">
+                                    <span>৳149.0</span>
+                                </div>
+                                <div class="bundle-action">
+                                    <span class="bundle-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bundle-alt-option">
+                                <div class="alt-option-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="alt-option-text">50 সেন্ড মানি</span>
+                                <span class="alt-option-arrow">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 100 Send Money Bundle -->
+                        <div class="bundle-option">
+                            <div class="bundle-details">
+                                <div class="bundle-icon-container teal">
+                                    <div class="bundle-icon">
+                                        <span class="bkash-logo">ব</span>
+                                    </div>
+                                </div>
+                                <div class="bundle-info">
+                                    <div class="bundle-name">100 সেন্ড মানি</div>
+                                    <div class="bundle-validity">30 দিন</div>
+                                    <div class="bundle-savings">
+                                        <div class="savings-badge">
+                                            <i class="fas fa-bullhorn"></i>
+                                            <span>বাঁচবে ৳251</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bundle-price">
+                                    <span>৳249.0</span>
+                                </div>
+                                <div class="bundle-action">
+                                    <span class="bundle-arrow">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bundle-alt-option">
+                                <div class="alt-option-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="alt-option-text">100 সেন্ড মানি</span>
+                                <span class="alt-option-arrow">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Button -->
+    <button id="chat-button" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </button>
+
+    <!-- bKash Chat Interface (initially hidden) -->
+    <div id="bkash-chat-overlay" class="bkash-chat-overlay hidden">
+        <div class="bkash-chat-window">
+            <!-- Chat Header -->
+            <div class="bkash-chat-header">
+                <div class="bkash-logo-container">
+                    <img src="/public/images/bkashlogo.png" alt="bKash Logo" class="bkash-logo">
+                    <span>বিকাশ কাস্টমার সার্ভিস</span>
+                </div>
+                <div class="header-controls">
+                    <button class="minimize-btn"><i class="fas fa-minus"></i></button>
+                    <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+
+            <!-- Chat Body where messages appear -->
+            <div class="bkash-chat-body" id="bkash-chat-body">
+                <!-- Messages will be added here dynamically -->
+            </div>
+
+            <!-- Chat Input Area -->
+            <div class="bkash-chat-input">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="টাইপ করুন এবং এন্টার চাপুন" class="message-input"
+                        id="bkash-message-input">
+                </div>
+                <button class="send-btn" id="bkash-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/JS/bkashBundleJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,862 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  background-color: #e2146c;
+  padding: 8px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.bangla-bkash {
+  color: white;
+  font-size: 24px;
+  margin-right: 5px;
+  letter-spacing: -0.5px;
+}
+
+.logo {
+  height: 64px;
+}
+
+/* Cash Out Form Styles */
+.cashout-form-section {
+  padding: 20px 0 20px;
+  background-color: #f8f9fa;
+  margin-top: 60px; /* Space for fixed header */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cashout-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 600px; /* Fixed height for the container */
+  margin-top: -55px;
+}
+
+/* Gradient Header */
+.form-header-gradient {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  padding: 15px 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.form-header-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+  z-index: 1;
+}
+
+.header-left,
+.header-right {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.header-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.title-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-icon i {
+  color: white;
+  font-size: 18px;
+}
+
+.bkash-logo-small {
+  height: 28px;
+  width: auto;
+}
+
+/* Tabs */
+.tabs-container {
+  border-bottom: 1px solid #eee;
+  position: relative;
+  background-color: white;
+  z-index: 5;
+}
+
+.tabs-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tab-item {
+  padding: 15px 10px;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #777;
+  font-size: 14px;
+}
+
+.tab-item.active {
+  color: #e2146c;
+}
+
+.tab-indicator {
+  height: 3px;
+  background-color: #e2146c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Content Scrolling Area */
+.cashout-form {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Agent Section - Make content scrollable */
+.agent-section {
+  height: 100%; /* Full height of parent */
+}
+
+/* Agent Section Content */
+#agentSearchForm {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Amount Input Section */
+.amount-input-section {
+  height: 100%; /* Full height of parent */
+}
+
+#amountForm {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* PIN Section */
+.pin-section {
+  height: 100%; /* Full height of parent */
+}
+
+#pinForm {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Search Agent Section */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 30px;
+  padding: 4px 15px;
+  border: 1px solid #ebebeb;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.search-input-wrapper:focus-within {
+  border-color: #e2146c;
+  box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
+  background-color: white;
+}
+
+.search-icon {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.search-clear {
+  background: none;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.search-clear:hover {
+  opacity: 1;
+  color: #e2146c;
+}
+
+/* QR Scanner Button */
+.qr-scan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  background-color: #fff;
+  border: 1px solid #e2146c;
+  border-radius: 10px;
+  color: #e2146c;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.qr-scan-btn:hover {
+  background-color: #fff5f8;
+  transform: translateY(-2px);
+}
+
+.qr-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Agent Items */
+.recent-agent-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.agent-item {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.agent-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff5f8;
+}
+
+.agent-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background-color: #e1f5fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.agent-avatar img {
+  width: 100%;
+  height: auto;
+}
+
+.favorite-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  background-color: #e2146c;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.agent-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.agent-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 3px;
+}
+
+.agent-number {
+  font-size: 12px;
+  color: #777;
+}
+
+.cashback-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff5252;
+  color: white;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Saved Agents List */
+.saved-agents-list {
+  margin-bottom: 25px;
+}
+
+.saved-agent-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  margin-bottom: 12px;
+}
+
+.saved-agent-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-color: #fff5f8;
+}
+
+.empty-list-message {
+  text-align: center;
+  padding: 30px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Recipient Card */
+.recipient-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  border: none;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #ebebeb;
+  color: #333;
+}
+
+.recipient-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recipient-info {
+  flex: 1;
+}
+
+.recipient-name-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.recipient-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.recipient-number {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Amount Entry */
+.amount-entry-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.amount-label {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.amount-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.currency-symbol {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e2146c;
+  padding-right: 5px;
+}
+
+.amount-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 15px 0;
+  font-size: 24px;
+  background-color: transparent;
+  color: #333;
+  font-weight: 600;
+}
+
+.amount-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Fee Information */
+.fee-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #fff5f8;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.fee-info i {
+  color: #e2146c;
+  font-size: 16px;
+}
+
+.fee-text {
+  font-size: 13px;
+  color: #666;
+}
+
+.fee-amount {
+  color: #e2146c;
+  font-weight: 500;
+}
+
+/* Additional Info */
+.info-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #f5f7fa;
+  margin-bottom: 20px;
+}
+
+.info-icon {
+  color: #e2146c;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.info-text {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.info-link {
+  color: #e2146c;
+  text-decoration: none;
+}
+
+/* Quick Amount Buttons */
+.quick-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.quick-amount-btn {
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 12px 5px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.quick-amount-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+  border-color: #e2146c;
+}
+
+.quick-amount-btn.active {
+  background-color: #fff5f8;
+  border-color: #e2146c;
+  color: #e2146c;
+  font-weight: 600;
+}
+
+.amount-value {
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.action-btn {
+  width: 100%;
+  padding: 17px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.next-btn {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  color: white;
+}
+
+.next-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(226, 20, 108, 0.2);
+}
+
+.cashout-btn {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  color: white;
+}
+
+.cashout-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(226, 20, 108, 0.2);
+}
+
+.cashout-btn:disabled {
+  background: #f0f0f0;
+  color: #aaa;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* PIN Entry Styling */
+.pin-digits {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.pin-digit {
+  width: 45px;
+  height: 50px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  -webkit-text-security: disc;
+}
+
+/* Warning Section */
+.warning-section {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #fff9e6;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.warning-icon {
+  color: #ff9800;
+  font-size: 20px;
+}
+
+.warning-text {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.shake-effect {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+/* Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 11%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .cashout-form-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .quick-amounts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Adjust height for mobile */
+  .cashout-form-container {
+    height: calc(
+      100vh - 80px
+    ); /* Full height of viewport minus header and padding */
+  }
+}
+
+/* Custom scrollbar for better appearance */
+.cashout-form::-webkit-scrollbar,
+#agentSearchForm::-webkit-scrollbar,
+#amountForm::-webkit-scrollbar,
+#pinForm::-webkit-scrollbar {
+  width: 5px;
+}
+
+.cashout-form::-webkit-scrollbar-track,
+#agentSearchForm::-webkit-scrollbar-track,
+#amountForm::-webkit-scrollbar-track,
+#pinForm::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cashout-form::-webkit-scrollbar-thumb,
+#agentSearchForm::-webkit-scrollbar-thumb,
+#amountForm::-webkit-scrollbar-thumb,
+#pinForm::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.cashout-form::-webkit-scrollbar-thumb:hover,
+#agentSearchForm::-webkit-scrollbar-thumb:hover,
+#amountForm::-webkit-scrollbar-thumb:hover,
+#pinForm::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

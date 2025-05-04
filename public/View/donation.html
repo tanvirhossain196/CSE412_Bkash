@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডোনেশন - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/CSS/donation.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/main.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+    
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+    
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+    
+                </div>
+    
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+    
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <div class="donation-backdrop"></div>
+
+        <div class="container">
+            <!-- Donation Introduction -->
+
+
+            <div class="donation-container" id="mainContainer">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="back-button" id="backButton">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="header-title">
+                            <h3>ডোনেশন</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donation-content">
+                    <!-- Info Banner -->
+                    <div class="info-banner">
+                        <div class="info-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <p>সুবিধাবঞ্চিত মানুষকে সহায়তা করতে অনুদান বিকাশ করুন</p>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="প্রতিষ্ঠান খুঁজুন..." id="foundationSearch">
+                            <i class="fas fa-times clear-search" id="clearSearch"></i>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="category-filters">
+                        <button class="category-btn active" data-category="all">সকল</button>
+                        <button class="category-btn" data-category="humanitarian">মানবিক সাহায্য</button>
+                        <button class="category-btn" data-category="education">শিক্ষা</button>
+                        <button class="category-btn" data-category="healthcare">স্বাস্থ্যসেবা</button>
+                        <button class="category-btn" data-category="disaster">দুর্যোগ</button>
+                    </div>
+
+                    <!-- Foundations List -->
+                    <div class="foundation-list">
+                        <!-- Foundation 1 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/actionaid.png" alt="অ্যাকশনএইড বাংলাদেশ">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">অ্যাকশনএইড বাংলাদেশ</div>
+                                <div class="foundation-desc">মানবাধিকার প্রতিষ্ঠা ও দারিদ্র্য বিমোচনের লক্ষ্যে কাজ করছে
+                                </div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 2 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/as-sunnah.png" alt="আস-সুন্নাহ ফাউন্ডেশন (অনুদান)">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">আস-সুন্নাহ ফাউন্ডেশন (অনুদান)</div>
+                                <div class="foundation-desc">সামাজিক উন্নয়ন ও মানবকল্যাণে নিবেদিত</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 3 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/as-sunnah-zakat.png" alt="আস-সুন্নাহ ফাউন্ডেশনে (যাকাত)">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">আস-সুন্নাহ ফাউন্ডেশনে (যাকাত)</div>
+                                <div class="foundation-desc">যাকাত ফান্ড দরিদ্র ও জরুরি প্রয়োজনে ব্যবহৃত হয়</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 4 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/anjuman.png" alt="আঞ্জুমান মুফিদুল ইসলাম">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">আঞ্জুমান মুফিদুল ইসলাম</div>
+                                <div class="foundation-desc">সমাজসেবা ও জনকল্যাণে নিয়োজিত প্রতিষ্ঠান</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 5 -->
+                        <div class="foundation-item" data-category="disaster">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/army.png" alt="বাংলাদেশ সেনাবাহিনীর ত্রাণ তহবিল">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বাংলাদেশ সেনাবাহিনীর ত্রাণ তহবিল</div>
+                                <div class="foundation-desc">দুর্যোগ ও জরুরি পরিস্থিতিতে ত্রাণ সেবা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 6 -->
+                        <div class="foundation-item" data-category="education">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/brac.png" alt="ব্র্যাক">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">ব্র্যাক</div>
+                                <div class="foundation-desc">শিক্ষা, স্বাস্থ্য ও দারিদ্র্য বিমোচনে অগ্রণী ভূমিকা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 7 -->
+                        <div class="foundation-item" data-category="healthcare">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/red-crescent.png" alt="বাংলাদেশ রেড ক্রিসেন্ট সোসাইটি">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বাংলাদেশ রেড ক্রিসেন্ট সোসাইটি</div>
+                                <div class="foundation-desc">দুর্যোগ ও স্বাস্থ্যসেবায় আন্তর্জাতিক মানের সেবা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 8 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/navy.png"
+                                    alt="বাংলাদেশ নৌবাহিনী (বিএনএফডব্লিউএ ডোনেশন ফান্ড)">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বাংলাদেশ নৌবাহিনী (বিএনএফডব্লিউএ ডোনেশন ফান্ড)</div>
+                                <div class="foundation-desc">সামাজিক উন্নয়ন ও নিরাপত্তা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 9 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/air-force.png" alt="বাংলাদেশ বিমান বাহিনী কল্যাণ ট্রাস্ট">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বাংলাদেশ বিমান বাহিনী কল্যাণ ট্রাস্ট</div>
+                                <div class="foundation-desc">সামাজিক ও মানবিক কল্যাণে কাজ করে</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 10 -->
+                        <div class="foundation-item" data-category="disaster">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/border-guard.png" alt="বর্ডার গার্ড বাংলাদেশ ত্রাণ তহবিল">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বর্ডার গার্ড বাংলাদেশ ত্রাণ তহবিল</div>
+                                <div class="foundation-desc">দুর্যোগ ও বিপর্যয়ে ত্রাণ সহায়তা প্রদান</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 11 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/coast-guard.png"
+                                    alt="বাংলাদেশ কোস্ট গার্ড পরিবার কল্যাণ সংঘ অনুদান ফান্ড">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বাংলাদেশ কোস্ট গার্ড পরিবার কল্যাণ সংঘ অনুদান ফান্ড</div>
+                                <div class="foundation-desc">উপকূলীয় জনগোষ্ঠীর সেবায় নিয়োজিত</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 12 -->
+                        <div class="foundation-item" data-category="healthcare">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/thalassemia.png" alt="বাংলাদেশ থ্যালাসেমিয়া ফাউন্ডেশন">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বাংলাদেশ থ্যালাসেমিয়া ফাউন্ডেশন</div>
+                                <div class="foundation-desc">থ্যালাসেমিয়া রোগীদের চিকিৎসা ও সহায়তা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 13 -->
+                        <div class="foundation-item" data-category="education">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/bidyanondo.png" alt="বিদ্যানন্দ ফাউন্ডেশন">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">বিদ্যানন্দ ফাউন্ডেশন</div>
+                                <div class="foundation-desc">শিক্ষা ও সুবিধাবঞ্চিত শিশুদের জন্য কাজ করে</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 14 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/czm.png" alt="সেন্টার ফর যাকাত ম্যানেজমেন্ট">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">সেন্টার ফর যাকাত ম্যানেজমেন্ট</div>
+                                <div class="foundation-desc">যাকাত ব্যবস্থাপনা ও বিতরণে নিয়োজিত</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 15 -->
+                        <div class="foundation-item" data-category="disaster">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/pmo.png" alt="প্রধান উপদেষ্টার ত্রাণ ও কল্যাণ তহবিল">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">প্রধান উপদেষ্টার ত্রাণ ও কল্যাণ তহবিল</div>
+                                <div class="foundation-desc">জাতীয় দুর্যোগে ত্রাণ ও পুনর্বাসন সহায়তা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Add remaining foundations with appropriate category tags -->
+                        <!-- Foundation 16 -->
+                        <div class="foundation-item" data-category="healthcare">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/dham.png" alt="ঢাকা আহ্ছানিয়া মিশন">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">ঢাকা আহ্ছানিয়া মিশন</div>
+                                <div class="foundation-desc">স্বাস্থ্য ও শিক্ষা ক্ষেত্রে সুদীর্ঘ অভিজ্ঞতা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 17 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/donation.png" alt="ডু-নেশন ফাউন্ডেশন ট্রাস্ট">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">ডু-নেশন ফাউন্ডেশন ট্রাস্ট</div>
+                                <div class="foundation-desc">বিভিন্ন সামাজিক কার্যক্রমে অবদান রাখছে</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 18 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/embassy.png" alt="ফিলিস্তিন দূতাবাস ঢাকা">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">ফিলিস্তিন দূতাবাস ঢাকা</div>
+                                <div class="foundation-desc">ফিলিস্তিনি জনগণের জন্য মানবিক সহায়তা</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 19 -->
+                        <div class="foundation-item" data-category="education">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/eso-sobai.png" alt="এসো সবাই">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">এসো সবাই</div>
+                                <div class="foundation-desc">শিক্ষা ও সামাজিক উন্নয়নে কাজ করে</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 20 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/food-for-all.png" alt="ফুড ফর আল- খুধুর্মিন ফাউন্ডেশন">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">ফুড ফর আল- খুধুর্মিন ফাউন্ডেশন</div>
+                                <div class="foundation-desc">খাদ্য নিরাপত্তা ও ক্ষুধা নিরসনে নিয়োজিত</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 21 -->
+                        <div class="foundation-item" data-category="healthcare">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/friendship.png" alt="ফ্রেন্ডশিপ">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">ফ্রেন্ডশিপ</div>
+                                <div class="foundation-desc">দুর্গম এলাকায় স্বাস্থ্যসেবা ও উন্নয়ন কার্যক্রম</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+
+                        <!-- Foundation 22 -->
+                        <div class="foundation-item" data-category="humanitarian">
+                            <div class="foundation-logo">
+                                <img src="/public/images/foundations/human-aid.png" alt="হিউম্যান এইড বাংলাদেশ ফাউন্ডেশন">
+                            </div>
+                            <div class="foundation-info">
+                                <div class="foundation-name">হিউম্যান এইড বাংলাদেশ ফাউন্ডেশন</div>
+                                <div class="foundation-desc">মানবিক সহায়তা ও সামাজিক উন্নয়নে অবদান</div>
+                            </div>
+                            <div class="arrow-icon"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" style="display: none;">
+                    <div class="no-results-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <p>কোন ফলাফল পাওয়া যায়নি</p>
+                    <p class="no-results-sub">দয়া করে আবার চেষ্টা করুন</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="donation-footer">
+                    <p>বিকাশ লিমিটেড কর্তৃক এই সেবা প্রদান করা হচ্ছে</p>
+                    <div class="support-contact">
+                        <i class="fas fa-headset"></i> সাহায্যের জন্য: 16247
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="/public/JS/donationJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Search functionality
+        $(document).ready(function () {
+            // Search function
+            $("#foundationSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $(".foundation-item").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+
+                // Show no results message if no items are visible
+                if ($(".foundation-item:visible").length === 0) {
+                    $(".no-results").show();
+                } else {
+                    $(".no-results").hide();
+                }
+            });
+
+            // Clear search
+            $("#clearSearch").click(function () {
+                $("#foundationSearch").val('');
+                $("#foundationSearch").trigger("keyup");
+                $(this).hide();
+            });
+
+            // Show/hide clear button
+            $("#foundationSearch").on("keyup", function () {
+                if ($(this).val()) {
+                    $("#clearSearch").show();
+                } else {
+                    $("#clearSearch").hide();
+                }
+            });
+
+            // Category filtering
+            $(".category-btn").click(function () {
+                $(".category-btn").removeClass("active");
+                $(this).addClass("active");
+
+                var category = $(this).data("category");
+
+                if (category === "all") {
+                    $(".foundation-item").show();
+                } else {
+                    $(".foundation-item").hide();
+                    $('.foundation-item[data-category="' + category + '"]').show();
+                }
+
+                // Check if no results
+                if ($(".foundation-item:visible").length === 0) {
+                    $(".no-results").show();
+                } else {
+                    $(".no-results").hide();
+                }
+            });
+
+            // Back button functionality
+            $("#backButton").click(function () {
+                window.history.back();
+            });
+
+            // Foundation item click
+            $(".foundation-item").click(function () {
+                // Add animation class
+                $(this).addClass("item-clicked");
+
+                // Simulate loading and redirect
+                setTimeout(function () {
+                    // Here you would redirect to the foundation's donation page
+                    // window.location.href = "foundation-donation.html?id=" + foundationId;
+                    alert("Redirecting to donation page for this foundation");
+                }, 300);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ</title>
+
+    <!-- Try these different favicon approaches -->
+    <link rel="icon" href="/public/images/locallogo.png" type="image/png">
+    <link rel="shortcut icon" href="/public/images/locallogo.png" type="image/png">
+    <!-- If you have an ICO version, add this too -->
+    <!-- <link rel="icon" href="images/bkashlogo.ico" type="image/x-icon"> -->
+
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html">
+                <span class="bangla-bkash">বিকাশ</span>
+                <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="Campaigns.html" class="nav-item">ক্যাশপইন</a>
+            <!-- <button class="nav-item dropdown" id="servicesButton">
+                সার্ভিসেস
+            </button> -->
+            <a href="business.html" class="nav-item">বিজনেস</a>
+            <a href="help.html" class="nav-item dropdown">হেল্প</a>
+            <a href="#" class="nav-item">ক্যারিয়ার</a>
+            <a href="#" class="nav-item">পরিচিতি</a>
+            <a href="#" class="nav-item">রুম</a>
+            <a href="#" class="nav-item">স্টুডেন্ট</a>
+            <button class="app-btn">বিকাশ অ্যাপ</button>
+        </nav>
+
+        <div class="right-nav">
+            <button class="login-btn" id="loginButton">লগইন</button>
+            <!-- <a href="javascript:void(0);" class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </a> -->
+        </div>
+    </header>
+
+    <!-- Services Dropdown Menu -->
+    <div class="dropdown-menu" id="servicesMenu">
+        <div class="service-grid">
+            <!-- Row 1 -->
+            <a href="sendMoney.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image1.png" alt="সেন্ড মানি">
+                </div>
+                <div class="service-name">সেন্ড মানি</div>
+            </a>
+            <a href="recharge.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image2.png" alt="মোবাইল রিচার্জ">
+                </div>
+                <div class="service-name">মোবাইল রিচার্জ</div>
+            </a>
+            <a href="payment.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image3.png" alt="পেমেন্ট">
+                </div>
+                <div class="service-name">পেমেন্ট</div>
+            </a>
+            <a href="cashOut.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image4.png" alt="ক্যাশ আউট">
+                </div>
+                <div class="service-name">ক্যাশ আউট</div>
+            </a>
+
+            <!-- Row 2 -->
+            <a href="bkashBundle.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image8.png" alt="বিকাশ সার্ভিসেস">
+                </div>
+                <div class="service-name">বিকাশ বান্ডেল</div>
+            </a>
+            <a href="addMoney.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image5.png" alt="অ্যাড মানি">
+                </div>
+                <div class="service-name">অ্যাড মানি</div>
+            </a>
+            <a href="payBills.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image6.png" alt="পে বিল">
+                </div>
+                <div class="service-name">পে বিল</div>
+            </a>
+            <a href="savings.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image7.png" alt="সেভিংস">
+                </div>
+                <div class="service-name">সেভিংস</div>
+            </a>
+
+            <!-- Row 3 -->
+            <a href="loan.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image9.png" alt="লোন">
+                </div>
+                <div class="service-name">লোন</div>
+            </a>
+            <a href="bkashToBank.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image10.png" alt="বিকাশ টু ব্যাংক">
+                </div>
+                <div class="service-name">বিকাশ টু ব্যাংক</div>
+            </a>
+            <a href="requestMoney.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image11.png" alt="রিকোয়েস্ট মানি">
+                </div>
+                <div class="service-name">রিকোয়েস্ট মানি</div>
+            </a>
+            <a href="remittance.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image12.png" alt="রেমিটেন্স">
+                </div>
+                <div class="service-name">রেমিটেন্স</div>
+            </a>
+
+            <!-- Row 4 -->
+            <a href="microfinance.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image16.png" alt="মাইক্রোফাইন্যান্স">
+                </div>
+                <div class="service-name">মাইক্রোফাইন্যান্স</div>
+            </a>
+            <a href="education.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image15.png" alt="এডুকেশন ফি">
+                </div>
+                <div class="service-name">এডুকেশন ফি</div>
+            </a>
+            <a href="donation.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image13.png" alt="ডোনেশন">
+                </div>
+                <div class="service-name">ডোনেশন</div>
+            </a>
+            <a href="insurance.html" class="service-item">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image14.png" alt="ই-ভ্যালোপ">
+                </div>
+                <div class="service-name">ইন্স্যুরেন্স</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Rest of the HTML remains the same -->
+    <!-- Hero Banner Slider -->
+    <section class="hero-slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 - Eid Shopping -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="hero-banner">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="/public/images/services/slider1.png" alt="বিকাশ ঈদ পেমেন্ট">
+                                </div>
+                                <div class="banner-text-wrapper">
+                                    <div class="banner-text-container">
+                                        <h2 class="banner-headline">এবার ঈদে কেনাকাটার সব মোমেন্টে বিকাশ পেমেন্ট!</h2>
+                                    </div>
+                                    <a href="#" class="btn-details">বিস্তারিত</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - DPS -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="hero-banner">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="/public/images/services/slider2.png" alt="বিকাশ অ্যাপে ডিপিএস">
+                                </div>
+                                <div class="banner-text-wrapper">
+                                    <div class="banner-text-container">
+                                        <h2 class="banner-headline">বিকাশ অ্যাপে ডিপিএস, টাকা জমায় সারাদেশ!</h2>
+                                    </div>
+                                    <a href="#" class="btn-details">বিস্তারিত</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 - Bill Payment -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="hero-banner">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="/public/images/services/slider3.png" alt="বিকাশ বিল পেমেন্ট">
+                                </div>
+                                <div class="banner-text-wrapper">
+                                    <div class="banner-text-container">
+                                        <h2 class="banner-headline">বিকাশ-এ দেখুন বিল আসলো কতো, জমাও দিন সময়মতো!</h2>
+                                    </div>
+                                    <a href="#" class="btn-details">বিস্তারিত</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 - Cash Out -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="hero-banner">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="/public/images/services/slider4.png" alt="বিকাশ ক্যাশ আউট">
+                                </div>
+                                <div class="banner-text-wrapper">
+                                    <div class="banner-text-container">
+                                        <h2 class="banner-headline">প্রিয় ক্যাশ আউটে সুবিধা ডাবল</h2>
+                                    </div>
+                                    <a href="#" class="btn-details">বিস্তারিত</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 - Security -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <div class="hero-banner">
+                            <div class="banner-content">
+                                <div class="banner-image">
+                                    <img src="/public/images/services/slider5.png" alt="বিকাশ নিরাপত্তা">
+                                </div>
+                                <div class="banner-text-wrapper">
+                                    <div class="banner-text-container">
+                                        <h2 class="banner-headline">রুখবো প্রতারক, রাখবো টাকা নিরাপদ</h2>
+                                    </div>
+                                    <a href="#" class="btn-details">বিস্তারিত</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation and pagination -->
+            <div class="swiper-custom-navigation">
+                <div class="swiper-custom-prev">‹</div>
+                <div class="swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>
+                <div class="swiper-custom-next">›</div>
+                <div class="swiper-pause">‖</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Categories -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">সার্ভিসসমূহ</h2>
+            <div class="services-grid">
+                <!-- Updated Send Money link with clickable icon and text -->
+                <a href="sendMoney.html" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/send-money.png" alt="সেন্ড মানি">
+                    </div>
+                    <h3 class="service-category-title">সেন্ড মানি</h3>
+                </a>
+                <a href="#" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/mobile-recharge.png" alt="মোবাইল রিচার্জ">
+                    </div>
+                    <h3 class="service-category-title">মোবাইল রিচার্জ</h3>
+                </a>
+                <a href="#" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/cash-out.png" alt="ক্যাশ আউট">
+                    </div>
+                    <h3 class="service-category-title">ক্যাশ আউট</h3>
+                </a>
+                <a href="#" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/payment.png" alt="পেমেন্ট">
+                    </div>
+                    <h3 class="service-category-title">পেমেন্ট</h3>
+                </a>
+                <a href="#" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/add-money.png" alt="অ্যাড মানি">
+                    </div>
+                    <h3 class="service-category-title">অ্যাড মানি</h3>
+                </a>
+                <a href="#" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/savings.png" alt="সেভিংস">
+                    </div>
+                    <h3 class="service-category-title">সেভিংস</h3>
+                </a>
+                <a href="#" class="service-category">
+                    <div class="service-category-icon">
+                        <img src="/public/images/icons/loan.png" alt="লোন">
+                    </div>
+                    <h3 class="service-category-title">লোন</h3>
+                </a>
+                <a href="#" class="service-category more-link">
+                    <div class="more-icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <h3 class="service-category-title">আরও দেখুন</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="/public/images/features/security.png" alt="নিরাপদ ট্রানজেকশন">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">নিরাপদ ট্রানজেকশন</h3>
+                        <p class="feature-text">শক্তিশালী নিরাপত্তা ফিচার সহ আপনার সব লেনদেন সবসময় সুরক্ষিত রাখুন</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="/public/images/features/nationwide.png" alt="সারাদেশে কাভারেজ">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">সারাদেশে কাভারেজ</h3>
+                        <p class="feature-text">৬৪ জেলা জুড়ে ৩০০,০০০+ এর বেশি এজেন্ট এবং মার্চেন্টের মাধ্যমে সার্ভিস
+                            পান</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="/public/images/features/customer-service.png" alt="২৪/৭ কাস্টমার সার্ভিস">
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">২৪/৭ কাস্টমার সার্ভিস</h3>
+                        <p class="feature-text">১৬২৪৭ হেল্পলাইন নম্বরে কল করে যেকোনো সাহায্য নিন</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download App Section -->
+    <section class="download-app">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text">
+                    <h2 class="download-title">বিকাশ অ্যাপ ডাউনলোড করুন</h2>
+                    <p class="download-description">নিজের বিকাশ একাউন্ট এবং সব ফিচার নিয়ন্ত্রণ করুন আপনার হাতের মুঠোয়
+                    </p>
+                    <div class="download-buttons">
+                        <a href="#" class="app-download-btn">
+                            <img src="/public/images/play-store.png" alt="Google Play">
+                        </a>
+                        <a href="#" class="app-download-btn">
+                            <img src="/public/images/app-store.png" alt="App Store">
+                        </a>
+                    </div>
+                </div>
+                <div class="app-image">
+                    <img src="/public/images/app-mockup.png" alt="বিকাশ অ্যাপ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer HTML -->
+    <footer class="bkash-footer">
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-logo-section">
+                <div class="footer-logo">
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
+                </div>
+                <p class="footer-tagline">
+                    বিকাশ বাংলাদেশের মানুষকে মোবাইল ফোনের মাধ্যমে দ্রুত, নিরাপদে ও সহজে টাকা পাঠানো এবং পেমেন্ট সেবা
+                    প্রদান
+                    করে
+                </p>
+            </div>
+
+            <!-- App Download -->
+            <div class="footer-app-download">
+                <h3 class="footer-heading">বিকাশ অ্যাপ ডাউনলোড করুন</h3>
+                <div class="app-store-buttons">
+                    <a href="#" class="app-button">
+                        <img src="/public/images/google-play.png" alt="Google Play">
+                    </a>
+                    <a href="#" class="app-button">
+                        <img src="/public/images/app-store.png" alt="App Store">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links-grid">
+                <!-- Column 1: Services -->
+                <div class="footer-links-column">
+                    <h4 class="footer-column-title">সেবা</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#">ক্যাশপইন</a></li>
+                        <li><a href="#">হেল্প</a></li>
+                        <li><a href="#">কনটেন্ট সেল</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="footer-links-column">
+                    <h4 class="footer-column-title">কোম্পানি</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#">বিকাশ সম্পর্কে</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                        <li><a href="#">ক্যারিয়ার</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Banking -->
+                <div class="footer-links-column">
+                    <h4 class="footer-column-title">ব্যাংকা</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#">বিকাশ মার্চেন্ট লোন</a></li>
+                        <li><a href="#">বিকাশ সার্ভেট লোন</a></li>
+                        <li><a href="#">ডিজিটাল বেতন</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Other -->
+                <div class="footer-links-column">
+                    <h4 class="footer-column-title">অন্যান্য</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#">শর্তাবলি</a></li>
+                        <li><a href="#">সাধারণ জিজ্ঞাসা</a></li>
+                        <li><a href="#">নিরাপত্তা পরামর্শ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Certifications -->
+                <div class="footer-links-column">
+                    <h4 class="footer-column-title">সিকিউরিটি ও কমপ্লায়েন্স সার্টিফিকেটসমূহ</h4>
+                    <div class="certification-logos">
+                        <img src="/public/images/certification1.png" alt="Certification 1">
+                        <img src="/public/images/certification2.png" alt="Certification 2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Social -->
+            <div class="footer-bottom">
+                <div class="copyright-text">
+                    © 2025 bKash, সর্বস্বত্ব সংরক্ষিত
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Important: Load LoginJS.js first so its functions are available to script.js -->
+    <script src="/public/JS/LoginJS.js"></script>
+    <script src="/public/JS/script.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/login-button.js"></script>
+
+    <script>
+        document.querySelector(".login-btn").onclick = function (e) {
+            e.preventDefault();
+            showPopup("loginPopup");
+        };
+    </script>
+</body>
+
+</html>

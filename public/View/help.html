@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হেল্প - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html">
+                <span class="bangla-bkash">বিকাশ</span>
+                <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="Campaigns.html" class="nav-item">ক্যাশপইন</a>
+            <div class="nav-dropdown">
+                <button class="nav-item dropdown" id="servicesButton">
+                    সার্ভিসেস <i class="fas fa-angle-down"></i>
+                </button>
+                <div class="dropdown-menu" id="servicesMenu">
+                    <!-- Dropdown content will be added through JS -->
+                </div>
+            </div>
+            <a href="business.html" class="nav-item">বিজনেস</a>
+            <div class="nav-dropdown">
+                <button class="nav-item dropdown active" id="helpButton">
+                    হেল্প <i class="fas fa-angle-down"></i>
+                </button>
+                <!-- হেল্প ড্রপডাউন মেনু - ৫টি রো সহ -->
+                <div class="help-dropdown-menu">
+                    <div class="help-dropdown-container">
+                        <!-- বাম দিকের মেনু আইটেম কলাম -->
+                        <div class="help-menu-column">
+                            <!-- ১ম রো - ৪টি আইটেম -->
+                            <div class="help-menu-row">
+                                <a href="#" class="help-menu-item">
+                                    <span>গ্রাহক সেবা কেন্দ্র</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>সাধারণ জিজ্ঞাসা</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>রিসেন্ট শিপ</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>রিওয়ার্ডস</span>
+                                </a>
+                            </div>
+
+                            <!-- ২য় রো - ৪টি আইটেম -->
+                            <div class="help-menu-row">
+                                <a href="#" class="help-menu-item">
+                                    <span>ডিসকন্টিনিউড এজেন্ট</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>চার্জ এবং লিমিট</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>তথ্য হালনাগাদ</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>নিরাপত্তা পরামর্শ</span>
+                                </a>
+                            </div>
+
+                            <!-- ৩য় রো - ৪টি আইটেম -->
+                            <div class="help-menu-row">
+                                <a href="#" class="help-menu-item">
+                                    <span>ডিসকন্টিনিউড ডিস্ট্রিবিউটর</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>একাউন্ট ম্যানেজ</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>জমানো টাকার উপর ইন্টারেস্ট</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>কমপ্লাইন্ট সেল</span>
+                                </a>
+                            </div>
+
+                            <!-- ৪র্থ রো - ৪টি আইটেম -->
+                            <div class="help-menu-row">
+                                <a href="#" class="help-menu-item">
+                                    <span>যোগাযোগ করুন</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>এইচএসবিসি কার্ড</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>প্রতারণা এড়িয়ে চলুন</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>বিকাশ টু ব্যাংক</span>
+                                </a>
+                            </div>
+
+                            <!-- ৫ম রো - ৩টি আইটেম -->
+                            <div class="help-menu-row">
+                                <a href="#" class="help-menu-item">
+                                    <span>সিকিউরিটি ইডেনটিফিকেশন</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>ব্যাংক টু বিকাশ</span>
+                                </a>
+                                <a href="#" class="help-menu-item">
+                                    <span>ভিডিও টিউটোরিয়াল</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ডান দিকের কুইক লিংক কলাম -->
+                        <div class="help-quick-links-column">
+                            <a href="#" class="help-quick-link">
+                                <i class="far fa-comment-dots"></i>
+                                <span>লাইভ চ্যাট</span>
+                            </a>
+                            <a href="tel:16247" class="help-quick-link">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>হেল্প লাইন ১৬২৪৭</span>
+                            </a>
+                            <a href="#" class="help-quick-link">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>ই-অ্যাপয়েন্টমেন্ট</span>
+                            </a>
+                            <a href="#" class="help-quick-link">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>বিকাশ ম্যাপ</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="nav-item">ক্যারিয়ার</a>
+            <a href="#" class="nav-item">পরিচিতি</a>
+            <a href="#" class="nav-item">রুম</a>
+            <a href="#" class="nav-item">স্টুডেন্ট</a>
+            <button class="app-btn">বিকাশ অ্যাপ</button>
+        </nav>
+
+        <div class="right-nav">
+            <div class="language">
+                <span class="lang-btn">Eng</span>
+                <span class="separator">|</span>
+                <span class="lang-btn active-lang">বাংলা</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="help-hero-banner">
+        <div class="help-hero-content">
+            <div class="help-img-container">
+                <img src="/public/images/help1.jpg" alt="Customer Service" class="help-hero-img">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Help Service Cards -->
+    <section class="help-services-section">
+        <div class="container">
+            <h2 class="section-title">আপনাকে সেবা প্রদানে আমরা আছি</h2>
+
+            <div class="help-services-grid">
+                <!-- Card 1 -->
+                <div class="help-card">
+                    <div class="help-card-icon">
+                        <img src="/public/images/help3.jpg" alt="গ্রাহক সেবা কেন্দ্র">
+                    </div>
+                    <h3 class="help-card-title">গ্রাহক সেবা কেন্দ্র</h3>
+                    <p class="help-card-text">বিকাশ সংক্রান্ত যেকোনো সেবা পেতে গ্রাহক সেবা কেন্দ্রে আসুন</p>
+                    <a href="#" class="help-card-link">বিস্তারিত জানুন</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="help-card">
+                    <div class="help-card-icon">
+                        <img src="/public/images/help4.jpg" alt="প্রতারণা এড়িয়ে চলুন">
+                    </div>
+                    <h3 class="help-card-title">প্রতারণা এড়িয়ে চলুন</h3>
+                    <p class="help-card-text">বিকাশ সংক্রান্ত যেকোনো প্রতারণা এড়াতে এই সতর্কতামূলক পদক্ষেপগুলো মেনে
+                        চলুন</p>
+                    <a href="#" class="help-card-link">বিস্তারিত জানুন</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="help-card">
+                    <div class="help-card-icon">
+                        <img src="/public/images/help5.jpg" alt="চার্জ ক্যালকুলেটর">
+                    </div>
+                    <h3 class="help-card-title">চার্জ ক্যালকুলেটর</h3>
+                    <p class="help-card-text">বিকাশ সেবাসমূহের চার্জ হিসাব করুন</p>
+                    <a href="#" class="help-card-link">বিস্তারিত জানুন</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="help-card">
+                    <div class="help-card-icon">
+                        <img src="/public/images/help6.jpg" alt="বিকাশ সম্পর্কিত সাধারণ জিজ্ঞাসা">
+                    </div>
+                    <h3 class="help-card-title">বিকাশ সম্পর্কিত সাধারণ জিজ্ঞাসা</h3>
+                    <p class="help-card-text">বিকাশ সংক্রান্ত ব্যবহার বিষয়ক বিস্তারিত প্রশ্নের উত্তর জানুন</p>
+                    <a href="#" class="help-card-link">বিস্তারিত জানুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Center Contact Section -->
+    <!-- Updated Contact Section - Matches the image -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-image-container">
+                    <img src="/public/images/help7.jpg" alt="কাস্টমার কেয়ার" class="contact-image">
+                </div>
+                <div class="contact-info-container">
+                    <h2 class="contact-title">২৪/৭ আপনার সেবায়:</h2>
+                    <p class="contact-description">
+                        গ্রাহকসেবা প্রতিনিধিরা দিনরাত ২৪ ঘণ্টা 16247, লাইভ চ্যাট এবং ফেসবুক-এ সক্রিয় রয়েছে। এছাড়া
+                        e-Appointment নিন অথবা ই-মেইল করুন <a href="mailto:support@bkash.com">support@bkash.com</a>-এ
+                    </p>
+
+                    <div class="contact-buttons">
+                        <a href="tel:16247" class="contact-btn phone-btn">
+                            <i class="fas fa-phone-alt"></i> 16247
+                        </a>
+                        <a href="#" class="contact-btn appointment-btn">
+                            <i class="far fa-calendar-alt"></i> ই-অ্যাপয়েন্টমেন্ট
+                        </a>
+                        <a href="#" class="contact-btn chat-btn">
+                            <i class="far fa-comment-dots"></i> লাইভ চ্যাট
+                        </a>
+                        <a href="#" class="contact-btn map-btn">
+                            <i class="fas fa-map-marker-alt"></i> বিকাশ ম্যাপ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charges and Limits Section -->
+    <section class="charges-section">
+        <div class="container">
+            <h2 class="section-title">বিকাশ চার্জ, লিমিট এবং ইন্টারেস্ট</h2>
+            <div class="charges-grid">
+                <div class="charge-card">
+                    <div class="charge-icon">
+                        <img src="/public/images/help8.jpg" alt="লিমিট">
+                    </div>
+                    <h3 class="charge-title">লিমিট</h3>
+                    <p class="charge-text">বিকাশ পেমেন্টের চার্জ এবং দৈনিক বার্ষিক লেনদেনের লিমিট জানুন</p>
+                </div>
+
+                <div class="charge-card">
+                    <div class="charge-icon">
+                        <img src="/public/images/help9.jpg" alt="জমানো টাকার উপর ইন্টারেস্ট">
+                    </div>
+                    <h3 class="charge-title">জমানো টাকার উপর ইন্টারেস্ট</h3>
+                    <p class="charge-text">বিকাশ একাউন্টে জমানো টাকার উপর ইন্টারেস্ট সম্পর্কে জানুন</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Topics Section -->
+    <section class="help-topics-section">
+        <div class="container">
+            <h2 class="section-title">সারাদেশে বিকাশ</h2>
+            <div class="help-topics-grid">
+                <div class="topic-item">
+                    <div class="topic-icon">
+                        <img src="/public/images/help/account.png" alt="একাউন্ট তৈরি">
+                    </div>
+                    <span class="topic-name">একাউন্ট তৈরি</span>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-icon">
+                        <img src="/public/images/help/send-money.png" alt="সেন্ড মানি">
+                    </div>
+                    <span class="topic-name">সেন্ড মানি</span>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-icon">
+                        <img src="/public/images/help/cash-out.png" alt="ক্যাশ আউট">
+                    </div>
+                    <span class="topic-name">ক্যাশ আউট</span>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-icon">
+                        <img src="/public/images/help/payment.png" alt="পেমেন্ট">
+                    </div>
+                    <span class="topic-name">পেমেন্ট</span>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-icon">
+                        <img src="/public/images/help/recharge.png" alt="রিচার্জ">
+                    </div>
+                    <span class="topic-name">রিচার্জ</span>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-icon">
+                        <img src="/public/images/help/blocked.png" alt="রিস্ট্রিকশন্স">
+                    </div>
+                    <span class="topic-name">রিস্ট্রিকশন্স</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">পরিচিতি</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#">আমাদের ম্যানেজমেন্ট</a></li>
+                        <li><a href="#">বিকাশ ইনোভেশন</a></li>
+                        <li><a href="#">কেন বিকাশ?</a></li>
+                        <li><a href="#">ক্যারিয়ার</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">সার্ভিসসমূহ</h3>
+                    <ul class="footer-links">
+                        <li><a href="sendMoney.html">সেন্ড মানি</a></li>
+                        <li><a href="#">ক্যাশ আউট</a></li>
+                        <li><a href="#">পেমেন্ট</a></li>
+                        <li><a href="#">মোবাইল রিচার্জ</a></li>
+                        <li><a href="#">অ্যাড মানি</a></li>
+                        <li><a href="#">সমস্ত সার্ভিস</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">সাহায্য</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="active-link">হেল্প সেন্টার</a></li>
+                        <li><a href="#">লিমিট ও চার্জ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">১৬২৪৭</a></li>
+                        <li><a href="#">নিরাপত্তা</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">আমাদের সাথে থাকুন</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="app-download">
+                        <h4 class="download-title">অ্যাপ ডাউনলোড করুন</h4>
+                        <div class="store-links">
+                            <a href="#" class="store-link">
+                                <img src="/public/images/play-store-sm.png" alt="Google Play">
+                            </a>
+                            <a href="#" class="store-link">
+                                <img src="/public/images/app-store-sm.png" alt="App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© ২০২৫ বিকাশ লিমিটেড। সর্বসত্ব সংরক্ষিত।</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">প্রাইভেসি পলিসি</a>
+                    <a href="#">টার্মস অফ সার্ভিস</a>
+                    <a href="#">সাইটম্যাপ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <script src="/public/JS/script.js"></script>
+    <script src="/public/JS/helpJS.js"></script>
+</body>
+
+</html>

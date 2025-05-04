@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bKash Chat Interface</title>
+    <link rel="stylesheet" href="/public/CSS/chat.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Chat Button that triggers the chat interface -->
+    <button id="bkash-chat-button" class="bkash-chat-trigger">
+        <i class="far fa-comment-dots"></i>
+        <span>Chat with us</span>
+    </button>
+
+    <!-- bKash Chat Interface (initially hidden) -->
+    <div id="bkash-chat-overlay" class="bkash-chat-overlay hidden">
+        <div class="bkash-chat-window">
+            <!-- Chat Header -->
+            <div class="bkash-chat-header">
+                <div class="bkash-chat-logo">
+                    <img src="https://www.bkash.com/sites/default/files/favicon_pink_0.png" alt="bKash Logo">
+                    <span>bKash Limited</span>
+                </div>
+                <div class="header-actions">
+                    <button class="minimize-btn"><i class="fas fa-minus"></i></button>
+                    <button class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+
+            <!-- Chat Body where messages appear -->
+            <div class="bkash-chat-body" id="bkash-chat-body">
+                <!-- Messages will be added here dynamically -->
+            </div>
+
+            <!-- Chat Input Area -->
+            <div class="bkash-chat-input">
+                <button class="attachment-btn"><i class="fas fa-plus"></i></button>
+                <input type="text" placeholder="Type your message and press enter" class="message-input"
+                    id="bkash-message-input">
+                <button class="emoji-btn"><i class="far fa-smile"></i></button>
+                <button class="send-btn" id="bkash-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/JS/chatJS.js"></script>
+</body>
+
+</html>

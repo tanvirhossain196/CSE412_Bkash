@@ -1,0 +1,353 @@
+/* Updated bKash Chat Interface Styles */
+:root {
+  --bkash-primary: #e2146c;
+  --bkash-primary-dark: #c01359;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --bg-light: #f5f5f5;
+  --bg-white: #ffffff;
+  --border-light: #e0e0e0;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Demo bKash Bundle Page */
+.bkash-bundle-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Chat Trigger Button */
+.bkash-chat-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--bkash-primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(226, 20, 108, 0.3);
+  transition: all 0.3s ease;
+}
+
+.bkash-chat-trigger:hover {
+  background-color: var(--bkash-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(226, 20, 108, 0.4);
+}
+
+.bkash-chat-trigger i {
+  font-size: 18px;
+}
+
+/* Chat Overlay */
+.bkash-chat-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 400px;
+  height: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.bkash-chat-overlay.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+/* Chat Window */
+.bkash-chat-window {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
+}
+
+/* Chat Header */
+.bkash-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bkash-primary);
+  padding: 12px 15px;
+  color: white;
+}
+
+.bkash-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bkash-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 2px;
+  background-color: white;
+}
+
+.bkash-logo-container span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.minimize-btn,
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chat Body */
+.bkash-chat-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #f5f5f5;
+}
+
+/* Chat Messages */
+.chat-message {
+  margin-bottom: 15px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.bot .message-container {
+  align-items: flex-start;
+}
+
+.user .message-container {
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.message-bubble {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2px;
+}
+
+.bot .message-bubble {
+  background-color: white;
+  color: #333;
+  border-bottom-left-radius: 5px;
+}
+
+.user .message-bubble {
+  background-color: var(--bkash-primary);
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* Language Options */
+.language-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.lang-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--bkash-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.english {
+  background-color: var(--bkash-primary);
+  color: white;
+}
+
+.lang-btn.bangla {
+  background-color: white;
+  color: var(--bkash-primary);
+}
+
+/* Chat Input Area */
+.bkash-chat-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background-color: white;
+  border-top: 1px solid #eee;
+}
+
+.input-wrapper {
+  flex: 1;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bkash-chat-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.attachment-btn,
+.emoji-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: #999;
+  cursor: pointer;
+}
+
+.send-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--bkash-primary);
+  color: white;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  padding: 12px 16px;
+  background-color: white;
+  border-radius: 18px;
+  border-bottom-left-radius: 5px;
+  width: fit-content;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.typing-indicator span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: typing 1s infinite alternate;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+@keyframes typing {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .bkash-chat-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .bkash-chat-window {
+    border-radius: 0;
+  }
+}

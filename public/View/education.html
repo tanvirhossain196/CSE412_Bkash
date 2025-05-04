@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>এডুকেশন ফি - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/CSS/education.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/AllHeaderSyeles.css">
+
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+
+                </div>
+
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <!-- <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i> -->
+                </div>
+
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Education Fee Section -->
+    <section class="education-fee-section">
+        <div class="container">
+            <div class="education-fee-container">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="title-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="header-title">
+                            <h3>এডুকেশন ফি</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-fee-form">
+                    <!-- Main Selection Section -->
+                    <div class="main-selection-section" id="mainSelectionSection">
+                        <div class="section-title">প্রতিষ্ঠান খুঁজুন</div>
+                        <div class="search-container">
+                            <div class="search-input-wrapper">
+                                <span class="search-icon"><i class="fas fa-search"></i></span>
+                                <input type="text" placeholder="প্রতিষ্ঠানের নাম বা ধরন দিন" class="search-input">
+                                <button class="search-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="category-title">ধুবে দেখুন</div>
+                        <div class="category-grid">
+                            <div class="category-item" id="schoolOption">
+                                <div class="category-icon">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div class="category-name">স্কুল</div>
+                            </div>
+
+                            <div class="category-item" id="collegeOption">
+                                <div class="category-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="category-name">কলেজ</div>
+                            </div>
+
+                            <div class="category-item" id="universityOption">
+                                <div class="category-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="category-name">ইউনিভার্সিটি</div>
+                            </div>
+
+                            <div class="category-item" id="trainingOption">
+                                <div class="category-icon">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="category-name">ট্রেনিং</div>
+                            </div>
+
+                            <div class="category-item" id="otherOption">
+                                <div class="category-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="category-name">অন্যান্য</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+
+    <!-- JavaScript -->
+    <script src="/public/JS/educationJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+
+</body>
+
+</html>

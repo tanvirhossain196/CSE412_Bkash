@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ - পেমেন্ট</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/payment.css">
+    <link rel="stylesheet" href="/public/CSS/AllHeaderSyeles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+
+                </div>
+
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Merchant Selection Section -->
+    <section class="merchant-selection-section">
+        <div class="container">
+            <div class="merchant-selection-container">
+                <!-- Header -->
+                <div class="selection-header">
+                    <div class="header-content">
+                        <div class="back-button">
+                            <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                        </div>
+                        <div class="header-title">
+                            <h3>পেমেন্ট</h3>
+                        </div>
+                        <div class="header-icon">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-section">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="মার্চেন্ট এর নাম্বার বা নাম দিন" class="search-input">
+                    </div>
+                </div>
+                
+                <!-- Subscription Section -->
+                <div class="subscription-section">
+                    <div class="subscription-container">
+                        <div class="subscription-icon">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <div class="subscription-text">
+                            <div class="subscription-title">সাবস্ক্রিপশন</div>
+                            <div class="subscription-desc">সাবস্ক্রিপশন ম্যানেজ করুন</div>
+                        </div>
+                        <div class="subscription-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Merchants -->
+                <div class="recent-merchants-section">
+                    <h4 class="section-title">সাম্প্রতিক</h4>
+                    <div class="merchants-list">
+                        <!-- Merchant 1 -->
+                        <div class="merchant-item" data-merchant="TechPark" data-number="01896506676">
+                            <div class="merchant-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="merchant-info">
+                                <div class="merchant-name">TechPark</div>
+                                <div class="merchant-number">01896506676</div>
+                            </div>
+                        </div>
+
+                        <!-- Merchant 2 -->
+                        <div class="merchant-item" data-merchant="Meena Bazar - Aftabnagar" data-number="01844644236">
+                            <div class="merchant-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="merchant-info">
+                                <div class="merchant-name">Meena Bazar - Aftabnagar</div>
+                                <div class="merchant-number">01844644236</div>
+                            </div>
+                        </div>
+
+                        <!-- Merchant 3 -->
+                        <div class="merchant-item" data-merchant="Zabira Pharma and Departmental Store"
+                            data-number="01960654365">
+                            <div class="merchant-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="merchant-info">
+                                <div class="merchant-name">Zabira Pharma and Departmental Store</div>
+                                <div class="merchant-number">01960654365</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <script src="/public/JS/paymentJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+</body>
+
+</html>

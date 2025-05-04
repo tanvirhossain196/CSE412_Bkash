@@ -1,0 +1,1338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  background-color: #e2146c;
+  padding: 8px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.bangla-bkash {
+  color: white;
+  font-size: 24px;
+  margin-right: 5px;
+  letter-spacing: -0.5px;
+}
+
+.logo {
+  height: 64px;
+}
+
+/* Add Money Form Styles */
+.add-money-form-section {
+  padding: 80px 0 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.add-money-form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+/* Gradient Header */
+.form-header-gradient {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-header-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+}
+
+.header-content {
+  position: relative;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-icon i {
+  color: white;
+  font-size: 18px;
+}
+
+.header-title h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.balance-container {
+  text-align: right;
+}
+
+.balance-hidden,
+.balance-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.balance-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.dots-container,
+.amount-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 5px 8px;
+}
+
+.balance-dots {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 600;
+}
+
+.balance-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.balance-toggle-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 3px;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.balance-toggle-btn:hover {
+  color: white;
+}
+
+/* Form Content */
+.add-money-form {
+  padding: 20px;
+}
+
+/* Source Selection Section */
+.source-selection-section {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.source-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.source-option {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.source-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-color: #e2146c;
+}
+
+.source-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2146c;
+  margin-right: 15px;
+}
+
+.source-icon i {
+  font-size: 24px;
+}
+
+.source-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+.source-indicator {
+  margin-left: 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+.source-badge {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e2146c;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Bank to bKash Section */
+.bank-to-bkash-section {
+  display: none;
+}
+
+.add-money-source-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.source-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.option-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.option-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.option-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.option-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+.right-icon {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Bank List Section */
+.bank-list-section {
+  display: none;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 4px 15px;
+  border: 1px solid #ebebeb;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.search-input-wrapper:focus-within {
+  border-color: #e2146c;
+  box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
+  background-color: white;
+}
+
+.search-icon {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.bank-category {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.bank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bank-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.bank-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.bank-logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.bank-logo img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.bank-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+.link-icon {
+  color: #e2146c;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.has-badge::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e2146c;
+  display: inline-block;
+  margin-left: 10px;
+  position: absolute;
+  right: 40px;
+}
+
+/* Bank Account Detail Section */
+.bank-account-section {
+  display: none;
+}
+
+.bank-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.selected-bank-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.selected-bank-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.selected-bank-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.account-input-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.account-input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.account-input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e2146c;
+  font-size: 18px;
+}
+
+.account-input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  outline: none;
+  font-size: 15px;
+  background-color: #f8f8f8;
+}
+
+.account-input::placeholder {
+  color: #aaa;
+}
+
+.info-box {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.info-icon {
+  color: #e2146c;
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.info-link {
+  color: #e2146c;
+  text-decoration: none;
+}
+
+.terms-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Card to bKash Section */
+.card-to-bkash-section {
+  display: none;
+}
+
+.tab-container {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tab-item {
+  flex: 1;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-item.active {
+  background-color: white;
+  color: #e2146c;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.account-section-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.account-info {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.account-number {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.min-amount-text {
+  font-size: 14px;
+  color: #777;
+  margin-top: 15px;
+}
+
+/* Card Type Selection */
+.card-type-section {
+  display: none;
+}
+
+.card-type-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card-types {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-type-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #eee;
+}
+
+.card-type-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-type-logo {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.card-type-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card-type-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+}
+
+/* Bottom Action Buttons */
+.action-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 10px;
+}
+
+.proceed-btn {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  color: white;
+}
+
+.proceed-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(226, 20, 108, 0.2);
+}
+
+.cancel-btn {
+  background-color: #f1f1f1;
+  color: #666;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons .action-btn {
+  flex: 1;
+}
+
+/* Bottom Sheet */
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 25px 20px;
+  display: none;
+}
+
+.bottom-sheet.show {
+  transform: translateY(0);
+  display: block;
+}
+
+.sheet-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.sheet-content {
+  margin-bottom: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .add-money-form-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Additional styles for Card to bKash popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease forwards;
+  backdrop-filter: blur(3px);
+}
+
+.popup-overlay.show {
+  display: flex; /* Changed from block to flex for better centering */
+}
+
+.popup-container {
+  width: 95%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto; /* Center horizontally */
+  opacity: 0;
+  transform: scale(0.95);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-container.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.popup-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Back Button */
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* bKash Logo */
+.bkash-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Override some existing styles to make it work better as a popup */
+.popup-container .add-money-form {
+  padding: 20px;
+}
+
+.popup-container .form-header-gradient {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Additional animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Make sure the card section is properly styled in the popup */
+#cardToBkashPopupSection {
+  display: block !important;
+  padding-top: 0;
+}
+
+/* Fix for any nested elements */
+#cardToBkashPopupSection .tab-container,
+#cardToBkashPopupSection .account-info,
+#cardToBkashPopupSection .account-input-container,
+#cardToBkashPopupSection .min-amount-text,
+#cardToBkashPopupSection .action-btn {
+  width: 100%;
+}
+
+/* Card Preview */
+.card-preview {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1.6 / 1;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card-chip {
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(135deg, #f5d182 0%, #e4b84a 100%);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card-number-preview {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-label {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.card-name-preview,
+.card-expiry-preview {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.card-brand-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+/* Form Styles */
+.card-form-container {
+  padding: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #e2146c;
+}
+
+/* Card type actions */
+.form-actions,
+.otp-actions,
+.pin-actions,
+.success-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-cancel,
+.btn-proceed,
+.btn-resend,
+.btn-verify,
+.btn-confirm,
+.btn-download,
+.btn-done {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+}
+
+.btn-cancel {
+  background-color: #f1f1f1;
+  color: #666;
+}
+
+.btn-proceed,
+.btn-verify,
+.btn-confirm,
+.btn-done {
+  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  color: white;
+}
+
+.btn-resend {
+  background-color: white;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.btn-download {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.btn-resend:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* OTP Verification */
+.otp-verification-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.otp-icon,
+.pin-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: #e2146c;
+  font-size: 24px;
+}
+
+.otp-message,
+.pin-message {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.otp-input-group,
+.pin-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.otp-input,
+.pin-input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.otp-input:focus,
+.pin-input:focus {
+  outline: none;
+  border-color: #e2146c;
+}
+
+.otp-timer {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* PIN Verification */
+.pin-verification-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Success Container */
+.success-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 32px;
+}
+
+.success-message {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.success-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e2146c;
+  margin-bottom: 5px;
+}
+
+.success-info {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.transaction-details {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #666;
+}
+
+.detail-value {
+  font-weight: 500;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.loading-overlay.show {
+  opacity: 1;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #e2146c;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-message {
+  color: #333;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Message */
+.error-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+  transition: transform 0.3s ease;
+}
+
+.error-message.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Notification Message */
+.notification-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+  transition: transform 0.3s ease;
+}
+
+.notification-message.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Transaction Amount Display */
+.transaction-amount-display {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.amount-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.amount-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e2146c;
+}
+
+/* Form Styles for Card Input */
+.card-form-container {
+  padding: 20px 0;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 480px) {
+  .popup-container {
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .card-preview {
+    max-width: 280px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .otp-input,
+  .pin-input {
+    width: 35px;
+    height: 35px;
+  }
+
+  .success-message {
+    font-size: 20px;
+  }
+
+  .success-amount {
+    font-size: 24px;
+  }
+
+  .form-actions,
+  .otp-actions,
+  .pin-actions,
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-proceed,
+  .btn-resend,
+  .btn-verify,
+  .btn-confirm,
+  .btn-download,
+  .btn-done {
+    width: 100%;
+  }
+}

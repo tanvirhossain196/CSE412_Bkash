@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ টু ব্যাংক - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/CSS/bkashToBank.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/AllHeaderSyeles.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+    
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+    
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+    
+                </div>
+    
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+    
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- bKash to Bank Section -->
+    <section class="bkash-to-bank-section">
+        <div class="container">
+            <div class="bkash-to-bank-container">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="title-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="header-title">
+                            <h3>বিকাশ টু ব্যাংক</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bkash-to-bank-form">
+                    <!-- Main Account Selection Section -->
+                    <div class="account-selection-section" id="accountSelectionSection">
+                        <div class="section-title">Select your Transfer Method</div>
+                        <div class="account-options">
+                            <div class="account-option" id="bankAccountOption">
+                                <div class="account-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="account-name">Bank Account <span class="account-badge"></span></div>
+                                <div class="account-indicator">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+
+                            <div class="account-option" id="debitCardOption">
+                                <div class="account-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="account-name">Visa Debit Card</div>
+                                <div class="account-indicator">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank List Section -->
+                    <div class="bank-list-section" id="bankListSection">
+                        <div class="back-button" id="backToBankMain">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </div>
+
+                        <div class="search-container">
+                            <div class="search-input-wrapper">
+                                <span class="search-icon"><i class="fas fa-search"></i></span>
+                                <input type="text" placeholder="Enter Bank Name" class="search-input">
+                                <button class="search-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bank-category">All Banks</div>
+                        <div class="bank-list">
+                            <div class="bank-item has-badge">
+                                <div class="bank-logo">
+                                    <img src="/public/images/banks/agrani-bank.png" alt="Agrani Bank">
+                                </div>
+                                <div class="bank-name">Agrani Bank</div>
+                                <div class="link-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
+
+                            <div class="bank-item has-badge">
+                                <div class="bank-logo">
+                                    <img src="/public/images/banks/ab-bank.png" alt="AB Bank Limited">
+                                </div>
+                                <div class="bank-name">AB Bank Limited</div>
+                                <div class="link-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
+
+                            <div class="bank-item">
+                                <div class="bank-logo">
+                                    <img src="/public/images/banks/bdbl.png" alt="Bangladesh Development Bank Limited">
+                                </div>
+                                <div class="bank-name">Bangladesh Development Bank Limited</div>
+                                <div class="link-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
+
+                            <div class="bank-item has-badge">
+                                <div class="bank-logo">
+                                    <img src="/public/images/banks/community-bank.png" alt="Community Bank Bangladesh">
+                                </div>
+                                <div class="bank-name">Community Bank Bangladesh</div>
+                                <div class="link-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
+
+                            <div class="bank-item has-badge">
+                                <div class="bank-logo">
+                                    <img src="/public/images/banks/dhaka-bank.png" alt="DHAKA BANK LIMITED">
+                                </div>
+                                <div class="bank-name">DHAKA BANK LIMITED</div>
+                                <div class="link-icon">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="/public/JS/bkashToBankJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+</body>
+
+</html>

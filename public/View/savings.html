@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ - সেভিংস</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/savings.css">
+    <link rel="stylesheet" href="/public/CSS/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+    
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+    
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+    
+                </div>
+    
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+    
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Savings Main Section -->
+    <section class="savings-section">
+        <div class="container">
+            <div class="savings-container">
+                <!-- Header -->
+                <div class="savings-header">
+                    <div class="header-content">
+                        <div class="back-button">
+                            <a href="#"><i class="fas fa-piggy-bank"></i></a>
+                        </div>
+                        <div class="header-title">
+                            <h3>সেভিংস</h3>
+                        </div>
+                        <div class="header-icon">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Savings Content -->
+                <div class="savings-main-content">
+                    <div class="savings-action">
+                        <div class="savings-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <button class="new-savings-button">নতুন সেভিংস খুলুন</button>
+                    </div>
+
+                    <div class="savings-options">
+                        <div class="savings-option">
+                            <div class="option-icon">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <div class="option-text">
+                                <p>রিটর্ন ও আয়কর সনদ</p>
+                            </div>
+                            <div class="option-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="savings-option">
+                            <div class="option-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="option-text">
+                                <p>সতর্কবলি ও সাধারণ জিজ্ঞাসা</p>
+                            </div>
+                            <div class="option-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <script src="/public/JS/savingsJS.js"></script>
+    <script src="/public/JS/savingsETin.js"></script>
+    <script src="/public/JS/savingsFAQ.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+</body>
+
+</html>

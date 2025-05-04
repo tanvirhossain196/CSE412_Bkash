@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মাইক্রোফাইন্যান্স - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/CSS/microfinance.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/main.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+    
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+    
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+    
+                </div>
+    
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+    
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Microfinance Section -->
+    <section class="microfinance-section">
+        <div class="container">
+            <div class="microfinance-container" id="mainContainer">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="back-button">
+                            <img src="/public/images/icons/back-icon.png" alt="Back"
+                                style="height: 24px; width: 24px; object-fit: contain;">
+                        </div>
+                        <div class="header-title">
+                            <h3>মাইক্রোফাইন্যান্স</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="microfinance-content">
+                    <!-- Search Section -->
+                    <div class="search-section">
+                        <h4>প্রতিষ্ঠান খুঁজুন</h4>
+                        <div class="search-input-container">
+                            <input type="text" placeholder="প্রতিষ্ঠানের নাম লিখুন" class="search-input">
+                            <div class="search-icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Receipt Section -->
+                    <div class="receipt-section">
+                        <div class="receipt-icon-container">
+                            <img src="/public/images/icons/receipt-icon.png" alt="রিসিট" class="receipt-icon">
+                        </div>
+                        <div class="receipt-text">রিসিট</div>
+                    </div>
+
+                    <!-- Organizations List Header -->
+                    <div class="list-header">
+                        <h4>প্রতিষ্ঠানের তালিকা</h4>
+                    </div>
+
+                    <!-- Organizations List -->
+                    <div class="organization-list">
+                        <!-- Organization 1 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="/public/images/microfinance/brac.png" alt="ব্র্যাক">
+                            </div>
+                            <div class="organization-name">ব্র্যাক</div>
+                        </div>
+
+                        <!-- Organization 2 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="/public/images/microfinance/buro.png" alt="ব্যুরো বাংলাদেশ">
+                            </div>
+                            <div class="organization-name">ব্যুরো বাংলাদেশ</div>
+                        </div>
+
+                        <!-- Organization 3 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/uddipan.png"
+                                    alt="ইউনাইটেড ডেভেলপমেন্ট ইনিসিয়েটিভস ফর প্রোগ্রামড অ্যাকশনস (উদ্দীপন)">
+                            </div>
+                            <div class="organization-name">ইউনাইটেড ডেভেলপমেন্ট ইনিসিয়েটিভস ফর প্রোগ্রামড অ্যাকশনস
+                                (উদ্দীপন)</div>
+                        </div>
+
+                        <!-- Organization 4 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/shakti.png" alt="শক্তি ফাউন্ডেশন">
+                            </div>
+                            <div class="organization-name">শক্তি ফাউন্ডেশন</div>
+                        </div>
+
+                        <!-- Organization 5 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/cdip.png"
+                                    alt="সেন্টার ফর ডেভেলপমেন্ট ইনোভেশন এন্ড প্র্যাকটিসেস (সিডিপি)">
+                            </div>
+                            <div class="organization-name">সেন্টার ফর ডেভেলপমেন্ট ইনোভেশন এন্ড প্র্যাকটিসেস (সিডিপি)
+                            </div>
+                        </div>
+
+                        <!-- Organization 6 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/padakhep.png" alt="পদক্ষেপ মানবিক উন্নয়ন কেন্দ্র">
+                            </div>
+                            <div class="organization-name">পদক্ষেপ মানবিক উন্নয়ন কেন্দ্র</div>
+                        </div>
+
+                        <!-- Organization 7 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/basa.png" alt="বাসা ফাউন্ডেশন">
+                            </div>
+                            <div class="organization-name">বাসা ফাউন্ডেশন</div>
+                        </div>
+
+                        <!-- Organization 8 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/ambala.png" alt="আমবালা ফাউন্ডেশন">
+                            </div>
+                            <div class="organization-name">আমবালা ফাউন্ডেশন</div>
+                        </div>
+
+                        <!-- Organization 9 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/ids.png" alt="ইড বাংলাদেশ">
+                            </div>
+                            <div class="organization-name">ইড বাংলাদেশ</div>
+                        </div>
+
+                        <!-- Organization 10 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/muslim-aid.png" alt="মুসলিম এইড বাংলাদেশ">
+                            </div>
+                            <div class="organization-name">মুসলিম এইড বাংলাদেশ</div>
+                        </div>
+
+                        <!-- Organization 11 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/popi.png"
+                                    alt="পিপলস ওরিয়েন্টেড প্রোগ্রাম ইমপ্লিমেন্টেশন (পপি)">
+                            </div>
+                            <div class="organization-name">পিপলস ওরিয়েন্টেড প্রোগ্রাম ইমপ্লিমেন্টেশন (পপি)</div>
+                        </div>
+
+                        <!-- Organization 12 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/sss.png" alt="সোসাইটি ফর সোশাল সার্ভিস (এসএসএস)">
+                            </div>
+                            <div class="organization-name">সোসাইটি ফর সোশাল সার্ভিস (এসএসএস)</div>
+                        </div>
+
+                        <!-- Organization 13 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/rds.png" alt="রুরাল ডেভেলপমেন্ট সংস্থা (আরডিএস)">
+                            </div>
+                            <div class="organization-name">রুরাল ডেভেলপমেন্ট সংস্থা (আরডিএস)</div>
+                        </div>
+
+                        <!-- Organization 14 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/gjus.png" alt="গ্রামীণ জন উন্নয়ন সংস্থা (জিজেইউএস)">
+                            </div>
+                            <div class="organization-name">গ্রামীণ জন উন্নয়ন সংস্থা (জিজেইউএস)</div>
+                        </div>
+
+                        <!-- Organization 15 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/bff.png" alt="বাংলাদেশ ফেলোশীপ ফাউন্ডেশন (বিএফএফ)">
+                            </div>
+                            <div class="organization-name">বাংলাদেশ ফেলোশীপ ফাউন্ডেশন (বিএফএফ)</div>
+                        </div>
+
+                        <!-- Organization 16 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/disa.png"
+                                    alt="ডেভেলপমেন্ট ইনিসিয়েটিভ ফর সোশাল এডভালমেন্ট (ডিসা)">
+                            </div>
+                            <div class="organization-name">ডেভেলপমেন্ট ইনিসিয়েটিভ ফর সোশাল এডভালমেন্ট (ডিসা)</div>
+                        </div>
+
+                        <!-- Organization 17 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/dpks.png" alt="ডিপিকেএ ফাউন্ডেশন">
+                            </div>
+                            <div class="organization-name">ডিপিকেএ ফাউন্ডেশন</div>
+                        </div>
+
+                        <!-- Organization 18 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/udps.png"
+                                    alt="উত্তরা ডেভেলপমেন্ট প্রোগ্রাম সোসাইটি (ইউডিপিএস)">
+                            </div>
+                            <div class="organization-name">উত্তরা ডেভেলপমেন্ট প্রোগ্রাম সোসাইটি (ইউডিপিএস)</div>
+                        </div>
+
+                        <!-- Organization 19 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/nabolok.png" alt="নবলোক পরিষদ">
+                            </div>
+                            <div class="organization-name">নবলোক পরিষদ</div>
+                        </div>
+
+                        <!-- Organization 20 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/akk.png" alt="আমরা কাজ করি (একেকে)">
+                            </div>
+                            <div class="organization-name">আমরা কাজ করি (একেকে)</div>
+                        </div>
+
+                        <!-- Organization 21 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/sdi.png"
+                                    alt="সোসাইটি ফর ডেভেলপমেন্ট ইনিসিয়েটিভস (এসডিআই)">
+                            </div>
+                            <div class="organization-name">সোসাইটি ফর ডেভেলপমেন্ট ইনিসিয়েটিভস (এসডিআই)</div>
+                        </div>
+
+                        <!-- Organization 22 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/idf.png"
+                                    alt="ইন্টিগ্রেটেড ডেভেলপমেন্ট ফাউন্ডেশন (আইডিএফ)">
+                            </div>
+                            <div class="organization-name">ইন্টিগ্রেটেড ডেভেলপমেন্ট ফাউন্ডেশন (আইডিএফ)</div>
+                        </div>
+
+                        <!-- Organization 23 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/pks.png" alt="পল্লী বিকাশ কেন্দ্র (পিবিকে)">
+                            </div>
+                            <div class="organization-name">পল্লী বিকাশ কেন্দ্র (পিবিকে)</div>
+                        </div>
+
+                        <!-- Organization 24 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/mdo.png" alt="মডার্ন ডেভেলপমেন্ট অর্গানাইজেশন (এমডিও)">
+                            </div>
+                            <div class="organization-name">মডার্ন ডেভেলপমেন্ট অর্গানাইজেশন (এমডিও)</div>
+                        </div>
+
+                        <!-- Organization 25 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/coast.png" alt="কোস্ট ফাউন্ডেশন">
+                            </div>
+                            <div class="organization-name">কোস্ট ফাউন্ডেশন</div>
+                        </div>
+
+                        <!-- Organization 26 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/gks.png" alt="গ্রাম বিকাশ কেন্দ্র (জিবিকে)">
+                            </div>
+                            <div class="organization-name">গ্রাম বিকাশ কেন্দ্র (জিবিকে)</div>
+                        </div>
+
+                        <!-- Organization 27 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/satu.png" alt="সোশাল এডভালমেন্ট ফ্র ইউনিটি (সেতু)">
+                            </div>
+                            <div class="organization-name">সোশাল এডভালমেন্ট ফ্র ইউনিটি (সেতু)</div>
+                        </div>
+
+                        <!-- Organization 28 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/daisy.png" alt="দাঁখী মৌলিক উন্নয়ন সংস্থা (দাঁখী)">
+                            </div>
+                            <div class="organization-name">দাঁখী মৌলিক উন্নয়ন সংস্থা (দাঁখী)</div>
+                        </div>
+
+                        <!-- Organization 29 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/sds.png" alt="শিরোপা ডেভলপমেন্ট সোসাইটি">
+                            </div>
+                            <div class="organization-name">শিরোপা ডেভলপমেন্ট সোসাইটি</div>
+                        </div>
+
+                        <!-- Organization 30 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/ccda.png"
+                                    alt="সেন্টার ফর কমিউনিটি ডেভেলপমেন্ট এসিসটেন্স (সিসিডিএ)">
+                            </div>
+                            <div class="organization-name">সেন্টার ফর কমিউনিটি ডেভেলপমেন্ট এসিসটেন্স (সিসিডিএ)</div>
+                        </div>
+
+                        <!-- Organization 31 -->
+                        <div class="organization-item">
+                            <div class="organization-logo">
+                                <img src="images/microfinance/esdo.png"
+                                    alt="ইকো-সোশাল ডেভেলপমেন্ট অর্গানাইজেশন (ইএসডিও)">
+                            </div>
+                            <div class="organization-name">ইকো-সোশাল ডেভেলপমেন্ট অর্গানাইজেশন (ইএসডিও)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="/public/JS/microfinanceJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+</body>
+
+</html>

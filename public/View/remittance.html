@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দেশ অনুযায়ী অপারেটর - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/public/CSS/remittance.css">
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+    <link rel="stylesheet" href="/public/CSS/main.css">
+
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+    
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+    
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+    
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+    
+                </div>
+    
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+    
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Remittance Section -->
+    <section class="remittance-section">
+        <div class="container">
+            <!-- Main Remittance Container -->
+            <div class="remittance-container" id="mainContainer">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="back-button">
+                            <!-- Remittance image instead of arrow -->
+                            <img src="images/icons/image12.png" alt="Remittance"
+                                style="height: 40px; width: 40px; object-fit: contain;">
+                        </div>
+                        <div class="header-title">
+                            <h3>রেমিটেন্স</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remittance-content">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <div class="search-input-wrapper">
+                            <span class="search-icon"><i class="fas fa-search"></i></span>
+                            <input type="text" placeholder="অপারেটরের নাম দিন" class="search-input" id="searchOperator">
+                        </div>
+                    </div>
+
+                    <!-- Option Cards -->
+                    <div class="option-cards">
+                        <div class="option-card" id="countryOperatorsBtn">
+                            <div class="option-icon">
+                                <img src="images/globe-icon.png" alt="দেশ অনুযায়ী অপারেটর" class="option-img">
+                            </div>
+                            <div class="option-name">দেশ অনুযায়ী অপারেটর</div>
+                        </div>
+                        <div class="option-card">
+                            <div class="option-icon">
+                                <img src="images/receipt-icon.png" alt="রিসিট" class="option-img">
+                            </div>
+                            <div class="option-name">রিসিট</div>
+                        </div>
+                    </div>
+
+                    <!-- Operators Header -->
+                    <div class="operators-header">
+                        <span>সকল অপারেটর</span>
+                    </div>
+
+                    <!-- Operators List -->
+                    <div class="operators-list">
+                        <!-- Operator 1 -->
+                        <div class="operator-item">
+                            <div class="operator-logo">
+                                <img src="images/payoneer-logo.png" alt="পেওনিয়ার">
+                            </div>
+                            <div class="operator-name">পেওনিয়ার</div>
+                        </div>
+
+                        <!-- Operator 2 -->
+                        <div class="operator-item">
+                            <div class="operator-logo">
+                                <img src="images/wu-logo.png" alt="ওয়েস্টার্ন ইউনিয়ন">
+                            </div>
+                            <div class="operator-name">ওয়েস্টার্ন ইউনিয়ন</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Country Selection Container -->
+            <div class="country-container" id="countryContainer" style="display: none;">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="back-button" id="countryBackBtn">
+                            <!-- Remittance image instead of arrow -->
+                            <img src="images/remittance-icon.png" alt="Remittance"
+                                style="height: 24px; width: 24px; object-fit: contain;">
+                        </div>
+                        <div class="header-title">
+                            <h3>দেশ অনুযায়ী অপারেটর</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="country-content">
+                    <div class="country-label">দেশ</div>
+
+                    <div class="country-select-wrapper">
+                        <div class="country-select-btn" id="countrySelectBtn">
+                            <span>দেশ সিলেক্ট করুন</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <!-- Country List Area (Initially Hidden) -->
+                    <div class="country-list-area" id="countryListArea"
+                        style="display: none; background-color: #f9f9f9; border-radius: 10px; padding: 15px; margin-bottom: 15px; border: 1px solid #ebebeb;">
+                        <!-- Search Box -->
+                        <div class="search-input-wrapper">
+                            <span class="search-icon"><i class="fas fa-search"></i></span>
+                            <input type="text" placeholder="দেশের নাম দিন" class="search-input" id="countrySearchInput">
+                        </div>
+
+                        <!-- Country List -->
+                        <div class="country-list" id="countryList"
+                            style="max-height: 250px; overflow-y: auto; margin-top: 15px; padding-right: 5px;">
+                            <!-- Countries will be added here dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="country-info">
+                        <p>বিকাশ এর সাথে যুক্ত দেশ অনুযায়ী অপারেটর সম্পর্কে জানতে <a
+                                href="https://www.bkash.com/en/products-services/money-transfer-service"
+                                class="tap-link">ট্যাপ
+                                করুন</a></p>
+                    </div>
+
+                    <div class="operators-section" id="operatorsSection">
+                        <div class="operators-title">অপারেটরসমূহ</div>
+
+                        <div class="empty-operators">
+                            <div class="empty-icon">
+                                <img src="images/globe-icon-large.png" alt="Globe" class="globe-icon">
+                            </div>
+                            <div class="empty-message">দেশ সিলেক্ট করে অপারেটরের তালিকা দেখুন</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="overlay" id="overlay" style="display: none;"></div>
+        </div>
+    </section>
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="/public/JS/remittanceJS.js"></script>
+    <script src="/public/JS/chatJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+</body>
+
+</html>

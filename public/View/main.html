@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিকাশ - ড্যাশবোর্ড</title>
+
+    <link rel="icon" href="/images/locallogo.png" type="image/png">
+    <link rel="shortcut icon" href="/images/locallogo.png" type="image/png">
+
+    <link rel="stylesheet" href="/public/CSS/main.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <!-- Modified: Added 'active' class to make it always appear selected -->
+                <button class="nav-item dropdown premium-effect active" id="servicesButton">
+                    <div class="button-content">
+                        <!-- <i class="fas fa-th-large"></i>
+                        <span>সার্ভিসেস</span>
+                        <i class="fas fa-chevron-down nav-arrow"></i> -->
+                    </div>
+                </button>
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </div>
+
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>আপনার ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 15,250.75</div>
+
+                </div>
+
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">Md. Tanvir Hossain</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Enhanced User Dropdown -->
+    <div class="user-dropdown premium-shadow" id="userDropdown">
+        <div class="user-dropdown-header">
+            <div class="user-info">
+                <div class="dropdown-user-image">
+                    <img src="/public/images/user-avatar.png" alt="প্রোফাইল"
+                        onerror="this.src='https://via.placeholder.com/40';this.onerror='';">
+                </div>
+                <div>
+                    <div class="dropdown-user-name">Md. Tanvir Hossain</div>
+                    <div class="dropdown-user-phone">+880 1712-345678</div>
+                </div>
+            </div>
+        </div>
+        <div class="balance-display">
+            <div class="balance-label">আপনার ব্যালেন্স</div>
+            <div class="balance-amount">৳ 15,250.75</div>
+        </div>
+        <div class="user-dropdown-menu">
+            <a href="#" class="user-dropdown-item">
+                <i class="fas fa-user"></i> প্রোফাইল
+            </a>
+            <a href="#" class="user-dropdown-item">
+                <i class="fas fa-history"></i> লেনদেন ইতিহাস
+            </a>
+            <a href="#" class="user-dropdown-item">
+                <i class="fas fa-cog"></i> সেটিংস
+            </a>
+            <a href="#" class="user-dropdown-item">
+                <i class="fas fa-headset"></i> হেল্প এবং সাপোর্ট
+            </a>
+            <!-- <a href="index.html" class="user-dropdown-item logout">
+                <i class="fas fa-sign-out-alt"></i> লগআউট
+            </a> -->
+        </div>
+    </div>
+
+    <div class="dropdown-menu premium-shadow show" id="servicesMenu">
+        <div class="dropdown-header">
+            <h3>সকল সার্ভিসসমূহ</h3>
+            <p>বিকাশের সম্পূর্ণ সেবা এখান থেকে পাবেন</p>
+        </div>
+
+        <!-- Service Grid with Complete Services - Organized in 4x4 Grid -->
+        <div class="service-grid" id="serviceGrid">
+            <!-- Row 1 -->
+            <a href="sendMoney.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image1.png" alt="সেন্ড মানি">
+                </div>
+                <div class="service-name">সেন্ড মানি</div>
+            </a>
+            <a href="recharge.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image2.png" alt="মোবাইল রিচার্জ">
+                </div>
+                <div class="service-name">মোবাইল রিচার্জ</div>
+            </a>
+            <a href="payment.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image3.png" alt="পেমেন্ট">
+                </div>
+                <div class="service-name">পেমেন্ট</div>
+            </a>
+            <a href="cashOut.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image4.png" alt="ক্যাশ আউট">
+                </div>
+                <div class="service-name">ক্যাশ আউট</div>
+            </a>
+
+            <!-- Row 2 -->
+            <a href="bkashBundle.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image8.png" alt="বিকাশ সার্ভিসেস">
+                </div>
+                <div class="service-name">বিকাশ বান্ডেল</div>
+            </a>
+            <a href="addMoney.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image5.png" alt="অ্যাড মানি">
+                </div>
+                <div class="service-name">অ্যাড মানি</div>
+            </a>
+            <a href="payBills.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image6.png" alt="পে বিল">
+                </div>
+                <div class="service-name">পে বিল</div>
+            </a>
+            <a href="savings.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image7.png" alt="সেভিংস">
+                </div>
+                <div class="service-name">সেভিংস</div>
+            </a>
+
+            <!-- Row 3 -->
+            <a href="loan.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image9.png" alt="লোন">
+                </div>
+                <div class="service-name">লোন</div>
+            </a>
+            <a href="bkashToBank.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image10.png" alt="বিকাশ টু ব্যাংক">
+                </div>
+                <div class="service-name">বিকাশ টু ব্যাংক</div>
+            </a>
+            <a href="requestMoney.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image11.png" alt="রিকোয়েস্ট মানি">
+                </div>
+                <div class="service-name">রিকোয়েস্ট মানি</div>
+            </a>
+            <a href="remittance.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image12.png" alt="রেমিটেন্স">
+                </div>
+                <div class="service-name">রেমিটেন্স</div>
+            </a>
+
+            <!-- Row 4 -->
+            <a href="microfinance.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image16.png" alt="মাইক্রোফাইন্যান্স">
+                </div>
+                <div class="service-name">মাইক্রোফাইন্যান্স</div>
+            </a>
+            <a href="education.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image15.png" alt="এডুকেশন ফি">
+                </div>
+                <div class="service-name">এডুকেশন ফি</div>
+            </a>
+            <a href="donation.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image13.png" alt="ডোনেশন">
+                </div>
+                <div class="service-name">ডোনেশন</div>
+            </a>
+            <a href="insurance.html" class="service-item premium-card">
+                <div class="service-icon">
+                    <img src="/public/images/icons/image14.png" alt="ইন্স্যুরেন্স">
+                </div>
+                <div class="service-name">ইন্স্যুরেন্স</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat premium-effect">
+        <i class="far fa-comment-dots"></i>
+        <span>চ্যাট করুন</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/public/JS/mainJS.js"></script>
+    <script src="/public/JS/sideBarJS.js"></script>
+</body>
+
+</html>
