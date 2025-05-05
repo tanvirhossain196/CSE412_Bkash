@@ -1,7 +1,319 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Make sure all service items are visible at startup
+  // Get all service items
   const serviceItems = document.querySelectorAll(".service-item");
 
+  serviceItems.forEach((item) => {
+    // Add premium UI elements to each service item
+
+    // 1. Add highlight accent (top right corner triangle)
+    const highlightAccent = document.createElement("div");
+    highlightAccent.className = "highlight-accent";
+    item.appendChild(highlightAccent);
+
+    // 2. Add background gradient
+    const bgGradient = document.createElement("div");
+    bgGradient.className = "bg-gradient";
+    item.appendChild(bgGradient);
+
+    // 3. Add hover line indicator (bottom line)
+    const hoverLine = document.createElement("div");
+    hoverLine.className = "hover-line-indicator";
+    item.appendChild(hoverLine);
+
+    // 4. Add ripple container
+    const rippleContainer = document.createElement("div");
+    rippleContainer.className = "ripple-container";
+    item.appendChild(rippleContainer);
+
+    // 5. Make the service icon 3D
+    const serviceIcon = item.querySelector(".service-icon");
+    if (serviceIcon) {
+      // Create 3D wrapper around icon
+      const iconWrapper = document.createElement("div");
+      iconWrapper.className = "icon-3d-wrapper";
+
+      // Move icon inside wrapper
+      const iconParent = serviceIcon.parentNode;
+      iconParent.insertBefore(iconWrapper, serviceIcon);
+      iconWrapper.appendChild(serviceIcon);
+
+      // Add glossy overlay to icon
+      const glossOverlay = document.createElement("div");
+      glossOverlay.className = "icon-gloss-overlay";
+      serviceIcon.appendChild(glossOverlay);
+    }
+
+    // 6. Add ripple effect on click
+    item.addEventListener("click", function (e) {
+      const ripple = document.createElement("div");
+      ripple.className = "ripple-effect";
+
+      const rect = rippleContainer.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+      ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+
+      rippleContainer.appendChild(ripple);
+
+      // Remove ripple after animation
+      setTimeout(() => {
+        ripple.remove();
+      }, 800);
+    });
+
+    // 7. Add 3D tilt effect based on mouse position
+    item.addEventListener("mousemove", function (e) {
+      if (!item.matches(":hover")) return;
+
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Calculate tilt values (max ±5 degrees)
+      const tiltX = (y / rect.height - 0.5) * 10;
+      const tiltY = (x / rect.width - 0.5) * -10;
+
+      // Apply 3D transform to item
+      item.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-12px) scale(1.05)`;
+
+      // Dynamic shadow based on tilt
+      const shadowX = (x / rect.width - 0.5) * 10;
+      const shadowY = (y / rect.height - 0.5) * 10;
+      item.style.boxShadow = `
+        ${shadowX}px ${shadowY}px 30px rgba(0, 0, 0, 0.08),
+        ${shadowX / 2}px ${shadowY / 2}px 15px rgba(226, 20, 108, 0.1),
+        0 5px 10px rgba(226, 20, 108, 0.05),
+        inset 0 1px 1px rgba(255, 255, 255, 0.9)
+      `;
+
+      // Apply 3D transform to icon
+      const icon = item.querySelector(".service-icon");
+      if (icon) {
+        const iconTiltX = tiltX * 1.5; // Amplify icon tilt for more pronounced effect
+        const iconTiltY = tiltY * 1.5;
+        icon.style.transform = `rotateX(${iconTiltX}deg) rotateY(${iconTiltY}deg) translateZ(40px) scale(1.4)`;
+      }
+
+      // Move glossy overlay based on mouse position
+      const glossOverlay = item.querySelector(".icon-gloss-overlay");
+      if (glossOverlay) {
+        const moveX = (x / rect.width) * 100 - 50;
+        const moveY = (y / rect.height) * 100 - 50;
+        glossOverlay.style.background = `radial-gradient(
+          circle at ${50 + moveX / 2}% ${50 + moveY / 2}%,
+          rgba(255, 255, 255, 0.7) 0%,
+          rgba(255, 255, 255, 0) 60%
+        )`;
+      }
+    });
+
+    // 8. Reset transform on mouse leave
+    item.addEventListener("mouseleave", function () {
+      item.style.transform = "";
+      item.style.boxShadow = "";
+
+      // Reset icon transform
+      const icon = item.querySelector(".service-icon");
+      if (icon) {
+        icon.style.transform = "";
+      }
+
+      // Wait a small amount of time before allowing transitions again
+      setTimeout(() => {
+        item.style.transition = "all 0.45s cubic-bezier(0.19, 1, 0.22, 1)";
+        if (icon) {
+          icon.style.transition = "all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)";
+        }
+      }, 50);
+    });
+
+    // 9. Disable transitions during mouse movement for smoothness
+    item.addEventListener("mouseenter", function () {
+      item.style.transition = "none";
+
+      // Disable icon transition
+      const icon = item.querySelector(".service-icon");
+      if (icon) {
+        icon.style.transition = "none";
+      }
+
+      // Initial transform to avoid jump
+      item.style.transform =
+        "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-12px) scale(1.05)";
+
+      // Force browser to apply the transitions
+      setTimeout(() => {
+        item.style.transition = "none";
+        if (icon) {
+          icon.style.transition = "none";
+        }
+      }, 10);
+    });
+  });
+
+  // Create staggered hover effect when neighboring items are hovered
+  serviceItems.forEach((item, index) => {
+    item.addEventListener("mouseenter", function () {
+      // Calculate row and column in the grid
+      const row = Math.floor(index / 4); // Assuming 4 columns
+      const col = index % 4;
+
+      // Get neighboring items
+      serviceItems.forEach((otherItem, otherIndex) => {
+        const otherRow = Math.floor(otherIndex / 4);
+        const otherCol = otherIndex % 4;
+
+        // Check if it's a direct neighbor
+        const isNeighbor =
+          (otherRow === row && Math.abs(otherCol - col) === 1) || // Left or right
+          (otherCol === col && Math.abs(otherRow - row) === 1); // Above or below
+
+        if (isNeighbor) {
+          // Apply subtle hover effect to neighbors
+          otherItem.classList.add("neighbor-hover");
+
+          // Subtle tilt towards the hovered item
+          const tiltX = (otherRow - row) * 3;
+          const tiltY = (otherCol - col) * 3;
+
+          otherItem.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-4px) scale(1.02)`;
+          otherItem.style.zIndex = "5";
+
+          // Add relationship indicator
+          if (
+            !document.querySelector(`.relation-line-${index}-${otherIndex}`)
+          ) {
+            const relationLine = document.createElement("div");
+            relationLine.className = `relation-line relation-line-${index}-${otherIndex}`;
+            relationLine.style.position = "absolute";
+            relationLine.style.zIndex = "1";
+            relationLine.style.pointerEvents = "none";
+            relationLine.style.opacity = "0";
+            relationLine.style.transition = "opacity 0.3s ease";
+
+            const itemRect = item.getBoundingClientRect();
+            const otherRect = otherItem.getBoundingClientRect();
+
+            // Calculate line position
+            const x1 = itemRect.left + itemRect.width / 2;
+            const y1 = itemRect.top + itemRect.height / 2;
+            const x2 = otherRect.left + otherRect.width / 2;
+            const y2 = otherRect.top + otherRect.height / 2;
+
+            // Create SVG line
+            relationLine.innerHTML = `
+              <svg width="100%" height="100%" style="position: fixed; top: 0; left: 0; pointer-events: none;">
+                <defs>
+                  <linearGradient id="lineGradient-${index}-${otherIndex}" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="rgba(226, 20, 108, 0.7)" />
+                    <stop offset="100%" stop-color="rgba(226, 20, 108, 0.2)" />
+                  </linearGradient>
+                </defs>
+                <line 
+                  x1="${x1}" 
+                  y1="${y1}" 
+                  x2="${x2}" 
+                  y2="${y2}" 
+                  stroke="url(#lineGradient-${index}-${otherIndex})" 
+                  stroke-width="2" 
+                  stroke-dasharray="5,5" 
+                />
+              </svg>
+            `;
+
+            document.body.appendChild(relationLine);
+
+            // Fade in the line
+            setTimeout(() => {
+              relationLine.style.opacity = "1";
+            }, 10);
+          }
+        }
+      });
+    });
+
+    item.addEventListener("mouseleave", function () {
+      // Remove hover effect from neighbors
+      document.querySelectorAll(".neighbor-hover").forEach((neighbor) => {
+        neighbor.classList.remove("neighbor-hover");
+        neighbor.style.transform = "";
+        neighbor.style.zIndex = "";
+      });
+
+      // Remove relationship lines
+      document
+        .querySelectorAll(`[class^="relation-line-${index}-"]`)
+        .forEach((line) => {
+          line.style.opacity = "0";
+
+          // Remove after fade out
+          setTimeout(() => {
+            if (line.parentNode) {
+              line.parentNode.removeChild(line);
+            }
+          }, 300);
+        });
+
+      document
+        .querySelectorAll(`[class^="relation-line-"][class$="-${index}"]`)
+        .forEach((line) => {
+          line.style.opacity = "0";
+
+          // Remove after fade out
+          setTimeout(() => {
+            if (line.parentNode) {
+              line.parentNode.removeChild(line);
+            }
+          }, 300);
+        });
+    });
+  });
+
+  // Enhanced Service Item Hover Effects
+  serviceItems.forEach((item) => {
+    // Add hover arrow for the right side arrow effect
+    const hoverArrow = document.createElement("div");
+    hoverArrow.className = "hover-arrow";
+    hoverArrow.innerHTML = '<i class="fas fa-arrow-right"></i>';
+    item.appendChild(hoverArrow);
+
+    // Create service content wrapper for 3D effect if not already created
+    const serviceContent = item.querySelector(".service-content");
+    if (!serviceContent) {
+      const serviceIcon = item.querySelector(".service-icon");
+      const serviceName = item.querySelector(".service-name");
+
+      if (
+        serviceIcon &&
+        serviceName &&
+        !item.querySelector(".service-content")
+      ) {
+        // Create a wrapper div
+        const contentWrapper = document.createElement("div");
+        contentWrapper.className = "service-content";
+
+        // Clone the existing elements
+        const iconClone = serviceIcon.cloneNode(true);
+        const nameClone = serviceName.cloneNode(true);
+
+        // Add the clones to the wrapper
+        contentWrapper.appendChild(iconClone);
+        contentWrapper.appendChild(nameClone);
+
+        // Replace the original elements with the wrapper
+        serviceIcon.parentNode.replaceChild(contentWrapper, serviceIcon);
+
+        // If the name element still exists in the DOM (not removed by the replaceChild)
+        if (serviceName.parentNode) {
+          serviceName.parentNode.removeChild(serviceName);
+        }
+      }
+    }
+  });
+
+  // Make sure all service items are visible at startup
   serviceItems.forEach((item, index) => {
     // Remove staggered animation that might cause some items to be hidden
     item.style.opacity = "1";
@@ -72,6 +384,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const helpMenuItem = document.querySelector(
     ".user-dropdown-item:nth-child(4)"
   );
+
+  // Add premium hover effect to header elements
+  const headerButtons = document.querySelectorAll(".nav-item, .app-btn");
+  headerButtons.forEach((button) => {
+    button.addEventListener("mouseenter", function () {
+      this.style.boxShadow = "0 0 15px rgba(255, 255, 255, 0.3)";
+      this.style.transform = "translateY(-2px)";
+    });
+
+    button.addEventListener("mouseleave", function () {
+      this.style.boxShadow = "";
+      this.style.transform = "";
+    });
+  });
 
   // Services button is always in active state and dropdown is always visible
   // No need to toggle its display state on click
@@ -1092,14 +1418,6 @@ document.addEventListener("DOMContentLoaded", function () {
     animateOnScroll();
     window.addEventListener("scroll", animateOnScroll);
   }
-
-  // Enhance scroll experience by hiding address bar on mobile
-  window.addEventListener("load", function () {
-    // Scroll down 1px to hide address bar on mobile
-    setTimeout(function () {
-      window.scrollTo(0, 1);
-    }, 0);
-  });
 
   // Add parallax effect to banner images
   const handleParallax = () => {
