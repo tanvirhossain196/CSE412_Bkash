@@ -1,0 +1,1017 @@
+/* Main Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 70px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.bangla-bkash {
+  font-size: 24px;
+  font-weight: 700;
+  color: #198ae2;
+  margin-right: 5px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.app-btn {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.app-btn:hover {
+  background-color: #e9ecef;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.button-content i {
+  margin-right: 8px;
+  color: #198ae2;
+}
+
+.button-content span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.premium-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.6s;
+}
+
+.premium-effect:hover::before {
+  left: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.notification-bell {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.notification-bell i {
+  font-size: 18px;
+  color: #555;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #198ae2;
+  color: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.balance-popup {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  display: none;
+  z-index: 1010;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup-header span {
+  font-size: 14px;
+  color: #666;
+}
+
+.popup-amount {
+  font-size: 20px;
+  font-weight: 600;
+  color: #198ae2;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 24px;
+  padding: 5px 15px 5px 5px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.user-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.user-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 10px;
+}
+
+.balance-icon {
+  color: #198ae2;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.menu-toggle i {
+  color: #198ae2;
+  font-size: 18px;
+}
+
+/* Transaction Section */
+.transaction-section {
+  height: 100vh;
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Transaction Container and Popup Container */
+.transaction-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  z-index: 900;
+  transition: filter 0.3s ease;
+  margin-top: 20px;
+}
+
+.transaction-container.blur {
+  filter: blur(5px);
+}
+
+/* Popup container should exactly match the transaction-container */
+.popup-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  height: 80vh;
+  z-index: 901; /* Higher than the main container */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.popup-container.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Common Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Gradient Header - Changed to blue color scheme for agent */
+.form-header-gradient {
+  background: linear-gradient(135deg, #198ae2 0%, #0c5392 100%);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.form-header-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+}
+
+.header-content {
+  position: relative;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.bkash-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.back-button {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header-title h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Form Content */
+.transaction-form {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Search Container */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 4px 15px;
+  border: 1px solid #ebebeb;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.search-input-wrapper:focus-within {
+  border-color: #198ae2;
+  box-shadow: 0 3px 10px rgba(25, 138, 226, 0.1);
+  background-color: white;
+}
+
+.search-icon {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Option Cards */
+.option-cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.option-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option-icon {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.transaction-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue-icon {
+  color: #198ae2;
+}
+
+.option-name {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Contacts List */
+.contacts-header {
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.contacts-list {
+  overflow-y: auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+}
+
+.contact-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contact-avatar span {
+  color: white;
+}
+
+.blue {
+  background-color: #76c5f0;
+}
+
+.yellow {
+  background-color: #e9d985;
+}
+
+.green {
+  background-color: #97e3a9;
+}
+
+.purple {
+  background-color: #c8a5e9;
+}
+
+.pink {
+  background-color: #ecabc3;
+}
+
+.light-green {
+  background-color: #c9e388;
+}
+
+.coral {
+  background-color: #f7a79e;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.contact-number {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Live Chat Button */
+.live-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #198ae2;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(25, 138, 226, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 990;
+}
+
+.live-chat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(25, 138, 226, 0.4);
+}
+
+.live-chat i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Amount Entry Styling */
+.recipient-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.amount-field {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.amount-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.amount-input-wrapper {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #333;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 15px 15px 15px 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.amount-limit {
+  font-size: 12px;
+  color: #999;
+}
+
+.reference-field,
+.note-field {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.reference-label,
+.note-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.optional {
+  color: #999;
+  font-size: 12px;
+}
+
+.reference-input,
+.note-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.note-input {
+  height: 80px;
+  resize: none;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.popup-footer {
+  padding: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.proceed-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #198ae2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.proceed-btn:disabled {
+  background-color: #b3d7f4;
+  cursor: not-allowed;
+}
+
+/* Customer Verification Section */
+.customer-verification {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #f8fbff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e0ecf7;
+}
+
+.verification-header {
+  font-size: 16px;
+  font-weight: 500;
+  color: #198ae2;
+  margin-bottom: 10px;
+}
+
+.verification-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.verification-icon {
+  color: #198ae2;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.verification-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Pin Entry Popup */
+.pin-entry-section {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.pin-instruction {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pin-amount {
+  margin-bottom: 30px;
+}
+
+.amount-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #198ae2;
+}
+
+.pin-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pin-input {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #f9f9f9;
+}
+
+.pin-input:focus {
+  border-color: #198ae2;
+  outline: none;
+}
+
+/* Transaction History Styles */
+.transaction-history-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-tabs {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-tab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+}
+
+.transaction-tab.active {
+  color: #198ae2;
+  font-weight: 500;
+}
+
+.transaction-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #198ae2;
+}
+
+.transaction-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+.transaction-item {
+  display: flex;
+  padding: 15px 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.transaction-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.transaction-icon i {
+  color: #198ae2;
+  font-size: 18px;
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.transaction-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.transaction-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #777;
+}
+
+.transaction-date {
+  color: #999;
+}
+
+.transaction-amount {
+  font-weight: 500;
+  color: #198ae2;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.empty-state img {
+  width: 100px;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Commission Info */
+.commission-info {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px dashed #acd1f5;
+}
+
+.commission-title {
+  color: #198ae2;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.commission-value {
+  font-weight: 600;
+  color: #198ae2;
+  font-size: 16px;
+}
+
+/* Success Animation */
+.success-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.success-icon i {
+  font-size: 60px;
+  color: #4CAF50;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .transaction-container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .popup-container {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: scale(0.95);
+  }
+
+  .popup-container.show {
+    transform: scale(1);
+  }
+
+  .popup-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .option-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .option-card {
+    padding: 10px;
+  }
+
+  .option-icon {
+    font-size: 20px;
+  }
+
+  .option-name {
+    font-size: 12px;
+  }
+
+  .header {
+    padding: 0 15px;
+  }
+
+  .user-name {
+    font-size: 12px;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

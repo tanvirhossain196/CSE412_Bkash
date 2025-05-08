@@ -48,7 +48,7 @@ body {
 
 /* Loan Header */
 .loan-header {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #192b56 100%);
   padding: 15px 20px;
   position: relative;
   overflow: hidden;
@@ -173,13 +173,13 @@ body {
 
 .loan-icon i {
   font-size: 40px;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .apply-loan-button {
   width: 100%;
   padding: 15px 20px;
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #192b56 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -226,7 +226,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 18px;
 }
 
@@ -294,7 +294,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #192b56 100%);
   border-radius: 15px 15px 0 0;
   color: white;
   position: sticky;
@@ -374,7 +374,7 @@ body {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: #e2146c;
+  background: #1c2e58;
   border-radius: 2px;
 }
 
@@ -403,7 +403,7 @@ body {
 
 .form-group input:focus,
 .form-group select:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   outline: none;
   background: white;
   box-shadow: 0 0 0 4px rgba(226, 20, 108, 0.1);
@@ -419,7 +419,7 @@ body {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .input-with-icon input {
@@ -456,7 +456,7 @@ body {
 }
 
 .pin-digit:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   outline: none;
   box-shadow: 0 0 0 4px rgba(226, 20, 108, 0.1);
   background: white;
@@ -472,7 +472,7 @@ body {
 
 .next-button,
 .submit-button {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #192b56 100%);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -526,7 +526,7 @@ body {
 
 .loan-calculation span {
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* Success Container */
@@ -648,7 +648,7 @@ body {
 }
 
 .step-dot.active {
-  background: #e2146c;
+  background: #1c2e58;
   color: white;
   transform: scale(1.1);
 }
@@ -669,12 +669,12 @@ body {
 }
 
 .step-content::-webkit-scrollbar-thumb {
-  background: #e2146c;
+  background: #1c2e58;
   border-radius: 10px;
 }
 
 .step-content::-webkit-scrollbar-thumb:hover {
-  background: #a4126a;
+  background: #1c2e58;
 }
 
 /* Responsive Design */
@@ -740,7 +740,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   display: flex;
   align-items: center;

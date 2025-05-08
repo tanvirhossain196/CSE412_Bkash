@@ -1,0 +1,479 @@
+/* Agent Login Popup System Styles */
+
+/* Popup container */
+#popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#popup-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Overlay */
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#popup-overlay.show {
+  opacity: 1;
+}
+
+/* Base popup styles */
+.popup-dialog {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 20px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.popup-dialog.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Header styles - updated with confirmed color */
+.popup-header,
+.popup-dialog .popup-header,
+.agent-access-popup .popup-header,
+.agent-login-popup .popup-header,
+.agent-pin-popup .popup-header,
+.agent-registration-popup .popup-header,
+.pin-set-popup .popup-header {
+  background-color: #23386a !important; /* Using !important to ensure it overrides any other styles */
+  color: white !important;
+  padding: 15px 20px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  flex-grow: 1;
+  letter-spacing: 0.2px;
+}
+
+.popup-back {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 10px;
+  position: absolute;
+  left: 15px;
+  transition: transform 0.2s ease;
+}
+
+.popup-back:hover {
+  transform: translateX(-3px);
+}
+
+.popup-close {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  transition: transform 0.2s ease;
+}
+
+.popup-close:hover {
+  transform: rotate(90deg);
+}
+
+/* Content styles */
+.popup-content {
+  padding: 25px 20px;
+}
+
+/* Agent Access specific styles */
+.agent-access-popup .popup-content {
+  text-align: center;
+}
+
+.agent-access-popup p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #4a5568;
+}
+
+.agent-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Updated agent buttons with smaller padding */
+.agent-button {
+  flex: 1;
+  padding: 25px 15px; /* Reduced padding as requested */
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.agent-button:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agent-button.login-button {
+  background-color: #23386a;
+  color: white;
+}
+
+.agent-button.login-button:hover {
+  background-color: #2d4a8a;
+}
+
+/* Agent Login specific styles */
+.agent-login-popup .logo-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.popup-logo {
+  height: 40px;
+}
+
+.login-form .input-group {
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.phone-input {
+  display: flex;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.country-code {
+  background-color: #f1f5f9;
+  padding: 12px 15px;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.phone-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.input-hint {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #23386a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #2d4a8a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Agent PIN specific styles */
+.agent-pin-popup h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.agent-pin-popup .subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.security-notice {
+  background-color: #fff7ed;
+  border: 1px solid #ffedd5;
+  border-radius: 6px;
+  padding: 12px 15px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 3px rgba(251, 146, 60, 0.1);
+}
+
+.security-icon {
+  color: #f97316;
+  font-size: 18px;
+}
+
+.security-notice p {
+  margin: 0;
+  color: #9a3412;
+  font-size: 14px;
+  flex: 1;
+}
+
+.pin-input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pin-input {
+  width: 45px;
+  height: 55px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.pin-input:focus {
+  border-color: #23386a;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(35, 56, 106, 0.2);
+}
+
+.show-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.show-pin input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Agent Registration specific styles - updated with scrolling and dimensions */
+.agent-registration-popup {
+  max-width: 480px; /* Increased width */
+}
+
+.agent-registration-popup .popup-content {
+  max-height: 60vh; /* Constrain height */
+  overflow-y: auto; /* Add scrolling */
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.agent-registration-popup .form-group {
+  margin-bottom: 15px;
+}
+
+.agent-registration-popup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #23386a;
+  box-shadow: 0 0 0 2px rgba(35, 56, 106, 0.2);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.form-checkbox input {
+  margin-right: 10px;
+}
+
+/* PIN Set specific styles */
+.pin-set-popup .pin-instruction {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a5568;
+}
+
+.pin-section {
+  margin-bottom: 20px;
+}
+
+.pin-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.pin-note {
+  color: #64748b;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Error and Success states */
+.error-message {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+input.error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.2);
+}
+
+.success-message {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.success-icon {
+  font-size: 48px;
+  color: #10b981;
+  margin-bottom: 20px;
+}
+
+.success-message h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.success-message p {
+  margin-bottom: 0;
+  color: #64748b;
+}
+
+/* Custom scrollbar for better UX */
+.agent-registration-popup .popup-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.agent-registration-popup .popup-content::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 8px;
+}
+
+.agent-registration-popup .popup-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+.agent-registration-popup .popup-content::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .popup-dialog {
+    max-width: 100%;
+    margin: 0 15px;
+  }
+
+  .agent-buttons {
+    flex-direction: column;
+  }
+
+  .pin-input {
+    width: 40px;
+    height: 50px;
+  }
+
+  .agent-registration-popup .popup-content {
+    max-height: 70vh; /* More space on mobile */
+  }
+}
+
+@media (max-width: 350px) {
+  .popup-header h2 {
+    font-size: 16px;
+  }
+
+  .pin-input {
+    width: 35px;
+    height: 45px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>এজেন্ট বিকাশ টু বিকাশ রিকোয়েস্ট - বিকাশ | bKash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="/public/CSS/SPToSPRequest.css">
+<link rel="stylesheet" href="/public/CSS/agent.css">
+</head>
+
+<body>
+    <!-- Enhanced Header with Premium Design -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <span class="bangla-bkash">বিকাশ</span>
+                    <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <button class="app-btn premium-effect">
+                    <div class="button-content">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>বিকাশ এজেন্ট অ্যাপ</span>
+                    </div>
+                </button>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="user-section">
+                <!-- Notification Icon -->
+                <div class="notification-bell">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+
+                <!-- Balance display popup -->
+                <div class="balance-popup" id="balancePopup">
+                    <div class="popup-header">
+                        <span>এজেন্ট ব্যালেন্স</span>
+                    </div>
+                    <div class="popup-amount">৳ 125,750.25</div>
+                </div>
+
+                <div class="user-profile premium-effect" id="userProfile">
+                    <div class="user-image">
+                        <img src="images/agent-avatar.png" alt="এজেন্ট প্রোফাইল"
+                            onerror="this.src='https://via.placeholder.com/32';this.onerror='';">
+                    </div>
+                    <span class="user-name">বিকাশ এজেন্ট - রহিম স্টোর</span>
+                    <i class="fas fa-eye balance-icon" id="balanceToggle" title="ব্যালেন্স দেখুন"></i>
+                </div>
+
+                <a href="javascript:void(0);" class="menu-toggle premium-effect" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Transaction Section -->
+    <section class="transaction-section">
+        <div class="container">
+            <div class="transaction-container">
+                <div class="form-header-gradient">
+                    <div class="header-content">
+                        <div class="request-money-icon">
+                            <img src="images/icons/agent-icon.png" alt="এজেন্ট আইকন" style="height: 40px;">
+                        </div>
+                        <div class="header-title">
+                            <h3>এজেন্ট বিকাশ টু বিকাশ রিকোয়েস্ট</h3>
+                        </div>
+                        <div class="bkash-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 50px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transaction-form">
+                    <!-- Main Selection Section -->
+                    <div class="main-selection-section" id="mainSelectionSection">
+                        <div class="search-container">
+                            <div class="search-input-wrapper">
+                                <span class="search-icon"><i class="fas fa-search"></i></span>
+                                <input type="text" placeholder="গ্রাহকের বিকাশ নাম্বার দিন (01XXXXXXXXX)"
+                                    class="search-input" id="searchInput">
+                                <button class="search-btn" id="searchBtn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Option Cards -->
+                        <div class="option-cards">
+                            <div class="option-card" id="transactionHistoryButton">
+                                <div class="option-icon transaction-icon">
+                                    <i class="fas fa-history blue-icon"></i>
+                                </div>
+                                <div class="option-name">লেনদেন হিস্টোরি</div>
+                            </div>
+                            <div class="option-card" id="activeRequestsButton">
+                                <div class="option-icon active-icon">
+                                    <i class="fas fa-file-invoice blue-icon"></i>
+                                </div>
+                                <div class="option-name">সক্রিয় রিকোয়েস্ট</div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Customers Header -->
+                        <div class="contacts-header">
+                            <span>সাম্প্রতিক গ্রাহক</span>
+                        </div>
+
+                        <!-- Recent Customers List -->
+                        <div class="contacts-list" id="contactsList">
+                            <!-- Customer 1 -->
+                            <div class="contact-item">
+                                <div class="contact-avatar blue">
+                                    <span>ক</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-name">করিম আলী</div>
+                                    <div class="contact-number">01712345678</div>
+                                </div>
+                            </div>
+
+                            <!-- Customer 2 -->
+                            <div class="contact-item">
+                                <div class="contact-avatar yellow">
+                                    <span>স</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-name">সালমা বেগম</div>
+                                    <div class="contact-number">01876543210</div>
+                                </div>
+                            </div>
+
+                            <!-- Customer 3 -->
+                            <div class="contact-item">
+                                <div class="contact-avatar green">
+                                    <span>র</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-name">রহিম মিয়া</div>
+                                    <div class="contact-number">01911234567</div>
+                                </div>
+                            </div>
+
+                            <!-- Customer 4 -->
+                            <div class="contact-item">
+                                <div class="contact-avatar purple">
+                                    <span>জ</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-name">জাহিদুল ইসলাম</div>
+                                    <div class="contact-number">01698765432</div>
+                                </div>
+                            </div>
+
+                            <!-- Customer 5 -->
+                            <div class="contact-item">
+                                <div class="contact-avatar pink">
+                                    <span>ন</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-name">নাজমা খাতুন</div>
+                                    <div class="contact-number">01556789012</div>
+                                </div>
+                            </div>
+
+                            <!-- Customer 6 -->
+                            <div class="contact-item">
+                                <div class="contact-avatar light-green">
+                                    <span>ম</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-name">মোস্তাফিজুর রহমান</div>
+                                    <div class="contact-number">01865432109</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Live Chat Button -->
+    <a href="#" class="live-chat">
+        <i class="far fa-comment-dots"></i>
+        <span>এজেন্ট সাপোর্ট</span>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="/public/JS/SPToSPRequestJS.js"></script>
+    <script src="/public/JS/agentJS.js"></script>
+</body>
+
+</html>

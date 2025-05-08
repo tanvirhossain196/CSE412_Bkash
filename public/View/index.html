@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বিকাশ</title>
+    <title>SurePay</title>
 
     <!-- Try these different favicon approaches -->
     <link rel="icon" href="/public/images/locallogo.png" type="image/png">
@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="/public/CSS/styles.css">
     <link rel="stylesheet" href="/public/CSS/Login.css">
+    <link rel="stylesheet" href="/public/CSS/agentLogin.css">
+    <link rel="stylesheet" href="/public/CSS/agentPopup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
@@ -23,27 +25,27 @@
     <header class="header">
         <div class="logo-container">
             <a href="index.html">
-                <span class="bangla-bkash">বিকাশ</span>
+                <span class="bangla-bkash">SurePay</span>
                 <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="logo">
             </a>
         </div>
 
         <nav class="nav">
-            <a href="Campaigns.html" class="nav-item">ক্যাশপইন</a>
+            <a href="Campaigns.html" class="nav-item">ক্যাম্পেইন</a>
             <!-- <button class="nav-item dropdown" id="servicesButton">
                 সার্ভিসেস
             </button> -->
             <a href="business.html" class="nav-item">বিজনেস</a>
             <a href="help.html" class="nav-item dropdown">হেল্প</a>
-            <a href="#" class="nav-item">ক্যারিয়ার</a>
-            <a href="#" class="nav-item">পরিচিতি</a>
-            <a href="#" class="nav-item">রুম</a>
-            <a href="#" class="nav-item">স্টুডেন্ট</a>
+            <a href="career.html" class="nav-item">ক্যারিয়ার</a>
+            <a href="identity.html" class="nav-item">পরিচিতি</a>
+            <a href="student.html" class="nav-item">স্টুডেন্ট</a>
             <button class="app-btn">বিকাশ অ্যাপ</button>
         </nav>
 
         <div class="right-nav">
             <button class="login-btn" id="loginButton">লগইন</button>
+            <button class="login-btn" id="agentButton" style="margin-left: 10px;">এজেন্ট লগইন</button>
             <!-- <a href="javascript:void(0);" class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </a> -->
@@ -282,7 +284,7 @@
             <h2 class="section-title">সার্ভিসসমূহ</h2>
             <div class="services-grid">
                 <!-- Updated Send Money link with clickable icon and text -->
-                <a href="sendMoney.html" class="service-category">
+                <a href="#" class="service-category">
                     <div class="service-category-icon">
                         <img src="/public/images/icons/send-money.png" alt="সেন্ড মানি">
                     </div>
@@ -512,13 +514,9 @@
     <script src="/public/JS/script.js"></script>
     <script src="/public/JS/sideBarJS.js"></script>
     <script src="/public/JS/login-button.js"></script>
+    <!-- <script src="/public/JS/agentLoginJS.js"></script> -->
+     <script src="/public/JS/agentPopup.js"></script>
 
-    <script>
-        document.querySelector(".login-btn").onclick = function (e) {
-            e.preventDefault();
-            showPopup("loginPopup");
-        };
-    </script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   padding: 8px 5%;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@ body {
 
 .app-button:hover {
   background-color: white;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .language-selector {
@@ -144,7 +144,7 @@ main {
   position: absolute;
   right: 5px;
   top: 5px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   border: none;
   border-radius: 50%;
@@ -182,9 +182,9 @@ main {
 }
 
 .search-tag:hover {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
-  border-color: #e2146c;
+  border-color: #1c2e58;
 }
 
 /* Offer Sections */
@@ -232,8 +232,8 @@ main {
 
 .more-offers-btn {
   background-color: white;
-  border: 2px solid #e2146c;
-  color: #e2146c;
+  border: 2px solid #1c2e58;
+  color: #1c2e58;
   padding: 10px 25px;
   border-radius: 30px;
   font-size: 16px;
@@ -247,7 +247,7 @@ main {
 }
 
 .more-offers-btn:hover {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
 }
 
@@ -447,14 +447,14 @@ main {
 }
 
 .social-icon:hover {
-  background-color: #e2146c;
+  background-color: #1c2e58;
 }
 
 .chat-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   border: none;
   border-radius: 30px;

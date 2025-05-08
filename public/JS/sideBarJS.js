@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     .sidebar-header {
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       padding: 15px;
       display: flex;
@@ -232,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     .language-btn {
       background-color: transparent;
-      border: 1px solid #e2146c;
-      color: #e2146c;
+      border: 1px solid #23386a;
+      color: #23386a;
       border-radius: 20px;
       padding: 8px 20px;
       font-size: 14px;
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     .language-btn.active {
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
     }
     
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #e2146c;
+      color: #23386a;
       margin-right: 15px;
       font-size: 18px;
     }
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .sidebar-notification {
       width: 8px;
       height: 8px;
-      background-color: #e2146c;
+      background-color: #23386a;
       border-radius: 50%;
     }
     
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .popup-header {
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       padding: 15px;
       display: flex;
@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .statement-tab.active {
-      color: #e2146c;
+      color: #23386a;
       font-weight: 500;
     }
 
@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #e2146c;
+      background-color: #23386a;
     }
 
     .transaction-search {
@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .filter-button {
       background-color: white;
       border: none;
-      color: #e2146c;
+      color: #23386a;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -497,7 +497,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .transaction-amount.debit {
-      color: #e2146c;
+      color: #23386a;
     }
 
     .transaction-amount.credit {
@@ -528,7 +528,7 @@ document.addEventListener("DOMContentLoaded", function () {
       background: none;
       border: none;
       font-size: 20px;
-      color: #e2146c;
+      color: #23386a;
       cursor: pointer;
     }
 
@@ -594,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .category-amount.debit {
-      color: #e2146c;
+      color: #23386a;
     }
 
     .category-amount.credit {
@@ -619,7 +619,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .limits-tab.active {
-      color: #e2146c;
+      color: #23386a;
       font-weight: 500;
     }
 
@@ -630,7 +630,7 @@ document.addEventListener("DOMContentLoaded", function () {
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #e2146c;
+      background-color: #23386a;
     }
 
     .limits-subtabs {
@@ -649,9 +649,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .limits-subtab.active {
-      color: #e2146c;
+      color: #23386a;
       font-weight: 500;
-      border-bottom: 2px solid #e2146c;
+      border-bottom: 2px solid #23386a;
     }
 
     .limits-table {
@@ -672,7 +672,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .limits-table tr td:nth-child(2) {
       width: 20%;
       text-align: center;
-      color: #e2146c;
+      color: #23386a;
     }
 
     .limits-table tr td:last-child {
@@ -698,7 +698,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     .coupon-video-link i {
-      color: #e2146c;
+      color: #23386a;
       margin-right: 10px;
       font-size: 18px;
     }
@@ -743,7 +743,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .no-coupons-icon {
       font-size: 50px;
-      color: #e2146c;
+      color: #23386a;
       margin-bottom: 20px;
     }
 
@@ -804,7 +804,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .update-button {
       padding: 12px 30px;
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       border: none;
       border-radius: 30px;
@@ -847,7 +847,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .refer-button {
       padding: 10px 30px;
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       border: none;
       border-radius: 30px;
@@ -879,7 +879,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .refer-step-icon {
       width: 50px;
       height: 50px;
-      background-color: #e2146c;
+      background-color: #23386a;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -992,7 +992,7 @@ document.addEventListener("DOMContentLoaded", function () {
       font-size: 22px;
       font-weight: 600;
       margin-bottom: 5px;
-      color: #e2146c;
+      color: #23386a;
     }
     
     .about-subtitle {
@@ -1027,7 +1027,7 @@ document.addEventListener("DOMContentLoaded", function () {
       top: 5px;
       height: 15px;
       width: 3px;
-      background-color: #e2146c;
+      background-color: #23386a;
     }
     
     .section-text {
@@ -1056,7 +1056,7 @@ document.addEventListener("DOMContentLoaded", function () {
       position: absolute;
       left: 0;
       top: 0;
-      color: #e2146c;
+      color: #23386a;
     }
     
     .contact-item {
@@ -1068,7 +1068,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     .contact-item i {
-      color: #e2146c;
+      color: #23386a;
       margin-right: 10px;
       width: 20px;
       text-align: center;
@@ -1088,13 +1088,13 @@ document.addEventListener("DOMContentLoaded", function () {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #e2146c;
+      color: #23386a;
       text-decoration: none;
       transition: all 0.3s ease;
     }
     
     .social-link:hover {
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       transform: translateY(-3px);
     }
@@ -1133,7 +1133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       align-items: center;
       justify-content: center;
       margin-right: 15px;
-      color: #e2146c;
+      color: #23386a;
     }
     
     .settings-item-content {
@@ -1181,7 +1181,7 @@ document.addEventListener("DOMContentLoaded", function () {
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 5px;
-      color: #e2146c;
+      color: #23386a;
     }
     
     .autopay-subtitle {
@@ -1208,7 +1208,7 @@ document.addEventListener("DOMContentLoaded", function () {
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       display: flex;
       align-items: center;
@@ -1230,7 +1230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     .autopay-button {
       padding: 12px 25px;
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       border: none;
       border-radius: 25px;
@@ -1324,7 +1324,7 @@ document.addEventListener("DOMContentLoaded", function () {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #e2146c;
+      color: #23386a;
       font-size: 20px;
       margin-bottom: 10px;
     }
@@ -1372,7 +1372,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     .faq-question i {
-      color: #e2146c;
+      color: #23386a;
       transition: transform 0.3s ease;
     }
     
@@ -1426,7 +1426,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .month-selector {
       width: 100%;
       padding: 15px;
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       font-size: 16px;
       font-weight: 500;
@@ -1466,7 +1466,7 @@ document.addEventListener("DOMContentLoaded", function () {
       align-items: center;
       justify-content: center;
       margin-right: 15px;
-      color: #e2146c;
+      color: #23386a;
     }
     
     .update-item-content {
@@ -1528,7 +1528,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .autopay-option-title {
       font-size: 16px;
       font-weight: 500;
-      color: #e2146c;
+      color: #23386a;
     }
     
     /* Home Button Styles */
@@ -1536,7 +1536,7 @@ document.addEventListener("DOMContentLoaded", function () {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #e2146c;
+      background-color: #23386a;
       color: white;
       border: none;
       border-radius: 30px;
@@ -1615,7 +1615,7 @@ document.addEventListener("DOMContentLoaded", function () {
       align-items: center;
       justify-content: center;
       font-size: 16px;
-      color: #e2146c;
+      color: #23386a;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       border: none;
       cursor: pointer;
@@ -2332,7 +2332,7 @@ document.addEventListener("DOMContentLoaded", function () {
           
           <div class="map-legend">
             <div class="legend-item">
-              <div class="legend-icon" style="background-color: #e2146c;"></div>
+              <div class="legend-icon" style="background-color: #23386a;"></div>
               <div class="legend-text">বিকাশ এজেন্ট</div>
             </div>
             <div class="legend-item">
@@ -2858,7 +2858,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             <div style="display: flex; margin-bottom: 15px;">
               <input type="text" placeholder="আপনার মেসেজ লিখুন..." style="flex: 1; padding: 12px 15px; border-radius: 25px; border: 1px solid #ddd; outline: none;">
-              <button style="margin-left: 10px; width: 40px; height: 40px; border-radius: 50%; background-color: #e2146c; color: white; border: none; display: flex; align-items: center; justify-content: center;">
+              <button style="margin-left: 10px; width: 40px; height: 40px; border-radius: 50%; background-color: #23386a; color: white; border: none; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </div>
@@ -2887,7 +2887,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <textarea placeholder="আপনার সমস্যা বা অনুরোধের বিস্তারিত লিখুন..." style="width: 100%; height: 150px; padding: 12px 15px; border-radius: 8px; border: 1px solid #ddd; outline: none; resize: none;"></textarea>
             </div>
             
-            <button style="width: 100%; padding: 12px; background-color: #e2146c; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500;">
+            <button style="width: 100%; padding: 12px; background-color: #23386a; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500;">
               <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> ইমেইল পাঠান
             </button>
           </div>
@@ -2938,7 +2938,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           
           <div style="background-color: #fff1f6; border-radius: 10px; padding: 15px; margin-top: 20px;">
-            <button style="background-color: #e2146c; color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500;">
+            <button style="background-color: #23386a; color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500;">
               মার্চ মাসে যা নতুন ছিল
             </button>
           </div>
@@ -3071,6 +3071,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     console.log("Delegated logout event handler added");
   }
+
+  
 
   console.log(
     "Right-side sidebar initialization complete with all menu functionalities"

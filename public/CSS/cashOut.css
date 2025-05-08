@@ -12,7 +12,7 @@ body {
 
 /* Header Styles */
 .header {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   padding: 8px 5%;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@ body {
 
 /* Gradient Header */
 .form-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #23386a 100%);
   padding: 15px 20px;
   position: relative;
   overflow: hidden;
@@ -174,12 +174,12 @@ body {
 }
 
 .tab-item.active {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .tab-indicator {
   height: 3px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -243,7 +243,7 @@ body {
 }
 
 .search-input-wrapper:focus-within {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -276,7 +276,7 @@ body {
 
 .search-clear:hover {
   opacity: 1;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* QR Scanner Button */
@@ -287,9 +287,9 @@ body {
   gap: 10px;
   padding: 14px;
   background-color: #fff;
-  border: 1px solid #e2146c;
+  border: 1px solid #1c2e58;
   border-radius: 10px;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -371,7 +371,7 @@ body {
   right: -5px;
   width: 18px;
   height: 18px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   border-radius: 50%;
   color: white;
   display: flex;
@@ -404,7 +404,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #ff5252;
+  background-color: #23386a;
   color: white;
   font-size: 10px;
   padding: 3px 6px;
@@ -532,7 +532,7 @@ body {
 .currency-symbol {
   font-size: 24px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
   padding-right: 5px;
 }
 
@@ -567,7 +567,7 @@ body {
 }
 
 .fee-info i {
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 16px;
 }
 
@@ -577,7 +577,7 @@ body {
 }
 
 .fee-amount {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -593,7 +593,7 @@ body {
 }
 
 .info-icon {
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 16px;
   margin-top: 3px;
 }
@@ -605,7 +605,7 @@ body {
 }
 
 .info-link {
-  color: #e2146c;
+  color: #1c2e58;
   text-decoration: none;
 }
 
@@ -632,13 +632,13 @@ body {
 .quick-amount-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
-  border-color: #e2146c;
+  border-color: #1c2e58;
 }
 
 .quick-amount-btn.active {
   background-color: #fff5f8;
-  border-color: #e2146c;
-  color: #e2146c;
+  border-color: #1c2e58;
+  color: #1c2e58;
   font-weight: 600;
 }
 
@@ -664,7 +664,7 @@ body {
 }
 
 .next-btn {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+ background: linear-gradient(135deg, #1c2e58 0%, #23386a 100%);
   color: white;
 }
 
@@ -674,7 +674,7 @@ body {
 }
 
 .cashout-btn {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #23386a 100%);
   color: white;
 }
 

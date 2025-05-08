@@ -2585,7 +2585,7 @@ document.addEventListener("DOMContentLoaded", function () {
       align-items: center;
       justify-content: space-between;
       padding: 15px 20px;
-      background-color: #e2146c !important;
+      background-color: #23386a 
       color: #ffffff !important;
     }
     
@@ -2594,6 +2594,7 @@ document.addEventListener("DOMContentLoaded", function () {
       flex-grow: 1;
       font-weight: 600;
       margin: 0;
+      color: #ffffff !important;
     }
     
     .popup-back {
@@ -2649,7 +2650,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     .form-group input:focus,
     .form-group textarea:focus {
-      border-color: #e2146c;
+      border-color: #1c2e58;
       outline: none;
       box-shadow: 0 0 0 3px rgba(226, 20, 108, 0.1);
     }
