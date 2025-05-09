@@ -291,11 +291,11 @@ function downloadReceipt() {
             left: 0;
             right: 0;
             height: 8px;
-            background: linear-gradient(90deg, #e2146c, #a4126a);
+            background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         }
         .header { 
             text-align: center; 
-            border-bottom: 2px solid #e2146c; 
+            border-bottom: 2px solid #1c2e58; 
             padding-bottom: 20px; 
             margin-bottom: 30px; 
         }
@@ -304,7 +304,7 @@ function downloadReceipt() {
             margin-bottom: 15px; 
         }
         .title { 
-            color: #e2146c; 
+            color: #1c2e58; 
             font-size: 28px; 
             margin: 15px 0; 
             font-weight: 700;
@@ -539,7 +539,7 @@ window.addEventListener("load", function () {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+       background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
       border-radius: 15px 15px 0 0;
       color: white;
       position: sticky;
@@ -575,12 +575,12 @@ window.addEventListener("load", function () {
     }
 
     .step-content::-webkit-scrollbar-thumb {
-      background: #e2146c;
+      background: #1c2e58;
       border-radius: 10px;
     }
 
     .step-content::-webkit-scrollbar-thumb:hover {
-      background: #a4126a;
+      background: #1c2e58;
     }
   `;
   document.head.appendChild(styleElement);

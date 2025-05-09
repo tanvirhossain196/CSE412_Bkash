@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>সেভিংস</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>সেভিংস</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -381,7 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>সেভিংস</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>সেভিংস নিশ্চিত করুন</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -567,7 +567,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>পিন নম্বর প্রদান করুন</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -667,7 +667,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div style="width: 36px;"></div>
         <div class="success-header-title">সেভিংস সফল</div>
         <div class="success-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ আইকন" style="width: 100%; height: auto;">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন" style="width: 100%; height: auto;">
         </div>
       </div>
     </div>
@@ -861,7 +861,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <body>
         <div class="container">
           <div class="logo">
-            <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
           </div>
           
           <div class="header">

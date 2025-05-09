@@ -59,7 +59,7 @@ body {
 
 /* Gradient Header */
 .form-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+   background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 0;
   position: relative;
   overflow: hidden;
@@ -195,7 +195,7 @@ body {
 }
 
 .receipt-text {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
   font-size: 16px;
 }
@@ -271,12 +271,12 @@ body {
 }
 
 .microfinance-content::-webkit-scrollbar-thumb {
-  background: #e2146c;
+  background: #1c2e58;
   border-radius: 10px;
 }
 
 .microfinance-content::-webkit-scrollbar-thumb:hover {
-  background: #c5145d;
+  background: #1c2e58;
 }
 
 /* Responsive Styles */

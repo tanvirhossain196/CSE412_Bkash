@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>সতর্কবলি ও সাধারণ জিজ্ঞাসা</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -356,7 +356,7 @@ faqStyles.textContent = `
   }
 
   .popup-body::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #1c2e58;
   }
 
   .popup-body::-webkit-scrollbar-thumb {

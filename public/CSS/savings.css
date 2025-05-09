@@ -30,7 +30,7 @@ body {
 
 /* Savings Header */
 .savings-header {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 20px;
   position: relative;
   overflow: hidden;
@@ -156,13 +156,13 @@ body {
 
 .savings-icon i {
   font-size: 40px;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .new-savings-button {
   width: 100%;
   padding: 15px 20px;
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -209,7 +209,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 18px;
 }
 
@@ -257,7 +257,7 @@ body {
 }
 
 .step-circle.active {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
 }
 
@@ -273,7 +273,7 @@ body {
 }
 
 .step-line.active {
-  background-color: #e2146c;
+  background-color: #1c2e58;
 }
 
 .step-text-container {
@@ -291,7 +291,7 @@ body {
 }
 
 .step-text.active {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -345,7 +345,7 @@ body {
 }
 
 .popup-header {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 16px;
   position: relative;
   overflow: hidden;
@@ -411,7 +411,7 @@ body {
 .form-select:focus,
 .form-input:focus {
   outline: none;
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 0 0 3px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -443,7 +443,7 @@ body {
 
 .dropdown-option.selected {
   background-color: rgba(226, 20, 108, 0.05);
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -459,7 +459,7 @@ body {
 .action-button,.download-button {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -517,7 +517,7 @@ body {
 }
 
 .savings-type.active {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   background-color: rgba(226, 20, 108, 0.05);
 }
 
@@ -534,7 +534,7 @@ body {
 
 .type-icon.dps {
   background-color: rgba(226, 20, 108, 0.1);
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .type-icon.islamic {
@@ -588,7 +588,7 @@ body {
 }
 
 .bank-item.active {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   background-color: rgba(226, 20, 108, 0.05);
 }
 
@@ -630,7 +630,7 @@ body {
 .rate-value {
   font-size: 15px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .rate-label {
@@ -668,7 +668,7 @@ body {
 }
 
 .summary-value.highlight {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 600;
 }
 
@@ -706,7 +706,7 @@ body {
 }
 
 .pin-input:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   background-color: white;
   box-shadow: 0 0 0 3px rgba(226, 20, 108, 0.1);
 }
@@ -768,7 +768,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   display: flex;
   align-items: center;

@@ -16,7 +16,7 @@
 
 /* Receipt Header */
 .receipt-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 18px 20px;
   position: relative;
   overflow: hidden;
@@ -48,13 +48,13 @@
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   transition: all 0.3s;
   border-radius: 10px 10px 0 0;
 }
 
 .receipt-tabs .tab-btn.active {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .filter-controls select:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   outline: none;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
 }
@@ -160,7 +160,7 @@
 .receipt-amount {
   font-size: 16px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .action-buttons {
@@ -184,8 +184,8 @@
 
 .action-buttons button:hover {
   background-color: #f0f0f0;
-  border-color: #e2146c;
-  color: #e2146c;
+  border-color: #1c2e58;
+  color: #1c2e58;
 }
 
 /* Token Item */
@@ -266,7 +266,7 @@
 }
 
 .copy-token-btn:hover {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .token-units {
@@ -285,7 +285,7 @@
 .token-amount {
   font-size: 16px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* Receipt Modal */

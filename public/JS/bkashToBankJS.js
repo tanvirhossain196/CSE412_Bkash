@@ -2314,7 +2314,7 @@ document.addEventListener("DOMContentLoaded", function () {
       align-items: center;
       justify-content: space-between;
       padding: 10px 15px;
-      background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+       background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
       color: white;
       height: 60px;
     }
@@ -2358,7 +2358,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .success-amount {
       font-size: 24px;
       font-weight: 600;
-      color: #e2146c;
+      color: #1c2e58;
       margin-bottom: 5px;
       text-align: center;
     }
@@ -2431,7 +2431,7 @@ document.addEventListener("DOMContentLoaded", function () {
       padding: 12px;
       border-radius: 10px;
       border: none;
-      background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+       background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
       color: white;
       font-size: 15px;
       font-weight: 600;
@@ -2452,7 +2452,7 @@ document.addEventListener("DOMContentLoaded", function () {
     style.innerHTML = `
       /* Card Form Specific Styles */
       .card-visual {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+         background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         border-radius: 10px;
         padding: 20px;
         color: white;
@@ -2539,7 +2539,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .card-input:focus {
-        border-color: #e2146c;
+        border-color: #1c2e58;
         box-shadow: 0 0 0 2px rgba(226, 20, 108, 0.1);
         outline: none;
         background-color: white;
@@ -2579,7 +2579,7 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 40px;
         height: 40px;
         border: 4px solid #f3f3f3;
-        border-top: 4px solid #e2146c;
+        border-top: 4px solid #1c2e58;
         border-radius: 50%;
         animation: spin 1s linear infinite;
         margin: 0 auto 15px;
@@ -2695,7 +2695,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .pin-icon {
       text-align: center;
       font-size: 48px;
-      color: #e2146c;
+      color: #1c2e58;
       margin: 20px 0;
     }
     
@@ -2736,7 +2736,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     .pin-input:focus {
-      border-color: #e2146c;
+      border-color: #1c2e58;
       outline: none;
       background-color: white;
       box-shadow: 0 0 0 2px rgba(226, 20, 108, 0.1);
@@ -2778,7 +2778,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .success-amount {
       font-size: 24px;
       font-weight: 600;
-      color: #e2146c;
+      color: #1c2e58;
       margin-bottom: 5px;
       text-align: center;
     }

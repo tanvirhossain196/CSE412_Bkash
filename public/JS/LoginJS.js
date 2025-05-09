@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="number-verification">
         <div class="logo-section">
           <div class="bkash-logo">
-            <img src="images/bkash-bird-logo.png" alt="বিকাশ লোগো">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
           </div>
         </div>
         <div class="form-group">
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="number-verification">
         <div class="logo-section">
           <div class="bkash-logo">
-            <img src="images/bkash-bird-logo.png" alt="বিকাশ লোগো">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
           </div>
         </div>
         <div class="form-group">
@@ -504,7 +504,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return `
       <div class="identity-selection">
         <div class="logo-section">
-          <img src="images/bkash-bird-logo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
         <h3>আইডি ধরন নির্বাচন করুন</h3>
         <div class="identity-options">
@@ -601,7 +601,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return `
       <div class="ekyc-content">
         <div class="logo-section">
-          <img src="images/bkash-bird-logo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
         <h3>তিনটি সহজধাপে আপনার ই-কেওয়াইসির তথ্য দিন</h3>
         <div class="ekyc-steps">
@@ -1152,7 +1152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     logoContainer.style.alignItems = "center";
 
     const logo = document.createElement("img");
-    logo.src = "images/bkashlogo.png"; // Make sure this path is correct
+    logo.src = "/public/images/bkashlogo.png"; // Make sure this path is correct
     logo.alt = "বিকাশ";
     logo.style.height = "30px";
     logo.style.marginRight = "10px";

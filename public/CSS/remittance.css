@@ -60,7 +60,7 @@ body {
 
 /* Gradient Header */
 .form-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+   background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 0;
   position: relative;
   overflow: hidden;
@@ -143,7 +143,7 @@ body {
 }
 
 .search-input-wrapper:focus-within {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -302,7 +302,7 @@ body {
 }
 
 .tap-link {
-  color: #e2146c;
+  color: #1c2e58;
   text-decoration: none;
   font-weight: 500;
 }
@@ -439,12 +439,12 @@ body {
 }
 
 .country-list::-webkit-scrollbar-thumb {
-  background: #e2146c;
+  background: #1c2e58;
   border-radius: 10px;
 }
 
 .country-list::-webkit-scrollbar-thumb:hover {
-  background: #c5145d;
+  background: #1c2e58;
 }
 
 /* Selected country styling */

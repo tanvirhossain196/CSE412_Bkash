@@ -681,7 +681,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .pin-modal-header {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         color: white;
         padding: 16px 20px;
         border-radius: 16px 16px 0 0;
@@ -768,12 +768,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .pin-digit:focus {
-        border-color: #e2146c;
+        border-color: #1c2e58;
         box-shadow: 0 0 0 3px rgba(226, 20, 108, 0.2);
       }
       
       .pin-error {
-        color: #e74c3c;
+        color: #23386a;
         text-align: center;
         min-height: 20px;
         font-size: 14px;
@@ -782,7 +782,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .pin-confirm-btn {
         width: 100%;
         padding: 14px;
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         color: white;
         border: none;
         border-radius: 12px;
@@ -803,7 +803,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .forgot-pin {
-        color: #e2146c;
+        color: #1c2e58;
         text-decoration: none;
         font-size: 14px;
       }
@@ -1071,7 +1071,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .new-transaction {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         color: white;
       }
       

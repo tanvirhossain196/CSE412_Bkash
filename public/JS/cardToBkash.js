@@ -18,24 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupContainer = document.createElement("div");
     popupContainer.className = "popup-container";
 
-    // Create popup content with gradient header
+    // Create popup content with gradient header and updated layout
     popupContainer.innerHTML = `
       <div class="form-header-gradient">
-        <button class="popup-close-btn">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="header-content">
-          <div class="header-title">
+          <div class="header-left">
             <button class="back-btn">
               <i class="fas fa-arrow-left"></i>
             </button>
             <div class="title-icon">
               <i class="fas fa-credit-card"></i>
             </div>
-            <h3>Card to bKash</h3>
           </div>
-          <div class="bkash-logo">
-            <img src="images/bkashlogo.png" alt="bKash Logo" height="32">
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
           </div>
         </div>
       </div>
@@ -77,14 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 10);
 
     // Close button functionality
-    const closeBtn = popupContainer.querySelector(".popup-close-btn");
+    const closeBtn = popupContainer.querySelector(".back-btn");
     closeBtn.addEventListener("click", function () {
-      closePopup(popupOverlay, popupContainer);
-    });
-
-    // Back button functionality
-    const backBtn = popupContainer.querySelector(".back-btn");
-    backBtn.addEventListener("click", function () {
       closePopup(popupOverlay, popupContainer);
     });
 
@@ -129,24 +122,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupContainer = document.createElement("div");
     popupContainer.className = "popup-container";
 
-    // Create popup content with gradient header
+    // Create popup content with gradient header and updated layout
     popupContainer.innerHTML = `
       <div class="form-header-gradient">
-        <button class="popup-close-btn">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="header-content">
-          <div class="header-title">
+          <div class="header-left">
             <button class="back-btn">
               <i class="fas fa-arrow-left"></i>
             </button>
             <div class="title-icon">
               <i class="fas fa-credit-card"></i>
             </div>
-            <h3>Select Card Type</h3>
           </div>
-          <div class="bkash-logo">
-            <img src="images/bkashlogo.png" alt="bKash Logo" height="32">
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
           </div>
         </div>
       </div>
@@ -201,12 +193,6 @@ document.addEventListener("DOMContentLoaded", function () {
       popupContainer.classList.add("show");
     }, 10);
 
-    // Close button functionality
-    const closeBtn = popupContainer.querySelector(".popup-close-btn");
-    closeBtn.addEventListener("click", function () {
-      closePopup(popupOverlay, popupContainer);
-    });
-
     // Back button functionality
     const backBtn = popupContainer.querySelector(".back-btn");
     backBtn.addEventListener("click", function () {
@@ -257,24 +243,23 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
     }
 
-    // Create popup content with gradient header
+    // Create popup content with gradient header and updated layout
     popupContainer.innerHTML = `
       <div class="form-header-gradient">
-        <button class="popup-close-btn">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="header-content">
-          <div class="header-title">
+          <div class="header-left">
             <button class="back-btn">
               <i class="fas fa-arrow-left"></i>
             </button>
             <div class="title-icon">
               <i class="fas fa-credit-card"></i>
             </div>
-            <h3>Add Money with ${cardName}</h3>
           </div>
-          <div class="bkash-logo">
-            <img src="images/bkashlogo.png" alt="bKash Logo" height="32">
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
           </div>
         </div>
       </div>
@@ -356,12 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
       popupOverlay.classList.add("show");
       popupContainer.classList.add("show");
     }, 10);
-
-    // Close button functionality
-    const closeBtn = popupContainer.querySelector(".popup-close-btn");
-    closeBtn.addEventListener("click", function () {
-      closePopup(popupOverlay, popupContainer);
-    });
 
     // Back button functionality
     const backBtn = popupContainer.querySelector(".back-btn");
@@ -487,24 +466,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupContainer = document.createElement("div");
     popupContainer.className = "popup-container";
 
-    // Create popup content with gradient header
+    // Create popup content with gradient header and updated layout
     popupContainer.innerHTML = `
       <div class="form-header-gradient">
-        <button class="popup-close-btn">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="header-content">
-          <div class="header-title">
+          <div class="header-left">
             <button class="back-btn">
               <i class="fas fa-arrow-left"></i>
             </button>
             <div class="title-icon">
               <i class="fas fa-mobile-alt"></i>
             </div>
-            <h3>OTP Verification</h3>
           </div>
-          <div class="bkash-logo">
-            <img src="images/bkashlogo.png" alt="bKash Logo" height="32">
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
           </div>
         </div>
       </div>
@@ -556,12 +534,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const firstInput = popupContainer.querySelector(".otp-input");
       if (firstInput) firstInput.focus();
     }, 300);
-
-    // Close button functionality
-    const closeBtn = popupContainer.querySelector(".popup-close-btn");
-    closeBtn.addEventListener("click", function () {
-      closePopup(popupOverlay, popupContainer);
-    });
 
     // Back button functionality
     const backBtn = popupContainer.querySelector(".back-btn");
@@ -663,24 +635,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupContainer = document.createElement("div");
     popupContainer.className = "popup-container";
 
-    // Create popup content with gradient header
+    // Create popup content with gradient header and updated layout
     popupContainer.innerHTML = `
       <div class="form-header-gradient">
-        <button class="popup-close-btn">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="header-content">
-          <div class="header-title">
+          <div class="header-left">
             <button class="back-btn">
               <i class="fas fa-arrow-left"></i>
             </button>
             <div class="title-icon">
               <i class="fas fa-lock"></i>
             </div>
-            <h3>Enter bKash PIN</h3>
           </div>
-          <div class="bkash-logo">
-            <img src="images/bkashlogo.png" alt="bKash Logo" height="32">
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
           </div>
         </div>
       </div>
@@ -727,12 +698,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const firstInput = popupContainer.querySelector(".pin-input");
       if (firstInput) firstInput.focus();
     }, 300);
-
-    // Close button functionality
-    const closeBtn = popupContainer.querySelector(".popup-close-btn");
-    closeBtn.addEventListener("click", function () {
-      closePopup(popupOverlay, popupContainer);
-    });
 
     // Back button functionality
     const backBtn = popupContainer.querySelector(".back-btn");
@@ -820,21 +785,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupContainer = document.createElement("div");
     popupContainer.className = "popup-container success-popup";
 
-    // Create popup content with gradient header
+    // Create popup content with gradient header and updated layout
     popupContainer.innerHTML = `
       <div class="form-header-gradient">
-        <button class="popup-close-btn">
-          <i class="fas fa-times"></i>
-        </button>
         <div class="header-content">
-          <div class="header-title">
+          <div class="header-left">
             <div class="title-icon">
               <i class="fas fa-check-circle"></i>
             </div>
-            <h3>Payment Successful</h3>
           </div>
-          <div class="bkash-logo">
-            <img src="images/bkashlogo.png" alt="bKash Logo" height="32">
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
           </div>
         </div>
       </div>
@@ -891,12 +855,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 10);
 
     // Close button functionality
-    const closeBtn = popupContainer.querySelector(".popup-close-btn");
-    closeBtn.addEventListener("click", function () {
-      closePopup(popupOverlay, popupContainer);
-    });
-
-    // Done button functionality
     const doneBtn = popupContainer.querySelector(".btn-done");
     doneBtn.addEventListener("click", function () {
       closePopup(popupOverlay, popupContainer);
@@ -1148,30 +1106,6 @@ For any inquiries, call 16247.
         transform: translate(-50%, -50%) scale(1);
       }
       
-      /* Close Button */
-      .popup-close-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: rgba(255, 255, 255, 0.2);
-        border: none;
-        border-radius: 50%;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        z-index: 10;
-        transition: all 0.2s;
-      }
-      
-      .popup-close-btn:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-      
       /* Back Button */
       .back-btn {
         background: rgba(255, 255, 255, 0.2);
@@ -1193,16 +1127,48 @@ For any inquiries, call 16247.
         background: rgba(255, 255, 255, 0.3);
       }
       
-      /* Header Title */
-      .header-title {
+      /* Header Content */
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .header-left, .header-right {
         display: flex;
         align-items: center;
       }
-      
-      /* bKash Logo */
-      .bkash-logo {
+
+      .header-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .header-center h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .title-icon {
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
         display: flex;
         align-items: center;
+        justify-content: center;
+      }
+
+      .title-icon i {
+        color: white;
+        font-size: 18px;
       }
       
       /* Transaction Amount Display */

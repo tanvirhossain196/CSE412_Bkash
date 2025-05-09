@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Operators by country
   const operatorsByCountry = {
     BD: [
-      { name: "বাংলাদেশ বিকাশ", logo: "bkash-logo.png" },
+      { name: "বাংলাদেশ বিকাশ", logo: "/public/images/blogo.png" },
       { name: "রকেট", logo: "rocket-logo.png" },
       { name: "নগদ", logo: "nagad-logo.png" },
     ],
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create header
     const header = document.createElement("div");
     header.style.cssText = `
-            background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+             background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
             padding: 18px 20px;
             display: flex;
             justify-content: space-between;
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const logoContainer = document.createElement("div");
     logoContainer.innerHTML =
-      '<img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">';
+      '<img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">';
     logoContainer.style.cssText = `
             display: flex;
             align-items: center;
@@ -251,11 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 border-radius: 10px;
             }
             .country-list::-webkit-scrollbar-thumb {
-                background: #e2146c;
+                background: #1c2e58;
                 border-radius: 10px;
             }
             .country-list::-webkit-scrollbar-thumb:hover {
-                background: #c5145d;
+                background: #112555;
             }
             .country-item {
                 display: flex;
@@ -394,7 +394,7 @@ document.addEventListener("DOMContentLoaded", function () {
     infoText.innerHTML = `
             <p style="font-size: 14px; color: #666; line-height: 1.6;">
                 বিকাশ এর সাথে যুক্ত দেশ অনুযায়ী অপারেটর সম্পর্কে জানতে 
-                <a href="#" style="color: #e2146c; text-decoration: none; font-weight: 500;">ট্যাপ করুন</a>
+                <a href="#" style="color: #1c2e58; text-decoration: none; font-weight: 500;">ট্যাপ করুন</a>
             </p>
         `;
     content.appendChild(infoText);

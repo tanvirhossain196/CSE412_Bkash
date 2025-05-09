@@ -681,11 +681,11 @@ a {
 
 /* Agent Service Grid Styles - Centered 2x2 grid for agent services */
 .service-grid {
-  max-width: 1300px;
+  max-width: 1000px; /* Reduced from 1300px to better fit 3 items */
   width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Changed from 4 to 3 columns */
   gap: 30px;
   padding: 10px 5%;
   justify-content: center;

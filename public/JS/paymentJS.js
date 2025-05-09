@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <h3>পেমেন্ট</h3>
             </div>
             <div class="header-icon">
-              <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .payment-header, .pin-header, .success-header {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         padding: 12px 16px;
         position: relative;
         overflow: hidden;
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .merchant-icon-display {
         width: 40px;
         height: 40px;
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .amount-value {
         font-size: 36px;
         font-weight: 700;
-        color: #e2146c;
+        color: #1c2e58;
         margin: 0;
       }
       
@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .payment-option.active {
-        border-color: #e2146c;
+        border-color: #1c2e58;
         background: rgba(226, 20, 108, 0.05);
       }
       
@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
         position: absolute;
         top: 6px;
         right: 6px;
-        color: #e2146c;
+        color: #1c2e58;
         font-size: 10px;
       }
       
@@ -423,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .next-button {
         width: 100%;
         padding: 14px;
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         color: white;
         border: none;
         border-radius: 12px;
@@ -485,11 +485,12 @@ document.addEventListener("DOMContentLoaded", function () {
         nextButton.style.cursor = "not-allowed";
       } else {
         nextButton.style.background =
-          "linear-gradient(135deg, #e2146c 0%, #a4126a 100%)";
+          "linear-gradient(135deg, #1c2e58 0%, #112555 100%)";
         nextButton.style.cursor = "pointer";
       }
     }
 
+    
     // Handle payment option selection
     paymentOptions.forEach((option) => {
       option.addEventListener("click", function () {
@@ -616,14 +617,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .amount-input-wrapper:focus-within {
-          border-color: #e2146c;
+          border-color: #1c2e58;
           background-color: white;
         }
         
         .taka-symbol {
           font-size: 22px;
           font-weight: 600;
-          color: #e2146c;
+          color: #1c2e58;
           margin-right: 8px;
         }
         
@@ -640,7 +641,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .save-amount-button {
           width: 100%;
           padding: 12px;
-          background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+          background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
           color: white;
           border: none;
           border-radius: 10px;
@@ -738,7 +739,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pinPopup.style.flexDirection = "column";
 
     pinPopup.innerHTML = `
-      <div style="background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%); padding: 16px; position: relative; overflow: hidden; flex-shrink: 0;">
+      <div style="background: linear-gradient(135deg, #1c2e58 0%, #112555 100%); padding: 16px; position: relative; overflow: hidden; flex-shrink: 0;">
         <div style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1;">
           <div>
             <button class="back-to-payment" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 16px; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-arrow-left"></i></button>
@@ -758,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <span style="font-size: 14px; color: #666; font-weight: 500;">পেমেন্ট করা হচ্ছে</span>
           </div>
           <div style="display: flex; align-items: center; gap: 15px; background: #f9f9f9; padding: 12px; border-radius: 10px;">
-            <div style="width: 40px; height: 40px; background-color: rgba(226, 20, 108, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #e2146c; font-size: 18px;">
+            <div style="width: 40px; height: 40px; background-color: rgba(226, 20, 108, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1c2e58; font-size: 18px;">
               <i class="fas fa-store"></i>
             </div>
             <div>
@@ -772,7 +773,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div>
             <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eeeeee; font-size: 14px;">
               <span>পরিমাণ</span>
-              <span style="color: #e2146c; font-weight: 500;">৳${currentAmount}</span>
+              <span style="color: #1c2e58; font-weight: 500;">৳${currentAmount}</span>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eeeeee; font-size: 14px;">
               <span>চার্জ</span>
@@ -780,7 +781,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div style="display: flex; justify-content: space-between; padding: 10px 0; font-size: 14px; font-weight: 600;">
               <span>মোট</span>
-              <span style="color: #e2146c;">৳${currentAmount}</span>
+              <span style="color: #1c2e58;">৳${currentAmount}</span>
             </div>
           </div>
         </div>
@@ -798,7 +799,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </button>
         </div>
        <div style="text-align: center; margin-top: 10px;">
-          <a href="#" style="color: #e2146c; text-decoration: none; font-size: 14px; font-weight: 500;">পিন ভুলে গেছেন?</a>
+          <a href="#" style="color: #1c2e58; text-decoration: none; font-size: 14px; font-weight: 500;">পিন ভুলে গেছেন?</a>
         </div>
       </div>
     `;
@@ -831,7 +832,7 @@ document.addEventListener("DOMContentLoaded", function () {
           confirmButton.style.cursor = "not-allowed";
         } else {
           confirmButton.style.background =
-            "linear-gradient(135deg, #e2146c 0%, #a4126a 100%)";
+            "linear-gradient(135deg, #1c2e58 0%, #112555 100%)";
           confirmButton.style.cursor = "pointer";
         }
       });
@@ -1049,7 +1050,7 @@ document.addEventListener("DOMContentLoaded", function () {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #e2146c;
+        color: #1c2e58;
         font-size: 12px;
       }
       
@@ -1066,7 +1067,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .amount-value-large {
         font-size: 24px;
         font-weight: 700;
-        color: #e2146c;
+        color: #1c2e58;
       }
       
       .trans-id-compact {
@@ -1085,8 +1086,8 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 100%;
         padding: 10px;
         background-color: white;
-        color: #e2146c;
-        border: 1px solid #e2146c;
+        color: #1c2e58;
+        border: 1px solid #1c2e58;
         border-radius: 8px;
         font-size: 13px;
         font-weight: 600;
@@ -1105,7 +1106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .done-button {
         width: 100%;
         padding: 12px;
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         color: white;
         border: none;
         border-radius: 8px;
@@ -1204,7 +1205,7 @@ document.addEventListener("DOMContentLoaded", function () {
             overflow: hidden;
           }
           .receipt-header {
-            background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+            background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
             color: white;
             padding: 20px;
             text-align: center;
@@ -1242,7 +1243,7 @@ document.addEventListener("DOMContentLoaded", function () {
             align-items: center;
             justify-content: center;
             margin-right: 15px;
-            color: #e2146c;
+            color: #1c2e58;
             font-size: 20px;
           }
           .merchant-details h2 {

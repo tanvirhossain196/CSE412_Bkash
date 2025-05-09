@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         .popup-bundle-price {
             font-weight: 600;
-            color: #e2146c;
+            color: #1c2e58;
         }
         
         .bundle-popup-description {
@@ -552,7 +552,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .popup-bundle-saving i {
-            color: #e2146c;
+            color: #1c2e58;
         }
         
         .popup-bundle-terms {
@@ -566,7 +566,7 @@ document.addEventListener("DOMContentLoaded", function () {
             width: calc(100% - 40px);
             margin: 0 20px 20px;
             padding: 15px;
-            background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+            background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
             color: white;
             border: none;
             border-radius: 12px;
@@ -617,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .bundle-price {
             font-size: 24px;
             font-weight: 700;
-            color: #e2146c;
+            color: #1c2e58;
             margin-bottom: 5px;
         }
         
@@ -666,12 +666,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .modern-pin-digit.focused {
-            border-color: #e2146c;
+            border-color: #1c2e58;
             box-shadow: 0 0 0 2px rgba(226, 20, 108, 0.1);
         }
         
         .modern-pin-digit.filled {
-            border-color: #e2146c;
+            border-color: #1c2e58;
             background-color: rgba(226, 20, 108, 0.05);
         }
         
@@ -681,7 +681,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .pin-forgot a {
-            color: #e2146c;
+            color: #1c2e58;
             font-size: 14px;
             text-decoration: none;
         }
@@ -718,13 +718,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .pin-confirm-button.active {
-            background-color: #e2146c;
+            background-color: #1c2e58;
             color: white;
             cursor: pointer;
         }
         
         .pin-confirm-button.active:hover {
-            background-color: #d01361;
+            background-color: #112555;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(226, 20, 108, 0.2);
         }
@@ -790,7 +790,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .contact-btn {
-            background-color: #e2146c;
+            background-color: #1c2e58;
             color: white;
             padding: 5px 10px;
             border-radius: 15px;
@@ -835,7 +835,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .amount-input-field {
             font-size: 20px;
             font-weight: 600;
-            color: #e2146c;
+            color: #1c2e58;
         }
         
         .pin-instruction {
@@ -881,7 +881,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .confirm-btn:not(:disabled) {
-            background-color: #e2146c;
+            background-color: #1c2e58;
             color: white;
             cursor: pointer;
         }
@@ -898,7 +898,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .pin-digit:focus {
-            border-color: #e2146c;
+            border-color: #1c2e58;
             box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
         }
         
@@ -907,7 +907,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .forgot-pin a {
-            color: #e2146c;
+            color: #1c2e58;
             font-size: 14px;
             text-decoration: none;
         }
@@ -938,7 +938,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .pin-confirm-btn {
             flex: 1;
             padding: 15px;
-            background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+            background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
             color: white;
             border: none;
             border-radius: 12px;
@@ -991,7 +991,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .success-amount {
             font-size: 26px;
             font-weight: 700;
-            color: #e2146c;
+            color: #1c2e58;
             margin-bottom: 20px;
         }
         
@@ -1031,7 +1031,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         .success-close-btn {
             padding: 14px 50px;
-            background-color: #e2146c;
+            background-color: #1c2e58;
             color: white;
             border: none;
             border-radius: 25px;
@@ -1043,7 +1043,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         .success-close-btn:hover {
-            background-color: #c4115c;
+            background-color: #1c2e58;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(226, 20, 108, 0.3);
         }
@@ -1063,7 +1063,7 @@ document.addEventListener("DOMContentLoaded", function () {
             background-color: #f9f9f9;
             border-radius: 12px;
             cursor: pointer;
-            color: #e2146c;
+            color: #1c2e58;
             font-size: 14px;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -1094,7 +1094,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /* bKash App Header Styles */
         .bkash-app-header {
-          background-color: #e2146c;
+          background-color: #1c2e58;
           display: flex;
           justify-content: space-between;
           align-items: center;

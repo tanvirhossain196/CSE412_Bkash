@@ -516,10 +516,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                             <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 10px; margin-top: 5px;">
                                 <span style="color: #666; font-weight: 500;">নতুন ব্যালেন্স</span>
-                                <span style="color: #e2146c; font-weight: 600;">৳৩৩৮.৫৪</span>
+                                <span style="color: #1c2e58; font-weight: 600;">৳৩৩৮.৫৪</span>
                             </div>
                         </div>
-                        <button id="doneBtn" style="background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%); color: white; border: none; border-radius: 12px; padding: 14px; width: 100%; font-size: 16px; font-weight: 600; cursor: pointer;">ঠিক আছে</button>
+                        <button id="doneBtn" style="background: linear-gradient(135deg, #1c2e58 0%, #112555 100%); color: white; border: none; border-radius: 12px; padding: 14px; width: 100%; font-size: 16px; font-weight: 600; cursor: pointer;">ঠিক আছে</button>
                     </div>
                 `;
 

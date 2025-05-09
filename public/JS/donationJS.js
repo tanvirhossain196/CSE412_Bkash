@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h3>${title}</h3>
                     </div>
                     <div class="bkash-logo">
-                        <img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                        <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (backButton) {
     // Replace back button with a small bKash logo
     backButton.innerHTML =
-      '<img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 24px; width: auto; object-fit: contain;">';
+      '<img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 24px; width: auto; object-fit: contain;">';
     backButton.style.cursor = "default"; // Remove the cursor pointer
 
     // Remove the click event if there was one
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p style="font-size: 18px; font-weight: 500;">${
                               foundation.name
                             }</p>
-                            <p style="color: #e2146c; font-size: 14px; cursor: pointer;">আরো জানতে</p>
+                            <p style="color: #1c2e58; font-size: 14px; cursor: pointer;">আরো জানতে</p>
                         </div>
                     </div>
                     
@@ -143,10 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                         
                         <p style="font-size: 13px; color: #666; margin-bottom: 20px; text-align: center;">
-                            এগিয়ে যাওয়ার মাধ্যমে আপনি আমাদের <span style="color: #e2146c; text-decoration: underline; cursor: pointer;">শর্তাবলির</span> সাথে সম্মত হচ্ছেন
+                            এগিয়ে যাওয়ার মাধ্যমে আপনি আমাদের <span style="color: #1c2e58; text-decoration: underline; cursor: pointer;">শর্তাবলির</span> সাথে সম্মত হচ্ছেন
                         </p>
                         
-                        <button type="submit" style="width: 100%; background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%); color: white; border: none; padding: 15px; border-radius: 4px; font-size: 16px; font-weight: 500; cursor: pointer; text-align: center;">
+                        <button type="submit" style="width: 100%;  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%); color: white; border: none; padding: 15px; border-radius: 4px; font-size: 16px; font-weight: 500; cursor: pointer; text-align: center;">
                             অনুদান
                         </button>
                     </form>
@@ -251,10 +251,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     
                     <p style="font-size: 13px; color: #666; margin-bottom: 20px; text-align: center;">
-                        পিন দিয়ে আপনি <span style="color: #e2146c; text-decoration: underline; cursor: pointer;">শর্তাবলির</span> সাথে সম্মত হচ্ছেন
+                        পিন দিয়ে আপনি <span style="color: #1c2e58; text-decoration: underline; cursor: pointer;">শর্তাবলির</span> সাথে সম্মত হচ্ছেন
                     </p>
                     
-                    <button type="submit" style="width: 100%; background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%); color: white; border: none; padding: 15px; border-radius: 4px; font-size: 16px; font-weight: 500; cursor: pointer; text-align: center;">
+                    <button type="submit" style="width: 100%;  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%); color: white; border: none; padding: 15px; border-radius: 4px; font-size: 16px; font-weight: 500; cursor: pointer; text-align: center;">
                         এগিয়ে যান
                     </button>
                 </form>
@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <h3>অনুদান সফল</h3>
               </div>
               <div class="bkash-logo">
-                  <img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
+                  <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">
               </div>
           </div>
       </div>
@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
                     }
                     .receipt-header {
-                        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+                         background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
                         color: white;
                         padding: 20px;
                         text-align: center;
@@ -547,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="receipt-header">
                         <h2>বিকাশ অনুদান রসিদ</h2>
                         <p>ট্রানজেকশন আইডি: ${transactionId}</p>
-                        <img src="images/bkashlogo.png" alt="বিকাশ লোগো" class="receipt-logo">
+                        <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="receipt-logo">
                     </div>
                     
                     <div class="receipt-body">

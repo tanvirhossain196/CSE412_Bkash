@@ -298,11 +298,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .header {
           text-align: center;
           margin-bottom: 30px;
-          border-bottom: 2px solid #e2146c;
+          border-bottom: 2px solid #1c2e58;
           padding-bottom: 20px;
         }
         .logo {
-          color: #e2146c;
+          color: #1c2e58;
           font-size: 28px;
           font-weight: bold;
         }
@@ -423,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
           
           <div class="detail-row total">
             <div class="detail-label">মোট পরিশোধিত</div>
-            <div class="detail-value" style="color: #e2146c">${
+            <div class="detail-value" style="color: #1c2e58">${
               data.totalAmount
             }</div>
           </div>

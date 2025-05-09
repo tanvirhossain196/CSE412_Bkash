@@ -8,7 +8,7 @@
 }
 
 .gp {
-  background-color: #ce181f;
+  background-color: #1f9cee;
 }
 
 .robi {
@@ -98,7 +98,7 @@
 }
 
 .next-btn {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   color: white;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .recharge-btn {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+ background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   color: white;
 }
 
@@ -217,7 +217,7 @@
 .currency-symbol {
   font-size: 24px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
   padding-right: 5px;
 }
 
@@ -262,13 +262,13 @@
 .quick-amount-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
-  border-color: #e2146c;
+  border-color: #1c2e58;
 }
 
 .quick-amount-btn.active {
   background-color: #fff5f8;
-  border-color: #e2146c;
-  color: #e2146c;
+  border-color: #1c2e58;
+  color: #1c2e58;
   font-weight: 600;
 }
 
@@ -296,7 +296,7 @@
 
 .package-filter {
   font-size: 12px;
-  color: #e2146c;
+  color: #1c2e58;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -323,7 +323,7 @@
 }
 
 .package-item.active {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   background-color: #fff5f8;
 }
 
@@ -342,7 +342,7 @@
 .package-price {
   font-size: 14px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .package-details {
@@ -492,6 +492,7 @@
 
   .header-title h3 {
     font-size: 18px;
+    
   }
 
   .form-header-logo {
@@ -528,7 +529,7 @@ ul {
 
 /* Header Styles */
 .header {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   padding: 8px 5%;
   display: flex;
   align-items: center;
@@ -697,7 +698,7 @@ ul {
   text-align: center;
   font-size: 32px;
   margin-bottom: 20px;
-  color: #e2146c;
+  color: #1c2e58;
   /* margin-top: -10%; */
 }
 
@@ -778,7 +779,7 @@ ul {
 }
 
 .link-more {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -902,7 +903,7 @@ ul {
 }
 
 .faq-question i {
-  color: #e2146c;
+  color: #1c2e58;
   transition: transform 0.3s ease;
 }
 
@@ -928,8 +929,8 @@ ul {
   display: block;
   margin: 40px auto 0;
   background-color: transparent;
-  border: 1px solid #e2146c;
-  color: #e2146c;
+  border: 1px solid #1c2e58;
+  color: #1c2e58;
   padding: 12px 30px;
   border-radius: 25px;
   font-weight: 500;
@@ -939,7 +940,7 @@ ul {
 }
 
 .see-more-btn:hover {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
 }
 
@@ -1018,7 +1019,7 @@ ul {
   border-radius: 50%;
   background-color: white;
   border: none;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -1029,7 +1030,7 @@ ul {
 }
 
 .carousel-btn:hover {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
 }
 
@@ -1064,7 +1065,7 @@ ul {
 }
 
 .footer-links a:hover {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .social-links {
@@ -1085,7 +1086,7 @@ ul {
 }
 
 .social-link:hover {
-  background-color: #e2146c;
+  background-color: #1c2e58;
 }
 
 .social-link i {
@@ -1140,7 +1141,7 @@ ul {
 }
 
 .footer-bottom-links a:hover {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* Live Chat Button */
@@ -1148,7 +1149,7 @@ ul {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   padding: 12px 20px;
   border-radius: 30px;
@@ -1266,7 +1267,7 @@ ul {
 }
 
 .footer-menu a:hover {
-  color: #e6146c;
+  color: #1c2e58;
 }
 
 .certification-logos {
@@ -1315,7 +1316,7 @@ ul {
 }
 
 .social-icon:hover {
-  background-color: #e6146c;
+  background-color: #1c2e58;
 }
 
 .social-icon:hover i {
@@ -1479,7 +1480,7 @@ ul {
 
 /* Updated Form Header Styles */
 .form-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 0;
   position: relative;
   overflow: hidden;
@@ -1585,7 +1586,7 @@ ul {
 }
 
 .search-input-wrapper:focus-within {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -1618,7 +1619,7 @@ ul {
 
 .search-clear:hover {
   opacity: 1;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* Tabs */
@@ -1649,13 +1650,13 @@ ul {
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   transition: all 0.3s;
   border-radius: 10px 10px 0 0;
 }
 
 .tab-btn.active {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 

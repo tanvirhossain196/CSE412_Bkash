@@ -313,11 +313,24 @@ function addInternetBankingFunctionality() {
   function createAgraniTransferInterface(bank) {
     return `
       <div class="professional-transfer-container" style="background: linear-gradient(to bottom, #f8f9fa, #ffffff);">
-        <!-- Bank Header -->
-        <div class="transfer-header" style="background: ${bank.gradient}; padding: 30px 20px; text-align: center; color: white;">
-          <img src="${bank.logo}" alt="${bank.name}" class="transfer-bank-logo">
-          <h2 style="margin: 15px 0; font-size: 24px;">Internet Banking</h2>
-          <p style="opacity: 0.9; font-size: 16px;">Secure Money Transfer to bKash</p>
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
         </div>
 
         <!-- Login Form -->
@@ -414,12 +427,23 @@ function addInternetBankingFunctionality() {
   function createBankAsiaTransferInterface(bank) {
     return `
       <div class="professional-transfer-container" style="background: #f8f9fa;">
-        <!-- Bank Header -->
-        <div class="transfer-header-modern" style="background: ${bank.gradient};">
-          <div class="header-overlay">
-            <img src="${bank.logo}" alt="${bank.name}" class="transfer-bank-logo-modern">
-            <h2>Internet Banking Portal</h2>
-            <p>Transfer to bKash Account Securely</p>
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
           </div>
         </div>
 
@@ -512,13 +536,23 @@ function addInternetBankingFunctionality() {
   function createAlArafahTransferInterface(bank) {
     return `
       <div class="islamic-banking-container">
-        <!-- Header with Islamic Design -->
-        <div class="islamic-header" style="background: ${bank.gradient};">
-          <div class="islamic-pattern-overlay"></div>
-          <div class="islamic-header-content">
-            <img src="${bank.logo}" alt="${bank.name}" class="islamic-bank-logo">
-            <h2>Islamic Internet Banking</h2>
-            <p>Transfer to bKash Account - Shariah Compliant</p>
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-mosque"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
           </div>
         </div>
 
@@ -598,110 +632,631 @@ function addInternetBankingFunctionality() {
     `;
   }
 
-  // Add remaining bank interfaces...
-  // [I'll continue with the rest of the bank interfaces in the next part due to length]
+  // BDBL Transfer Interface
+  function createBDBLTransferInterface(bank) {
+    return `
+      <div class="professional-transfer-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
 
-  // Setup Enhanced Transfer Handlers
-  function setupEnhancedTransferHandlers(transferContainer, bank) {
-    const loginBtn = transferContainer.querySelector(
-      ".professional-login-btn, .modern-login-btn, .islamic-login-btn"
-    );
-    const passwordToggles = transferContainer.querySelectorAll(
-      ".password-toggle, .modern-password-toggle, .islamic-toggle-password"
-    );
-    const refreshCaptchas = transferContainer.querySelectorAll(
-      ".refresh-captcha-btn, .refresh-captcha-modern, .islamic-refresh-captcha"
-    );
+        <div class="login-container-modern">
+          <div class="login-card">
+            <h3>Secure Login Portal</h3>
+            
+            <div class="login-form-group">
+              <div class="input-container">
+                <i class="fas fa-id-card"></i>
+                <input type="text" id="bdblUserId" placeholder="Customer ID" required>
+                <span class="input-hint">Enter your 8-digit customer ID</span>
+              </div>
+            </div>
 
-    // Enhanced password toggle functionality
-    passwordToggles.forEach((toggle) => {
-      toggle.addEventListener("click", function () {
-        const passwordInput = this.parentElement.querySelector(
-          "input[type='password'], input[type='text']"
-        );
-        const icon = this.querySelector("i");
+            <div class="login-form-group">
+              <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="bdblPassword" placeholder="Password" required>
+                <button class="toggle-password" type="button">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
 
-        if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          icon.classList.remove("fa-eye");
-          icon.classList.add("fa-eye-slash");
-        } else {
-          passwordInput.type = "password";
-          icon.classList.remove("fa-eye-slash");
-          icon.classList.add("fa-eye");
-        }
-      });
-    });
+            <div class="captcha-section">
+              <div class="captcha-image">
+                <span>7X9PK</span>
+                <button class="refresh-captcha" type="button">
+                  <i class="fas fa-sync-alt"></i>
+                </button>
+              </div>
+              <input type="text" id="bdblCaptcha" placeholder="Enter verification code" required>
+            </div>
 
-    // Enhanced captcha refresh
-    refreshCaptchas.forEach((refreshBtn) => {
-      refreshBtn.addEventListener("click", function () {
-        const captchaDisplay =
-          this.parentElement.querySelector("span, img, div");
+            <div class="login-options">
+              <label class="remember-option">
+                <input type="checkbox"> Remember User ID
+              </label>
+              <a href="#" class="forgot-credentials">Forgot Password?</a>
+            </div>
 
-        // Add rotation animation
-        this.style.transform = "rotate(360deg)";
-        setTimeout(() => {
-          this.style.transform = "rotate(0deg)";
-        }, 500);
+            <button class="login-submit-btn" style="background: ${bank.gradient};">
+              <i class="fas fa-sign-in-alt"></i> Login Securely
+            </button>
+          </div>
 
-        // Generate new captcha
-        if (captchaDisplay.tagName === "IMG") {
-          // For image-based captcha
-          captchaDisplay.src = `images/captcha-${
-            Math.floor(Math.random() * 5) + 1
-          }.png`;
-        } else {
-          // For text-based captcha
-          captchaDisplay.textContent = generateRandomCaptcha();
-        }
-      });
-    });
+          <div class="bank-features-card">
+            <h4>BDBL Internet Banking</h4>
+            <ul class="features-list">
+              <li><i class="fas fa-shield-alt"></i> Government Owned Bank</li>
+              <li><i class="fas fa-exchange-alt"></i> Instant Fund Transfer</li>
+              <li><i class="fas fa-lock"></i> Multi-Level Security</li>
+              <li><i class="fas fa-headset"></i> 24/7 Support</li>
+            </ul>
+            <div class="helpline">
+              <p>Helpline: 16467</p>
+              <p>Email: support@bdbl.com.bd</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
 
-    // Enhanced login button handler
-    if (loginBtn) {
-      loginBtn.addEventListener("click", function () {
-        const inputs = transferContainer.querySelectorAll("input");
-        let allValid = true;
+  function createKrishiBankTransferInterface(bank) {
+    return `
+      <div class="agricultural-banking-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-tractor"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
 
-        // Validate all inputs with enhanced feedback
-        inputs.forEach((input) => {
-          const wrapper = input.closest(
-            ".input-wrapper, .modern-input-wrapper, .islamic-input-wrapper"
-          );
+        <div class="agri-login-form">
+          <div class="form-card-modern">
+            <h3>কৃষি ব্যাংক লগইন</h3>
+            
+            <div class="form-group-modern">
+              <label>Account Number / একাউন্ট নম্বর</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user-circle"></i>
+                <input type="text" id="krishiAccount" placeholder="Enter account number">
+              </div>
+            </div>
 
-          if (!input.value.trim()) {
-            allValid = false;
-            input.classList.add("input-error");
-            if (wrapper) wrapper.classList.add("error");
+            <div class="form-group-modern">
+              <label>Password / পাসওয়ার্ড</label>
+              <div class="input-with-icon">
+                <i class="fas fa-key"></i>
+                <input type="password" id="krishiPassword" placeholder="Enter password">
+                <button class="password-view" type="button">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
 
-            // Add error message
-            const feedback = document.createElement("span");
-            feedback.className = "error-feedback";
-            feedback.textContent = "This field is required";
-            if (!input.parentElement.querySelector(".error-feedback")) {
-              input.parentElement.appendChild(feedback);
-            }
-          } else {
-            input.classList.remove("input-error");
-            if (wrapper) wrapper.classList.remove("error");
-            const feedback =
-              input.parentElement.querySelector(".error-feedback");
-            if (feedback) feedback.remove();
-          }
-        });
+            <div class="language-toggle">
+              <button class="lang-btn active">English</button>
+              <button class="lang-btn">বাংলা</button>
+            </div>
 
-        if (allValid) {
-          // Show loading with bank-specific animation
-          showLoadingWithAnimation(`Logging in to ${bank.name}...`, bank.color);
+            <button class="agri-login-btn" style="background: ${bank.gradient};">
+              <i class="fas fa-sign-in-alt"></i> Login / লগইন করুন
+            </button>
+          </div>
 
-          setTimeout(() => {
-            hideLoading();
-            showTransferAmountPage(bank);
-          }, 1500);
-        }
-      });
-    }
+          <div class="agri-info-panel">
+            <h4>Agricultural Banking Benefits</h4>
+            <div class="benefit-items">
+              <div class="benefit-item">
+                <i class="fas fa-tractor"></i>
+                <span>Farmer-Friendly Services</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-seedling"></i>
+                <span>Crop Loan Management</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-warehouse"></i>
+                <span>Rural Banking Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function createABBankTransferInterface(bank) {
+    return `
+      <div class="digital-banking-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
+
+        <div class="digital-login-form">
+          <div class="login-tabs">
+            <button class="tab active">Retail Banking</button>
+            <button class="tab">Corporate Banking</button>
+          </div>
+
+          <div class="login-panel">
+            <div class="animated-input-group">
+              <input type="text" id="abUsername" required>
+              <label>Username</label>
+              <i class="fas fa-user"></i>
+            </div>
+
+            <div class="animated-input-group">
+              <input type="password" id="abPassword" required>
+              <label>Password</label>
+              <i class="fas fa-lock"></i>
+              <button class="password-toggle" type="button">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+
+            <div class="digital-captcha">
+              <canvas id="captchaCanvas" width="120" height="40"></canvas>
+              <button class="refresh-canvas" type="button">
+                <i class="fas fa-redo"></i>
+              </button>
+              <input type="text" id="abCaptcha" placeholder="Enter captcha">
+            </div>
+
+            <button class="digital-login-btn" style="background: ${bank.gradient};">
+              <span>Login</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="digital-features">
+            <div class="feature-box">
+              <i class="fas fa-bolt"></i>
+              <h5>Lightning Fast</h5>
+              <p>Instant transfers</p>
+            </div>
+            <div class="feature-box">
+              <i class="fas fa-shield-alt"></i>
+              <h5>Secure</h5>
+              <p>Bank-grade security</p>
+            </div>
+            <div class="feature-box">
+              <i class="fas fa-mobile-alt"></i>
+              <h5>Mobile Ready</h5>
+              <p>Access anywhere</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function createBCBTransferInterface(bank) {
+    return `
+      <div class="commerce-banking-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
+
+        <div class="commerce-login-section">
+          <div class="login-panel-commerce">
+            <div class="panel-header">
+              <h3>Secure Banking Portal</h3>
+              <p>Protected by 256-bit encryption</p>
+            </div>
+
+            <div class="commerce-form">
+              <div class="form-field">
+                <div class="field-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <input type="text" id="bcbUserId" placeholder="User ID" required>
+              </div>
+
+              <div class="form-field">
+                <div class="field-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <input type="password" id="bcbPassword" placeholder="Password" required>
+                <button class="show-password" type="button">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+
+              <div class="security-check">
+                <div class="security-image">
+                  <img src="images/security-code.png" alt="Security Code">
+                </div>
+                <input type="text" id="bcbSecurity" placeholder="Enter security code">
+              </div>
+
+              <button class="commerce-login-btn" style="background: ${bank.gradient};">
+                <i class="fas fa-lock"></i> Secure Login
+              </button>
+            </div>
+
+            <div class="login-help">
+              <a href="#"><i class="fas fa-question-circle"></i> Need Help?</a>
+              <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+            </div>
+          </div>
+
+          <div class="commerce-info">
+            <h4>Why BCB Internet Banking?</h4>
+            <div class="info-cards">
+              <div class="info-card">
+                <i class="fas fa-history"></i>
+                <h5>Transaction History</h5>
+                <p>View detailed records</p>
+              </div>
+              <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h5>24/7 Service</h5>
+                <p>Banking anytime</p>
+              </div>
+              <div class="info-card">
+                <i class="fas fa-chart-line"></i>
+                <h5>Fund Management</h5>
+                <p>Track your finances</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function createBengalBankTransferInterface(bank) {
+    return `
+      <div class="bengal-banking-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
+
+        <div class="bengal-login-area">
+          <div class="login-card-bengal">
+            <div class="card-header">
+              <h3>Internet Banking Login</h3>
+              <span class="security-badge">🔒 Secured</span>
+            </div>
+
+            <div class="bengal-form">
+              <div class="input-field">
+                <i class="fas fa-id-badge"></i>
+                <input type="text" id="bengalCustomerId" placeholder="Customer ID">
+                <span class="field-info">Enter your 10-digit ID</span>
+              </div>
+
+              <div class="input-field">
+                <i class="fas fa-key"></i>
+                <input type="password" id="bengalPassword" placeholder="Password">
+                <button class="toggle-view" type="button">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+
+              <div class="captcha-field">
+                <div class="captcha-box">3F7X9L</div>
+                <button class="regenerate" type="button">
+                  <i class="fas fa-sync"></i>
+                </button>
+                <input type="text" id="bengalCaptcha" placeholder="Enter captcha">
+              </div>
+
+              <button class="bengal-login-btn" style="background: ${bank.gradient};">
+                Login to Internet Banking
+              </button>
+            </div>
+
+            <div class="quick-links">
+              <a href="#">Forgot Password?</a>
+              <a href="#">First Time User?</a>
+              <a href="#">Security Tips</a>
+            </div>
+          </div>
+
+          <div class="bengal-features">
+            <h4>Banking Made Simple</h4>
+            <div class="feature-grid">
+              <div class="feature">
+                <i class="fas fa-paper-plane"></i>
+                <span>Quick Transfer</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile Banking</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-wallet"></i>
+                <span>Digital Wallet</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-headphones"></i>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function createBracBankTransferInterface(bank) {
+    return `
+      <div class="brac-banking-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
+
+        <div class="brac-login-section">
+          <div class="modern-login-card">
+            <div class="login-header">
+              <h3>Welcome Back!</h3>
+              <p>Login to your account</p>
+            </div>
+
+            <div class="login-form">
+              <div class="floating-label-group">
+                <input type="text" id="bracUsername" required>
+                <label>Username</label>
+                <i class="fas fa-user-circle"></i>
+              </div>
+
+              <div class="floating-label-group">
+                <input type="password" id="bracPassword" required>
+                <label>Password</label>
+                <i class="fas fa-lock"></i>
+                <button class="password-visibility" type="button">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+
+              <div class="verification-area">
+                <div class="math-captcha">
+                  <span>7 + 9 = ?</span>
+                </div>
+                <input type="text" id="bracCaptcha" placeholder="Answer">
+              </div>
+
+              <div class="remember-device">
+                <label>
+                  <input type="checkbox"> Remember this device
+                </label>
+              </div>
+
+              <button class="brac-login-btn" style="background: ${bank.gradient};">
+                <span>Login</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="login-footer">
+              <a href="#" class="forgot-link">Forgot Password?</a>
+              <a href="#" class="register-link">Register Now</a>
+            </div>
+          </div>
+
+          <div class="brac-advantages">
+            <h4>Why Choose BRAC Bank?</h4>
+            <div class="advantage-list">
+              <div class="advantage-item">
+                <i class="fas fa-rocket"></i>
+                <h5>Fastest Growth</h5>
+                <p>Leading SME bank</p>
+              </div>
+              <div class="advantage-item">
+                <i class="fas fa-globe"></i>
+                <h5>International</h5>
+                <p>Global banking solutions</p>
+              </div>
+              <div class="advantage-item">
+                <i class="fas fa-award"></i>
+                <h5>Award Winning</h5>
+                <p>Best digital bank 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Generic Professional Transfer Interface
+  function createProfessionalTransferInterface(bank) {
+    return `
+      <div class="professional-transfer-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-university"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
+
+        <div class="transfer-form-container">
+          <div class="login-section">
+            <h3 class="section-title">Login to Your Account</h3>
+            
+            <div class="form-group">
+              <label class="input-label">User ID / Account Number</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" class="professional-input" id="${
+                  bank.type
+                }Username" placeholder="Enter your User ID">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="input-label">Password</label>
+              <div class="input-wrapper">
+                <i class="fas fa-lock input-icon"></i>
+                <input type="password" class="professional-input" id="${
+                  bank.type
+                }Password" placeholder="Enter your password">
+                <button class="password-toggle" type="button">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="input-label">Security Verification</label>
+              <div class="captcha-container">
+                <div class="captcha-display-pro">
+                  <span>${generateRandomCaptcha()}</span>
+                  <button class="refresh-captcha-btn" type="button">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                </div>
+                <input type="text" class="professional-input" id="${
+                  bank.type
+                }Captcha" placeholder="Enter verification code">
+              </div>
+            </div>
+
+            <button class="professional-login-btn" style="background: ${
+              bank.gradient
+            };">
+              <i class="fas fa-sign-in-alt"></i>
+              <span>Login Securely</span>
+            </button>
+          </div>
+
+          <div class="features-section">
+            <h4>${bank.name} Features</h4>
+            <div class="features-grid">
+              ${bank.features
+                .map(
+                  (feature) => `
+                <div class="feature-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>${feature}</span>
+                </div>
+              `
+                )
+                .join("")}
+            </div>
+          </div>
+        </div>
+
+        <div class="transfer-footer">
+          <div class="security-info">
+            <i class="fas fa-lock"></i>
+            <span>Secured by ${bank.name}</span>
+          </div>
+          <div class="contact-info">
+            <span>Support: 16247</span>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   // Show Transfer Amount Page
@@ -713,11 +1268,24 @@ function addInternetBankingFunctionality() {
 
     const amountContent = `
       <div class="amount-transfer-container">
-        <!-- Bank Header -->
-        <div class="amount-header" style="background: ${bank.gradient};">
-          <img src="${bank.logo}" alt="${bank.name}" class="amount-bank-logo">
-          <h2>Transfer Money to bKash</h2>
-          <p>From ${bank.name}</p>
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
         </div>
 
         <!-- Transfer Form -->
@@ -887,11 +1455,24 @@ function addInternetBankingFunctionality() {
 
     const otpContent = `
       <div class="modern-otp-container">
-        <!-- Header -->
-        <div class="otp-header-modern" style="background: ${bank.gradient};">
-          <img src="${bank.logo}" alt="${bank.name}" class="otp-bank-logo">
-          <h2>Verify Your Transaction</h2>
-          <p>One Time Password (OTP) Verification</p>
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <button class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="title-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
         </div>
 
         <!-- OTP Form -->
@@ -1067,6 +1648,23 @@ function addInternetBankingFunctionality() {
     const transactionId = generateTransactionId();
     const successContent = `
       <div class="modern-success-container">
+        <!-- Updated Bank Header -->
+        <div class="form-header-gradient" style="background: ${bank.gradient};">
+          <div class="header-content">
+            <div class="header-left">
+              <div class="title-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="header-center">
+              <h3>Add Money</h3>
+            </div>
+            <div class="header-right">
+              <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+            </div>
+          </div>
+        </div>
+
         <!-- Success Animation -->
         <div class="success-animation">
           <div class="checkmark-circle" style="border-color: ${bank.color};">
@@ -1357,26 +1955,68 @@ function addInternetBankingFunctionality() {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
-      .transfer-header {
+      /* Updated Header styles */
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
         position: relative;
-        overflow: hidden;
+        z-index: 1;
       }
 
-      .transfer-header::after {
-        content: '';
+      .header-left, .header-right {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-center {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+        left: 50%;
+        transform: translateX(-50%);
       }
 
-      .transfer-bank-logo {
-        width: 100px;
-        height: auto;
-        margin-bottom: 15px;
-        filter: brightness(0) invert(1);
+      .header-center h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .title-icon {
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title-icon i {
+        color: white;
+        font-size: 18px;
+      }
+
+      .back-btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: all 0.2s;
+      }
+
+      .back-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
       }
 
       .transfer-form-container {
@@ -1794,13 +2434,6 @@ function addInternetBankingFunctionality() {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
-      .islamic-header {
-        position: relative;
-        padding: 30px 20px;
-        text-align: center;
-        color: white;
-      }
-
       .islamic-pattern-overlay {
         position: absolute;
         top: 0;
@@ -1809,18 +2442,6 @@ function addInternetBankingFunctionality() {
         bottom: 0;
         background: url('images/islamic-pattern.png');
         opacity: 0.1;
-      }
-
-      .islamic-header-content {
-        position: relative;
-        z-index: 1;
-      }
-
-      .islamic-bank-logo {
-        width: 100px;
-        height: auto;
-        margin-bottom: 15px;
-        filter: brightness(0) invert(1);
       }
 
       .islamic-form-container {
@@ -1966,19 +2587,6 @@ function addInternetBankingFunctionality() {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
-      .amount-header {
-        padding: 30px 20px;
-        text-align: center;
-        color: white;
-      }
-
-      .amount-bank-logo {
-        width: 80px;
-        height: auto;
-        margin-bottom: 15px;
-        filter: brightness(0) invert(1);
-      }
-
       .amount-form-container {
         padding: 30px;
       }
@@ -2015,10 +2623,6 @@ function addInternetBankingFunctionality() {
       .detail-value {
         font-weight: 600;
         color: #333;
-      }
-
-      .amount-form-group {
-        margin-bottom: 20px;
       }
 
       .amount-form-group label {
@@ -2170,19 +2774,6 @@ function addInternetBankingFunctionality() {
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
-
-      .otp-header-modern {
-        padding: 30px 20px;
-        text-align: center;
-        color: white;
-      }
-
-      .otp-bank-logo {
-        width: 80px;
-        height: auto;
-        margin-bottom: 15px;
-        filter: brightness(0) invert(1);
       }
 
       .otp-form-modern {
@@ -2655,18 +3246,6 @@ function addInternetBankingFunctionality() {
           border-radius: 0;
         }
 
-        .transfer-header,
-        .otp-header-modern,
-        .amount-header {
-          padding: 20px;
-        }
-
-        .transfer-bank-logo,
-        .otp-bank-logo,
-        .amount-bank-logo {
-          width: 70px;
-        }
-
         .otp-input-group {
           gap: 5px;
         }
@@ -2887,542 +3466,5 @@ function addInternetBankingFunctionality() {
     setTimeout(() => {
       notification.classList.remove("show");
     }, 3000);
-  }
-
-  // Create Professional Transfer Interface for remaining banks
-  function createBDBLTransferInterface(bank) {
-    return `
-      <div class="professional-transfer-container">
-        <div class="transfer-header-gradient" style="background: ${bank.gradient};">
-          <div class="header-pattern"></div>
-          <div class="header-content-modern">
-            <img src="${bank.logo}" alt="${bank.name}" class="transfer-bank-logo">
-            <h2>Development Bank Internet Banking</h2>
-            <p>Secure Money Transfer to bKash Account</p>
-          </div>
-        </div>
-
-        <div class="login-container-modern">
-          <div class="login-card">
-            <h3>Secure Login Portal</h3>
-            
-            <div class="login-form-group">
-              <div class="input-container">
-                <i class="fas fa-id-card"></i>
-                <input type="text" id="bdblUserId" placeholder="Customer ID" required>
-                <span class="input-hint">Enter your 8-digit customer ID</span>
-              </div>
-            </div>
-
-            <div class="login-form-group">
-              <div class="input-container">
-                <i class="fas fa-lock"></i>
-                <input type="password" id="bdblPassword" placeholder="Password" required>
-                <button class="toggle-password" type="button">
-                  <i class="fas fa-eye"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="captcha-section">
-              <div class="captcha-image">
-                <span>7X9PK</span>
-                <button class="refresh-captcha" type="button">
-                  <i class="fas fa-sync-alt"></i>
-                </button>
-              </div>
-              <input type="text" id="bdblCaptcha" placeholder="Enter verification code" required>
-            </div>
-
-            <div class="login-options">
-              <label class="remember-option">
-                <input type="checkbox"> Remember User ID
-              </label>
-              <a href="#" class="forgot-credentials">Forgot Password?</a>
-            </div>
-
-            <button class="login-submit-btn" style="background: ${bank.gradient};">
-              <i class="fas fa-sign-in-alt"></i> Login Securely
-            </button>
-          </div>
-
-          <div class="bank-features-card">
-            <h4>BDBL Internet Banking</h4>
-            <ul class="features-list">
-              <li><i class="fas fa-shield-alt"></i> Government Owned Bank</li>
-              <li><i class="fas fa-exchange-alt"></i> Instant Fund Transfer</li>
-              <li><i class="fas fa-lock"></i> Multi-Level Security</li>
-              <li><i class="fas fa-headset"></i> 24/7 Support</li>
-            </ul>
-            <div class="helpline">
-              <p>Helpline: 16467</p>
-              <p>Email: support@bdbl.com.bd</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  function createKrishiBankTransferInterface(bank) {
-    return `
-      <div class="agricultural-banking-container">
-        <div class="agri-header" style="background: ${bank.gradient};">
-          <div class="agricultural-pattern"></div>
-          <img src="${bank.logo}" alt="${bank.name}" class="agri-bank-logo">
-          <h2>Krishi Bank Internet Banking</h2>
-          <p>Farmers' Digital Banking Solution</p>
-        </div>
-
-        <div class="agri-login-form">
-          <div class="form-card-modern">
-            <h3>কৃষি ব্যাংক লগইন</h3>
-            
-            <div class="form-group-modern">
-              <label>Account Number / একাউন্ট নম্বর</label>
-              <div class="input-with-icon">
-                <i class="fas fa-user-circle"></i>
-                <input type="text" id="krishiAccount" placeholder="Enter account number">
-              </div>
-            </div>
-
-            <div class="form-group-modern">
-              <label>Password / পাসওয়ার্ড</label>
-              <div class="input-with-icon">
-                <i class="fas fa-key"></i>
-                <input type="password" id="krishiPassword" placeholder="Enter password">
-                <button class="password-view" type="button">
-                  <i class="fas fa-eye"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="language-toggle">
-              <button class="lang-btn active">English</button>
-              <button class="lang-btn">বাংলা</button>
-            </div>
-
-            <button class="agri-login-btn" style="background: ${bank.gradient};">
-              <i class="fas fa-sign-in-alt"></i> Login / লগইন করুন
-            </button>
-          </div>
-
-          <div class="agri-info-panel">
-            <h4>Agricultural Banking Benefits</h4>
-            <div class="benefit-items">
-              <div class="benefit-item">
-                <i class="fas fa-tractor"></i>
-                <span>Farmer-Friendly Services</span>
-              </div>
-              <div class="benefit-item">
-                <i class="fas fa-seedling"></i>
-                <span>Crop Loan Management</span>
-              </div>
-              <div class="benefit-item">
-                <i class="fas fa-warehouse"></i>
-                <span>Rural Banking Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  function createABBankTransferInterface(bank) {
-    return `
-      <div class="digital-banking-container">
-        <div class="digital-header" style="background: ${bank.gradient};">
-          <div class="digital-waves"></div>
-          <img src="${bank.logo}" alt="${bank.name}" class="digital-bank-logo">
-          <h2>AB Bank Digital Banking</h2>
-          <p>Next Generation Banking Experience</p>
-        </div>
-
-        <div class="digital-login-form">
-          <div class="login-tabs">
-            <button class="tab active">Retail Banking</button>
-            <button class="tab">Corporate Banking</button>
-          </div>
-
-          <div class="login-panel">
-            <div class="animated-input-group">
-              <input type="text" id="abUsername" required>
-              <label>Username</label>
-              <i class="fas fa-user"></i>
-            </div>
-
-            <div class="animated-input-group">
-              <input type="password" id="abPassword" required>
-              <label>Password</label>
-              <i class="fas fa-lock"></i>
-              <button class="password-toggle" type="button">
-                <i class="fas fa-eye"></i>
-              </button>
-            </div>
-
-            <div class="digital-captcha">
-              <canvas id="captchaCanvas" width="120" height="40"></canvas>
-              <button class="refresh-canvas" type="button">
-                <i class="fas fa-redo"></i>
-              </button>
-              <input type="text" id="abCaptcha" placeholder="Enter captcha">
-            </div>
-
-            <button class="digital-login-btn" style="background: ${bank.gradient};">
-              <span>Login</span>
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </div>
-
-          <div class="digital-features">
-            <div class="feature-box">
-              <i class="fas fa-bolt"></i>
-              <h5>Lightning Fast</h5>
-              <p>Instant transfers</p>
-            </div>
-            <div class="feature-box">
-              <i class="fas fa-shield-alt"></i>
-              <h5>Secure</h5>
-              <p>Bank-grade security</p>
-            </div>
-            <div class="feature-box">
-              <i class="fas fa-mobile-alt"></i>
-              <h5>Mobile Ready</h5>
-              <p>Access anywhere</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  function createBCBTransferInterface(bank) {
-    return `
-      <div class="commerce-banking-container">
-        <div class="commerce-header" style="background: ${bank.gradient};">
-          <div class="header-overlay"></div>
-          <img src="${bank.logo}" alt="${bank.name}" class="commerce-bank-logo">
-          <h2>Bangladesh Commerce Bank</h2>
-          <p>Commercial Banking Excellence</p>
-        </div>
-
-        <div class="commerce-login-section">
-          <div class="login-panel-commerce">
-            <div class="panel-header">
-              <h3>Secure Banking Portal</h3>
-              <p>Protected by 256-bit encryption</p>
-            </div>
-
-            <div class="commerce-form">
-              <div class="form-field">
-                <div class="field-icon">
-                  <i class="fas fa-user-tie"></i>
-                </div>
-                <input type="text" id="bcbUserId" placeholder="User ID" required>
-              </div>
-
-              <div class="form-field">
-                <div class="field-icon">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <input type="password" id="bcbPassword" placeholder="Password" required>
-                <button class="show-password" type="button">
-                  <i class="fas fa-eye"></i>
-                </button>
-              </div>
-
-              <div class="security-check">
-                <div class="security-image">
-                  <img src="images/security-code.png" alt="Security Code">
-                </div>
-                <input type="text" id="bcbSecurity" placeholder="Enter security code">
-              </div>
-
-              <button class="commerce-login-btn" style="background: ${bank.gradient};">
-                <i class="fas fa-lock"></i> Secure Login
-              </button>
-            </div>
-
-            <div class="login-help">
-              <a href="#"><i class="fas fa-question-circle"></i> Need Help?</a>
-              <a href="#"><i class="fas fa-user-plus"></i> Register</a>
-            </div>
-          </div>
-
-          <div class="commerce-info">
-            <h4>Why BCB Internet Banking?</h4>
-            <div class="info-cards">
-              <div class="info-card">
-                <i class="fas fa-history"></i>
-                <h5>Transaction History</h5>
-                <p>View detailed records</p>
-              </div>
-              <div class="info-card">
-                <i class="fas fa-clock"></i>
-                <h5>24/7 Service</h5>
-                <p>Banking anytime</p>
-              </div>
-              <div class="info-card">
-                <i class="fas fa-chart-line"></i>
-                <h5>Fund Management</h5>
-                <p>Track your finances</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  function createBengalBankTransferInterface(bank) {
-    return `
-      <div class="bengal-banking-container">
-        <div class="bengal-header" style="background: ${bank.gradient};">
-          <div class="bengal-pattern"></div>
-          <img src="${bank.logo}" alt="${bank.name}" class="bengal-bank-logo">
-          <h2>Bengal Commercial Bank</h2>
-          <p>Your Gateway to Digital Banking</p>
-        </div>
-
-        <div class="bengal-login-area">
-          <div class="login-card-bengal">
-            <div class="card-header">
-              <h3>Internet Banking Login</h3>
-              <span class="security-badge">🔒 Secured</span>
-            </div>
-
-            <div class="bengal-form">
-              <div class="input-field">
-                <i class="fas fa-id-badge"></i>
-                <input type="text" id="bengalCustomerId" placeholder="Customer ID">
-                <span class="field-info">Enter your 10-digit ID</span>
-              </div>
-
-              <div class="input-field">
-                <i class="fas fa-key"></i>
-                <input type="password" id="bengalPassword" placeholder="Password">
-                <button class="toggle-view" type="button">
-                  <i class="fas fa-eye"></i>
-                </button>
-              </div>
-
-              <div class="captcha-field">
-                <div class="captcha-box">3F7X9L</div>
-                <button class="regenerate" type="button">
-                  <i class="fas fa-sync"></i>
-                </button>
-                <input type="text" id="bengalCaptcha" placeholder="Enter captcha">
-              </div>
-
-              <button class="bengal-login-btn" style="background: ${bank.gradient};">
-                Login to Internet Banking
-              </button>
-            </div>
-
-            <div class="quick-links">
-              <a href="#">Forgot Password?</a>
-              <a href="#">First Time User?</a>
-              <a href="#">Security Tips</a>
-            </div>
-          </div>
-
-          <div class="bengal-features">
-            <h4>Banking Made Simple</h4>
-            <div class="feature-grid">
-              <div class="feature">
-                <i class="fas fa-paper-plane"></i>
-                <span>Quick Transfer</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-mobile-alt"></i>
-                <span>Mobile Banking</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-wallet"></i>
-                <span>Digital Wallet</span>
-              </div>
-              <div class="feature">
-                <i class="fas fa-headphones"></i>
-                <span>24/7 Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  function createBracBankTransferInterface(bank) {
-    return `
-      <div class="brac-banking-container">
-        <div class="brac-header" style="background: ${bank.gradient};">
-          <div class="animated-bg"></div>
-          <img src="${bank.logo}" alt="${bank.name}" class="brac-bank-logo">
-          <h2>BRAC Bank Internet Banking</h2>
-          <p>Banking Beyond Boundaries</p>
-        </div>
-
-        <div class="brac-login-section">
-          <div class="modern-login-card">
-            <div class="login-header">
-              <h3>Welcome Back!</h3>
-              <p>Login to your account</p>
-            </div>
-
-            <div class="login-form">
-              <div class="floating-label-group">
-                <input type="text" id="bracUsername" required>
-                <label>Username</label>
-                <i class="fas fa-user-circle"></i>
-              </div>
-
-              <div class="floating-label-group">
-                <input type="password" id="bracPassword" required>
-                <label>Password</label>
-                <i class="fas fa-lock"></i>
-                <button class="password-visibility" type="button">
-                  <i class="fas fa-eye"></i>
-                </button>
-              </div>
-
-              <div class="verification-area">
-                <div class="math-captcha">
-                  <span>7 + 9 = ?</span>
-                </div>
-                <input type="text" id="bracCaptcha" placeholder="Answer">
-              </div>
-
-              <div class="remember-device">
-                <label>
-                  <input type="checkbox"> Remember this device
-                </label>
-              </div>
-
-              <button class="brac-login-btn" style="background: ${bank.gradient};">
-                <span>Login</span>
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-
-            <div class="login-footer">
-              <a href="#" class="forgot-link">Forgot Password?</a>
-              <a href="#" class="register-link">Register Now</a>
-            </div>
-          </div>
-
-          <div class="brac-advantages">
-            <h4>Why Choose BRAC Bank?</h4>
-            <div class="advantage-list">
-              <div class="advantage-item">
-                <i class="fas fa-rocket"></i>
-                <h5>Fastest Growth</h5>
-                <p>Leading SME bank</p>
-              </div>
-              <div class="advantage-item">
-                <i class="fas fa-globe"></i>
-                <h5>International</h5>
-                <p>Global banking solutions</p>
-              </div>
-              <div class="advantage-item">
-                <i class="fas fa-award"></i>
-                <h5>Award Winning</h5>
-                <p>Best digital bank 2023</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  // Generic Professional Transfer Interface
-  function createProfessionalTransferInterface(bank) {
-    return `
-      <div class="professional-transfer-container">
-        <div class="transfer-header" style="background: ${bank.gradient};">
-          <img src="${bank.logo}" alt="${bank.name}" class="transfer-bank-logo">
-          <h2>${bank.name}</h2>
-          <p>Secure Internet Banking Portal</p>
-        </div>
-
-        <div class="transfer-form-container">
-          <div class="login-section">
-            <h3 class="section-title">Login to Your Account</h3>
-            
-            <div class="form-group">
-              <label class="input-label">User ID / Account Number</label>
-              <div class="input-wrapper">
-                <i class="fas fa-user input-icon"></i>
-                <input type="text" class="professional-input" id="${
-                  bank.type
-                }Username" placeholder="Enter your User ID">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="input-label">Password</label>
-              <div class="input-wrapper">
-                <i class="fas fa-lock input-icon"></i>
-                <input type="password" class="professional-input" id="${
-                  bank.type
-                }Password" placeholder="Enter your password">
-                <button class="password-toggle" type="button">
-                  <i class="fas fa-eye"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="input-label">Security Verification</label>
-              <div class="captcha-container">
-                <div class="captcha-display-pro">
-                  <span>${generateRandomCaptcha()}</span>
-                  <button class="refresh-captcha-btn" type="button">
-                    <i class="fas fa-sync-alt"></i>
-                  </button>
-                </div>
-                <input type="text" class="professional-input" id="${
-                  bank.type
-                }Captcha" placeholder="Enter verification code">
-              </div>
-            </div>
-
-            <button class="professional-login-btn" style="background: ${
-              bank.gradient
-            };">
-              <i class="fas fa-sign-in-alt"></i>
-              <span>Login Securely</span>
-            </button>
-          </div>
-
-          <div class="features-section">
-            <h4>${bank.name} Features</h4>
-            <div class="features-grid">
-              ${bank.features
-                .map(
-                  (feature) => `
-                <div class="feature-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>${feature}</span>
-                </div>
-              `
-                )
-                .join("")}
-            </div>
-          </div>
-        </div>
-
-        <div class="transfer-footer">
-          <div class="security-info">
-            <i class="fas fa-lock"></i>
-            <span>Secured by ${bank.name}</span>
-          </div>
-          <div class="contact-info">
-            <span>Support: 16247</span>
-          </div>
-        </div>
-      </div>
-    `;
   }
 }

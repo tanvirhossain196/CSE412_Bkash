@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-title">Search Results</div>
         <div class="popup-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
       </div>
       
@@ -645,7 +645,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-title">${title}</div>
         <div class="popup-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
       </div>
       
@@ -892,7 +892,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-title">এডুকেশন ফি</div>
         <div class="popup-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
       </div>
       
@@ -1128,7 +1128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-title">Confirmation</div>
         <div class="popup-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
       </div>
       
@@ -1199,7 +1199,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-title">Enter PIN</div>
         <div class="popup-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
       </div>
       
@@ -1396,7 +1396,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="popup-title">Payment Successful</div>
         <div class="popup-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ লোগো">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো">
         </div>
       </div>
       

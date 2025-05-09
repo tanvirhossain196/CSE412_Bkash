@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
         overflow: hidden;
       }
       .form-header-gradient {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+         background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         padding: 0;
         position: relative;
         overflow: hidden;
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .institution-item:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        border-color: #e2146c;
+        border-color: #1c2e58;
       }
       .institution-item:active {
         transform: translateY(0);
@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", function () {
       transition: border-color 0.3s;
     }
     .policy-input-field input:focus, .mobile-input-field input:focus {
-      border-color: #e2146c;
+      border-color: #1c2e58;
     }
     .policy-type-selector {
       display: flex;
@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     .policy-type-label input[type="radio"] {
       margin-right: 8px;
-      accent-color: #e2146c;
+      accent-color: #1c2e58;
     }
     .next-button-container {
       margin-top: 30px;
@@ -571,7 +571,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .next-button {
       width: 100%;
       padding: 14px;
-      background-color: #e2146c;
+      background-color: #1c2e58;
       color: white;
       border: none;
       border-radius: 8px;
@@ -585,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cursor: not-allowed;
     }
     .next-button:not(:disabled):hover {
-      background-color: #c01159;
+      background-color: #112555;
     }
   `;
     document.head.appendChild(style);
@@ -690,7 +690,7 @@ document.addEventListener("DOMContentLoaded", function () {
       font-size: 16px;
     }
     .amount-highlight {
-      color: #e2146c;
+      color: #1c2e58;
       font-weight: 600;
       font-size: 18px;
     }
@@ -1108,7 +1108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .receipt-title {
           font-size: 24px;
           font-weight: 600;
-          color: #e2146c;
+          color: #1c2e58;
           margin: 10px 0;
         }
         .transaction-status {
@@ -1148,7 +1148,7 @@ document.addEventListener("DOMContentLoaded", function () {
           margin-top: 40px;
         }
         .print-button {
-          background-color: #e2146c;
+          background-color: #1c2e58;
           color: white;
           border: none;
           padding: 10px 20px;
@@ -1513,7 +1513,7 @@ document.addEventListener("DOMContentLoaded", function () {
         overflow: hidden;
       }
       .form-header-gradient {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+         background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         padding: 0;
         position: relative;
         overflow: hidden;
@@ -1606,7 +1606,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .faq-item:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        border-color: #e2146c;
+        border-color: #1c2e58;
       }
       .faq-item:active {
         transform: translateY(0);
@@ -1714,7 +1714,7 @@ document.addEventListener("DOMContentLoaded", function () {
         margin-bottom: 20px;
       }
       .question-icon {
-        color: #e2146c;
+        color: #1c2e58;
         font-size: 24px;
         margin-right: 15px;
         flex-shrink: 0;
@@ -1783,8 +1783,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       .no-button:hover {
         background-color: #fff0f0;
-        border-color: #dc3545;
-        color: #dc3545;
+        border-color: #112555;
+        color: #112555;
       }
     `;
     document.head.appendChild(style);
@@ -1906,7 +1906,7 @@ document.addEventListener("DOMContentLoaded", function () {
       color: #333;
     }
     .faq-notification.error {
-      background-color: #dc3545;
+      background-color: #112555;
     }
   `;
   document.head.appendChild(notificationStyle);
@@ -1985,7 +1985,7 @@ document.addEventListener("DOMContentLoaded", function () {
         transition: border-color 0.3s;
       }
       .faq-search-input:focus {
-        border-color: #e2146c;
+        border-color: #1c2e58;
       }
     `;
     document.head.appendChild(searchStyle);

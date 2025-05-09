@@ -235,17 +235,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Show bank account form with all required fields
   function showBankAccountForm(bank) {
-    // Update bank account section with selected bank
-    const bankLogo = bankAccountSection.querySelector(
-      ".selected-bank-logo img"
-    );
-    const bankName = bankAccountSection.querySelector(".selected-bank-name");
-
-    bankLogo.src = bank.logo;
-    bankName.textContent = bank.name;
-
-    // Create the complete form structure
+    // Updated form structure with new header layout
     const formContent = `
+      <div class="form-header-gradient">
+        <div class="header-content">
+          <div class="header-left">
+            <div class="title-icon">
+              <i class="fas fa-university"></i>
+            </div>
+          </div>
+          <div class="header-center">
+            <h3>Add Money</h3>
+          </div>
+          <div class="header-right">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" height="32">
+          </div>
+        </div>
+      </div>
+      
       <div class="form-steps">
         <div class="form-step active" data-step="1">
           <div class="bank-header">
@@ -806,7 +813,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .back-button:hover {
-        color: #e2146c;
+        color: #1c2e58;
       }
       
       .back-button i {
@@ -905,7 +912,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       .sheet-confirm-btn {
-        background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+        background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
         color: white;
       }
       
@@ -953,7 +960,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       .otp-input:focus,
       .pin-input:focus {
-        border-color: #e2146c;
+        border-color: #1c2e58;
       }
       
       .resend-text {
@@ -964,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .resend-btn {
         background: none;
         border: none;
-        color: #e2146c;
+        color: #1c2e58;
         cursor: pointer;
         font-weight: 600;
       }
@@ -984,7 +991,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .transaction-amount {
         font-size: 32px;
         font-weight: 700;
-        color: #e2146c;
+        color: #1c2e58;
         margin: 10px 0;
       }
       
@@ -1057,7 +1064,7 @@ document.addEventListener("DOMContentLoaded", function () {
         width: 40px;
         height: 40px;
         border: 4px solid #f3f3f3;
-        border-top: 4px solid #e2146c;
+        border-top: 4px solid #1c2e58;
         border-radius: 50%;
         animation: spin 1s linear infinite;
         margin: 0 auto 15px;
@@ -1141,6 +1148,50 @@ document.addEventListener("DOMContentLoaded", function () {
         .proceed-btn {
           width: 100%;
         }
+      }
+
+      /* Updated header styles */
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .header-left, .header-right {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .header-center h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+
+      .title-icon {
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title-icon i {
+        color: white;
+        font-size: 18px;
       }
     `;
     document.head.appendChild(style);

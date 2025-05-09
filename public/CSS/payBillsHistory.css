@@ -16,7 +16,7 @@
 
 /* History Header */
 .history-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 18px 20px;
   position: relative;
   overflow: hidden;
@@ -68,13 +68,13 @@
 }
 
 .filter-dropdown-btn.active {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
 
 .filter-dropdown-btn.selected {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -125,12 +125,12 @@
 
 .filter-dropdown-item:hover {
   background-color: #f9f9f9;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .filter-dropdown-item.selected {
   background-color: rgba(226, 20, 108, 0.05);
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -152,12 +152,12 @@
 }
 
 .filter-dropdown-list::-webkit-scrollbar-thumb {
-  background: #e2146c;
+  background: #1c2e58;
   border-radius: 3px;
 }
 
 .filter-dropdown-list::-webkit-scrollbar-thumb:hover {
-  background: #a4126a;
+  background: #1c2e58;
 }
 
 /* Summary Cards */
@@ -188,7 +188,7 @@
 
 .summary-card.total .summary-icon {
   background-color: rgba(226, 20, 108, 0.1);
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .summary-card.count .summary-icon {
@@ -262,7 +262,7 @@
 .filter-step-number {
   width: 25px;
   height: 25px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -377,7 +377,7 @@
 .bill-amount {
   font-size: 16px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
   margin-bottom: 5px;
 }
 
@@ -450,8 +450,8 @@
 
 .load-more-btn:hover {
   background-color: #f9f9f9;
-  border-color: #e2146c;
-  color: #e2146c;
+  border-color: #1c2e58;
+  color: #1c2e58;
 }
 
 .load-more-btn i {
@@ -463,7 +463,7 @@
   position: fixed;
   bottom: 80px;
   right: 20px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   border: none;
   border-radius: 30px;
@@ -579,7 +579,7 @@
 }
 
 .detail-value.amount {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 600;
 }
 
@@ -622,7 +622,7 @@
 }
 
 .download-receipt-btn i {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* Animation */

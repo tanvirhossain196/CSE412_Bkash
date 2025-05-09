@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoContainer = document.createElement("div");
     logoContainer.className = "bkash-logo";
     logoContainer.innerHTML =
-      '<img src="images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">';
+      '<img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" style="height: 40px;">';
 
     headerContent.appendChild(backButton);
     headerContent.appendChild(headerTitle);
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     অনুগ্রহ করে আপনার বিকাশ পিন নাম্বার প্রবেশ করুন
                 </div>
                 <div class="pin-amount" style="text-align: center; margin-bottom: 30px;">
-                    <div class="amount-value" style="font-size: 28px; font-weight: 600; color: #e2146c;">৳${currentAmount.toFixed(
+                    <div class="amount-value" style="font-size: 28px; font-weight: 600; color: #1c2e58;">৳${currentAmount.toFixed(
                       2
                     )}</div>
                 </div>
@@ -618,12 +618,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div style="color: #666; font-size: 14px;">
                     অনুগ্রহ করে কন্টাক্টস সিলেক্ট করুন
                 </div>
-                <div style="color: #e2146c; font-size: 14px; font-weight: 500;">
+                <div style="color: #1c2e58; font-size: 14px; font-weight: 500;">
                     <span id="selectedCount">0</span>/10 সিলেক্ট হয়েছে
                 </div>
             </div>
             <div class="selected-contacts-preview" id="selectedContactsPreview" style="display: none; padding: 10px 15px; background-color: #fff5f8; margin-bottom: 10px;">
-                <div style="font-size: 14px; color: #e2146c; margin-bottom: 5px;">সিলেক্টেড কন্টাক্টস:</div>
+                <div style="font-size: 14px; color: #1c2e58; margin-bottom: 5px;">সিলেক্টেড কন্টাক্টস:</div>
                 <div id="selectedContactsList" style="display: flex; flex-wrap: wrap; gap: 5px;">
                 </div>
             </div>
@@ -789,7 +789,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           .map(
                             (contact) => `
                             <div style="display: flex; align-items: center; padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
-                                <div style="margin-right: 10px; width: 30px; height: 30px; border-radius: 50%; background-color: #e2146c; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+                                <div style="margin-right: 10px; width: 30px; height: 30px; border-radius: 50%; background-color: #1c2e58; color: white; display: flex; align-items: center; justify-content: center; font-weight: 600;">
                                     ${contact.name.charAt(0)}
                                 </div>
                                 <div>
@@ -851,7 +851,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function showGroupAmountPopup() {
     const content = `
             <div class="recipient-info">
-                <div class="contact-avatar" style="background-color: #e2146c;">
+                <div class="contact-avatar" style="background-color: #1c2e58;">
                     <i class="fas fa-users" style="color: white;"></i>
                 </div>
                 <div class="contact-info">

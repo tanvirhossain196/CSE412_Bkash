@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoContainer = document.createElement("div");
     logoContainer.className = "bkash-logo";
     const logo = document.createElement("img");
-    logo.src = "images/bkashlogo.png";
+    logo.src = "/public/images/bkashlogo.png";
     logo.style.height = "40px";
     logoContainer.appendChild(logo);
 
@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const infoIcon = document.createElement("div");
     infoIcon.innerHTML =
-      '<i class="fas fa-lightbulb" style="color: #e2146c; font-size: 18px;"></i>';
+      '<i class="fas fa-lightbulb" style="color: #1c2e58; font-size: 18px;"></i>';
     infoIcon.style.marginRight = "10px";
 
     const infoContent = document.createElement("p");
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const infoIcon = document.createElement("div");
     infoIcon.innerHTML =
-      '<i class="fas fa-lightbulb" style="color: #e2146c; font-size: 18px;"></i>';
+      '<i class="fas fa-lightbulb" style="color: #1c2e58; font-size: 18px;"></i>';
     infoIcon.style.marginRight = "10px";
 
     const infoContent = document.createElement("p");
@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
         openPinInputPopup(org, paymentAmount);
       } else {
         // Show validation error
-        amountInput.style.border = "1px solid #e2146c";
+        amountInput.style.border = "1px solid #1c2e58";
         const errorMsg = document.createElement("p");
         errorMsg.textContent = "টাকার পরিমাণ লিখুন";
         errorMsg.style.color = "#e2146c";
@@ -562,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show validation error
         pinFields.forEach((field) => {
           if (field.value.length === 0) {
-            field.style.border = "1px solid #e2146c";
+            field.style.border = "1px solid #1c2e58";
           }
         });
 
@@ -754,7 +754,7 @@ document.addEventListener("DOMContentLoaded", function () {
     downloadButton.style.flex = "1";
     downloadButton.style.backgroundColor = "white";
     downloadButton.style.color = "#e2146c";
-    downloadButton.style.border = "1px solid #e2146c";
+    downloadButton.style.border = "1px solid #1c2e58";
     downloadButton.style.borderRadius = "30px";
     downloadButton.style.padding = "12px 20px";
     downloadButton.style.fontWeight = "500";
@@ -788,7 +788,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                         }
                         .receipt-header {
-                            background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+                             background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
                             color: white;
                             padding: 20px;
                             text-align: center;
@@ -862,7 +862,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         .amount-value {
                             font-size: 18px;
                             font-weight: 600;
-                            color: #e2146c;
+                            color: #1c2e58;
                         }
                         .receipt-footer {
                             text-align: center;
@@ -875,7 +875,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <body>
                     <div class="receipt">
                         <div class="receipt-header">
-                            <img src="images/bkashlogo.png" alt="বিকাশ লোগো" class="receipt-logo">
+                            <img src="/public/images/bkashlogo.png" alt="বিকাশ লোগো" class="receipt-logo">
                             <h1 class="receipt-title">পেমেন্ট রিসিট</h1>
                         </div>
                         <div class="receipt-body">

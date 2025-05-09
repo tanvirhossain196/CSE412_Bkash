@@ -52,7 +52,7 @@ body {
 
 /* Gradient Header */
 .form-header-gradient {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 0;
   position: relative;
   overflow: hidden;
@@ -176,7 +176,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
-  scrollbar-color: #e2146c #f5f5f5;
+  scrollbar-color: #1c2e58 #f5f5f5;
 }
 
 /* Custom scrollbar styles */
@@ -190,13 +190,13 @@ body {
 }
 
 .paybill-form::-webkit-scrollbar-thumb {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   border-radius: 10px;
   border: 2px solid #f5f5f5;
 }
 
 .paybill-form::-webkit-scrollbar-thumb:hover {
-  background-color: #a4126a;
+  background-color: #112555;
 }
 
 /* Apply scrollable content to each section */
@@ -226,7 +226,7 @@ body {
 }
 
 .search-input-wrapper:focus-within {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -259,7 +259,7 @@ body {
 
 .search-clear:hover {
   opacity: 1;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 /* Tabs */
@@ -298,13 +298,13 @@ body {
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background-color: #e2146c;
+  background-color: #1c2e58;
   transition: all 0.3s;
   border-radius: 10px 10px 0 0;
 }
 
 .tab-btn.active {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -347,7 +347,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .receipt-text,
@@ -390,7 +390,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 18px;
 }
 
@@ -591,7 +591,7 @@ body {
 }
 
 .bill-input:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -612,7 +612,7 @@ select.bill-input {
 }
 
 select.bill-input:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e2146c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -627,7 +627,7 @@ select.bill-input option:hover {
   background-color: #f0f0f0;
 }
 select.bill-input option:checked {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   color: white;
 }
 
@@ -651,7 +651,7 @@ select.bill-input:disabled {
 }
 
 .amount-input-wrapper:focus-within {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
   background-color: white;
 }
@@ -659,7 +659,7 @@ select.bill-input:disabled {
 .currency-symbol {
   font-size: 24px;
   font-weight: 600;
-  color: #e2146c;
+  color: #1c2e58;
   padding-right: 8px;
 }
 
@@ -682,11 +682,11 @@ select.bill-input:disabled {
   border-radius: 10px;
   padding: 14px 16px;
   margin: 10px 0 25px;
-  border-left: 3px solid #e2146c;
+  border-left: 3px solid #1c2e58;
 }
 
 .form-notice i {
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 16px;
 }
 
@@ -718,7 +718,7 @@ select.bill-input:disabled {
 }
 
 .input-with-icon .bill-input:focus + i {
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .bill-input:disabled {
@@ -835,7 +835,7 @@ select.bill-input,
 }
 
 .detail-value.amount {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 600;
 }
 
@@ -891,7 +891,7 @@ select.bill-input,
 }
 
 .pin-digit:focus {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   box-shadow: 0 3px 10px rgba(226, 20, 108, 0.1);
 }
 
@@ -915,7 +915,7 @@ select.bill-input,
 .next-btn,
 .pay-btn,
 .confirm-btn {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   color: white;
 }
 
@@ -1065,7 +1065,7 @@ select.bill-input,
   max-height: 80vh;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #e2146c #f5f5f5;
+  scrollbar-color: #1c2e58 #f5f5f5;
 }
 
 .success-content::-webkit-scrollbar {
@@ -1078,7 +1078,7 @@ select.bill-input,
 }
 
 .success-content::-webkit-scrollbar-thumb {
-  background-color: #e2146c;
+  background-color: #1c2e58;
   border-radius: 10px;
   border: 2px solid #f5f5f5;
 }
@@ -1134,7 +1134,7 @@ select.bill-input,
 }
 
 .detail-row-value.total {
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 600;
 }
 

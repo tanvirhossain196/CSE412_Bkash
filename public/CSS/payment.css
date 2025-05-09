@@ -30,7 +30,7 @@ body {
 
 /* Payment Header */
 .payment-header {
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 20px;
   position: relative;
   overflow: hidden;
@@ -103,7 +103,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 20px;
 }
 
@@ -194,7 +194,7 @@ body {
   height: 24px;
   width: auto;
   margin-bottom: 8px;
-  color: #e2146c;
+  color: #1c2e58;
 }
 
 .payment-option span {
@@ -203,7 +203,7 @@ body {
 }
 
 .payment-option.active {
-  border-color: #e2146c;
+  border-color: #1c2e58;
   background-color: rgba(226, 20, 108, 0.05);
 }
 
@@ -211,7 +211,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 14px;
 }
 
@@ -236,7 +236,7 @@ body {
 .next-button {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #e2146c 0%, #a4126a 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -311,14 +311,14 @@ body {
 }
 
 .qr-scanner i {
-  color: #e2146c;
+  color: #1c2e58;
   font-size: 18px;
 }
 
 .qr-scanner p {
   margin: 0;
   font-size: 14px;
-  color: #e2146c;
+  color: #1c2e58;
   font-weight: 500;
 }
 
@@ -340,7 +340,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e2146c;
+  color: #1c2e58;
   margin-right: 15px;
 }
 
@@ -428,7 +428,7 @@ body {
 
 /* Header Styles */
 .selection-header {
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   padding: 15px 18px;
   position: relative;
   overflow: hidden;
@@ -509,7 +509,7 @@ body {
 }
 
 .search-container:focus-within {
-  border-color: #e91e63;
+  border-color: #23386a;
   box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.08);
 }
 
@@ -540,7 +540,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  border: 1px solid #e91e63;
+  border: 1px solid #23386a;
   border-radius: 10px;
   padding: 12px 15px;
   cursor: pointer;
@@ -556,12 +556,12 @@ body {
 }
 
 .qr-icon {
-  color: #e91e63;
+  color: #23386a;
   font-size: 18px;
 }
 
 .qr-text {
-  color: #e91e63;
+  color: #23386a;
   font-size: 13.5px;
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -600,7 +600,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e91e63;
+  color: #23386a;
   font-size: 16px;
   margin-right: 15px;
 }
@@ -669,7 +669,7 @@ body {
 .merchant-icon {
   width: 36px; /* Smaller icon */
   height: 36px; /* Smaller icon */
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  background: linear-gradient(135deg, #1c2e58 0%, #112555 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
